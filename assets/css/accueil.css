@@ -1,0 +1,79 @@
+.accueil {
+	.banner {
+		position: relative;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		z-index: -1;
+		height: 100%;
+	}
+
+	.elementOnImg {
+		position: absolute;
+		text-transform: uppercase;
+		z-index: 2;
+		font-size: 3vw;
+	}
+
+	.elementOnImg-1 {
+		left: 60px;
+		bottom: 210px;
+	}
+
+	.elementOnImg-2 {
+		left: 60px;
+		bottom: 180px;
+		text-transform: none;
+		font-size: 2vw;
+	}
+
+	.elementOnImg-3 {
+		left: 60px;
+		bottom: 94px;
+		width: 76px;
+		height: 76px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.elementOnImg-4 {
+		top: 75px;
+		left: 38%;
+		writing-mode: vertical-lr;
+	}
+
+	.chiffreOnImg {
+		position: absolute;
+		text-transform: uppercase;
+		z-index: 2;
+		line-height: 0.8;
+		color: rgba(0, 0, 0, 0);
+	}
+
+	.chiffreOnImg-1 {
+		right: 40px;
+		bottom: 94px;
+	}
+
+	.chiffreOnImg-2 {
+		padding: 0 auto;
+		bottom: 83px;
+		left: 19%;
+		font-size: 12vw;
+	}
+
+	.logo {
+		justify-content: space-between;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+.banner-footer {
+	background-image: url("assets/img/footer.png");
+	height: 50vh;
+	background-color: red;
+}

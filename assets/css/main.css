@@ -1,0 +1,353 @@
+@font-face {
+	font-family: "KBK";
+	src: url("../fonts/Kanit/Kanit-Black.ttf");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "KEBD";
+	src: url("../fonts/Kanit/Kanit-ExtraBold.ttf");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "KBD";
+	src: url("../fonts/Kanit/Kanit-Bold.ttf");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "KSBD";
+	src: url("../fonts/Kanit/Kanit-SemiBold.ttf");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "KM";
+	src: url("../fonts/Kanit/Kanit-Medium.ttf");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "KR";
+	src: url("../fonts/Kanit/Kanit-Regular.ttf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "KL";
+	src: url("../fonts/Kanit/Kanit-Light.ttf");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "KEL";
+	src: url("../fonts/Kanit/Kanit-ExtraLight.ttf");
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "KELI";
+	src: url("../fonts/Kanit/Kanit-ExtraLightItalic.ttf");
+	font-weight: 200;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "KT";
+	src: url("../fonts/Kanit/Kanit-Thin.ttf");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html {
+	font-family: "KR", sans-serif;
+	overflow-x: hidden;
+	line-height: normal;
+	color: #1e3463;
+	background-repeat: repeat;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+	background-color: #fff;
+	font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "KSBD", sans-serif;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.75rem;
+	overflow: hidden;
+}
+
+h2:after {
+	content: "";
+	display: inline-block;
+	height: 0.2em;
+	vertical-align: bottom;
+	width: 120px;
+	margin-right: -100%;
+	margin-left: 10px;
+	border-top: 1px solid #1e3463;
+}
+
+h3 {
+	font-size: 15px;
+	color: #1db1ff;
+	overflow: hidden;
+}
+
+h3:after {
+	content: "";
+	display: inline-block;
+	height: 0.2em;
+	vertical-align: bottom;
+	width: 60px;
+	margin-right: -100%;
+	margin-left: 10px;
+	border-top: 1px solid #1db1ff;
+}
+
+p {
+	margin-bottom: 0;
+	line-height: normal;
+}
+a {
+	text-decoration: none;
+	transition: all 0.5s;
+}
+
+li {
+	list-style: none;
+}
+
+.display-1 {
+	font-family: "KSBD";
+	font-size: 13.6vw;
+	line-height: 1.2;
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke: 1px #284e91;
+}
+
+.display-2 {
+	font-family: "KSBD";
+	font-size: 8vw;
+	line-height: 1.2;
+	-webkit-text-stroke: 1px white;
+}
+
+.display-3 {
+	font-family: "KSBD";
+	font-size: 2.5rem;
+	line-height: 1.2;
+}
+
+.display-4 {
+	font-family: "KSBD";
+	font-size: 3.7rem;
+	line-height: 1.2;
+	color: rgba(0, 0, 0, 0);
+	text-align: end;
+	-webkit-text-stroke: 1px #1db1ff;
+}
+
+.nav-item {
+	height: 20px;
+}
+
+.nav-item:not(:last-child):after {
+	content: "";
+	margin: 0 1rem;
+	border-left: 1px solid #d0d0d0;
+}
+
+.accueil {
+	.image {
+		position: relative;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+	}
+
+	.banner-content,
+	.elementOnImg {
+		position: absolute;
+		text-transform: uppercase;
+		z-index: 2;
+		font-size: 3vw;
+	}
+
+	.banner-content {
+		width: calc(100% - 2rem);
+	}
+
+	.banner-titre {
+		margin-left: 10vw;
+		margin-top: 10vw;
+		.titre {
+			display: block;
+			left: 50px;
+			font-family: "KSBD";
+			line-height: 100%;
+			font-size: 3vw;
+		}
+
+		.titre-1 {
+			font-size: 6vw;
+			line-height: 70%;
+		}
+
+		.titre-2 {
+			font-family: "KT";
+			font-size: 2.4vw;
+			line-height: 110%;
+		}
+
+		.titre-3 {
+			font-size: 2.4vw;
+		}
+	}
+
+	.categorie,
+	.icon {
+		position: absolute;
+		z-index: 2;
+		font-size: 1vw;
+	}
+
+	.categorie-1 {
+		left: 15vw;
+		top: 3vw;
+	}
+
+	.categorie-2 {
+		left: 33vw;
+		top: 23vw;
+	}
+
+	.categorie-3 {
+		left: 42vw;
+		top: 37vw;
+	}
+
+	.icon-chat {
+		right: 10vw;
+		top: 33vw;
+	}
+
+	.icon-chat {
+		right: 10vw;
+		top: 33vw;
+	}
+
+	.elementOnImg-1 {
+		left: 60px;
+		bottom: 210px;
+	}
+
+	.elementOnImg-2 {
+		left: 60px;
+		bottom: 180px;
+		text-transform: none;
+		font-size: 2vw;
+	}
+
+	.elementOnImg-3 {
+		left: 60px;
+		bottom: 94px;
+		width: 76px;
+		height: 76px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.elementOnImg-4 {
+		top: 75px;
+		left: 38%;
+		writing-mode: vertical-lr;
+	}
+
+	.chiffreOnImg {
+		position: absolute;
+		text-transform: uppercase;
+		z-index: 2;
+		line-height: 0.8;
+		color: rgba(0, 0, 0, 0);
+	}
+
+	.chiffreOnImg-1 {
+		right: 40px;
+		bottom: 94px;
+	}
+
+	.chiffreOnImg-2 {
+		padding: 0 auto;
+		bottom: 83px;
+		left: 19%;
+		font-size: 12vw;
+	}
+
+	.logo {
+		justify-content: space-between;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.footer {
+		.footer-intro {
+			font-family: "KELI";
+		}
+		.footer-text {
+			position: absolute;
+			z-index: 2;
+			display: flex;
+			width: calc(100% - 6rem);
+		}
+
+		li,
+		.footer-contact,
+		.footer-langues {
+			font-family: "KR";
+			text-transform: uppercase;
+			margin-bottom: 0.5rem;
+		}
+	}
+}
