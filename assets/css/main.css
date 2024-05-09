@@ -93,7 +93,7 @@ html {
 	width: 100%;
 	max-width: 100%;
 	overflow-x: hidden;
-	background-color: #fff;
+	/* background-color: #fff; */
 	font-size: 15px;
 }
 
@@ -150,204 +150,393 @@ a {
 	transition: all 0.5s;
 }
 
+a:hover {
+	text-decoration: none;
+}
+img {
+	width: 100%;
+}
+
 li {
 	list-style: none;
 }
 
-.display-1 {
-	font-family: "KSBD";
-	font-size: 13.6vw;
-	line-height: 1.2;
-	-webkit-text-fill-color: white;
-	-webkit-text-stroke: 1px #284e91;
-}
+.header {
+	.header-logo {
+		cursor: pointer;
+	}
+	.nav-item {
+		height: 20px;
+		cursor: pointer;
+		position: relative;
 
-.display-2 {
-	font-family: "KSBD";
-	font-size: 8vw;
-	line-height: 1.2;
-	-webkit-text-stroke: 1px white;
-}
+		.btn-prj {
+			background-color: transparent;
+			z-index: 1;
+			color: #284e91;
+			border: none;
+			display: inline-block;
+			position: relative;
+			font-family: "KSBD";
+			cursor: pointer;
+		}
 
-.display-3 {
-	font-family: "KSBD";
-	font-size: 2.5rem;
-	line-height: 1.2;
-}
+		.btn-prj + span {
+			border: 3px solid #284e91;
+			color: #284e91;
+			background-color: #fff;
+			font-family: "KSBD";
+			cursor: pointer;
+			z-index: -1;
+			position: absolute;
+			left: -3px;
+			top: -5px;
+			width: 80%;
+			height: 100%;
+			padding: 1rem;
+		}
 
-.display-4 {
-	font-family: "KSBD";
-	font-size: 3.7rem;
-	line-height: 1.2;
-	color: rgba(0, 0, 0, 0);
-	text-align: end;
-	-webkit-text-stroke: 1px #1db1ff;
-}
+		.btn-prj + span::before {
+			content: "";
+			display: inline-block;
+			width: 112px;
+			height: 47px;
+			border-bottom: 8px solid white;
+			-webkit-transform: translateY(20px) translateX(5px) rotate(26deg);
+			position: absolute;
+			top: -50px;
+			left: 2px;
+		}
+	}
 
-.nav-item {
-	height: 20px;
-}
-
-.nav-item:not(:last-child):after {
-	content: "";
-	margin: 0 1rem;
-	border-left: 1px solid #d0d0d0;
+	.nav-item:not(:last-child):after {
+		content: "";
+		margin: 0 1rem;
+		border-left: 1px solid #d0d0d0;
+	}
 }
 
 .accueil {
-	.image {
-		position: relative;
-		left: 0px;
-		top: 0px;
-		width: 100%;
-		height: 100%;
-	}
-
-	.banner-content,
-	.elementOnImg {
-		position: absolute;
-		text-transform: uppercase;
-		z-index: 2;
-		font-size: 3vw;
-	}
-
-	.banner-content {
-		width: calc(100% - 2rem);
-	}
-
-	.banner-titre {
-		margin-left: 10vw;
-		margin-top: 10vw;
-		.titre {
-			display: block;
-			left: 50px;
-			font-family: "KSBD";
-			line-height: 100%;
-			font-size: 3vw;
+	.banner {
+		.banner-content {
+			position: absolute;
+			text-transform: uppercase;
+			z-index: 2;
+			width: calc(100% - 2rem);
 		}
 
-		.titre-1 {
-			font-size: 6vw;
-			line-height: 70%;
+		.banner-titre {
+			margin-left: 10vw;
+			margin-top: 10vw;
+
+			.titre {
+				display: block;
+				left: 50px;
+				font-family: "KSBD";
+				line-height: 100%;
+				font-size: 3vw;
+				cursor: pointer;
+			}
+
+			.titre-1 {
+				font-size: 6vw;
+				line-height: 70%;
+			}
+
+			.titre-2 {
+				font-family: "KT";
+				font-size: 2.4vw;
+				line-height: 110%;
+			}
+
+			.titre-3 {
+				font-size: 2.4vw;
+			}
 		}
 
-		.titre-2 {
-			font-family: "KT";
-			font-size: 2.4vw;
-			line-height: 110%;
+		.categorie {
+			position: absolute;
+			z-index: 2;
+			font-size: 1vw;
+			cursor: pointer;
+			transition: transform 0.2s; /* Animation */
+
+			.darkText {
+				color: #08111b;
+			}
 		}
 
-		.titre-3 {
-			font-size: 2.4vw;
+		.categorie:before {
+			content: "";
+			display: inline-block;
+			width: 2.5vw;
+			height: 2.5vw;
+			-moz-border-radius: 2.5vw;
+			-webkit-border-radius: 2.5vw;
+			border-radius: 50%;
+			background-color: #1db1ff;
+			margin-right: -19%;
+			margin-bottom: -8%;
+		}
+
+		.categorie-1 {
+			left: 15vw;
+			top: 3vw;
+		}
+
+		.categorie-2 {
+			left: 33vw;
+			top: 23vw;
+		}
+
+		.categorie-3 {
+			left: 42vw;
+			top: 37vw;
+		}
+
+		.icon {
+			width: 3vw;
+			position: absolute;
+			z-index: 2;
+			font-size: 1vw;
+			cursor: pointer;
+			transition: transform 0.2s; /* Animation */
+		}
+
+		.icon-chat {
+			right: 10vw;
+			top: 33vw;
+		}
+
+		.icon-chat {
+			right: 10vw;
+			top: 33vw;
+		}
+
+		.icon-loupe {
+			left: 47vw;
+			top: 4vw;
+		}
+
+		.icon-globe {
+			left: 50vw;
+			top: 25vw;
+		}
+
+		.icon-panier {
+			width: 3vw;
+			right: 12vw;
+			top: 3vw;
+		}
+
+		.icon-location-1 {
+			right: 26.5vw;
+			top: 11vw;
+		}
+
+		.icon-location-2 {
+			right: 15vw;
+			top: 10vw;
+		}
+
+		.icon-location-3 {
+			right: 15.5%;
+			top: 15vw;
+		}
+
+		.categorie:hover,
+		.icon:hover {
+			transform: scale(1.2);
 		}
 	}
 
-	.categorie,
-	.icon {
-		position: absolute;
-		z-index: 2;
-		font-size: 1vw;
+	.display-1 {
+		font-family: "KSBD";
+		font-size: 13.6vw;
+		line-height: 1.2;
+		-webkit-text-fill-color: white;
+		-webkit-text-stroke: 1px #284e91;
 	}
-
-	.categorie-1 {
-		left: 15vw;
-		top: 3vw;
-	}
-
-	.categorie-2 {
-		left: 33vw;
-		top: 23vw;
-	}
-
-	.categorie-3 {
-		left: 42vw;
-		top: 37vw;
-	}
-
-	.icon-chat {
-		right: 10vw;
-		top: 33vw;
-	}
-
-	.icon-chat {
-		right: 10vw;
-		top: 33vw;
-	}
-
-	.elementOnImg-1 {
-		left: 60px;
-		bottom: 210px;
-	}
-
-	.elementOnImg-2 {
-		left: 60px;
-		bottom: 180px;
-		text-transform: none;
-		font-size: 2vw;
-	}
-
-	.elementOnImg-3 {
-		left: 60px;
-		bottom: 94px;
-		width: 76px;
-		height: 76px;
-
-		img {
+	.services {
+		.imageService {
+			position: relative;
+			left: 0px;
+			top: 0px;
 			width: 100%;
+			height: 100%;
 		}
-	}
 
-	.elementOnImg-4 {
-		top: 75px;
-		left: 38%;
-		writing-mode: vertical-lr;
-	}
+		.display-2 {
+			font-family: "KSBD";
+			font-size: 8vw;
+			line-height: 1.2;
+			-webkit-text-stroke: 1px white;
+		}
 
-	.chiffreOnImg {
-		position: absolute;
-		text-transform: uppercase;
-		z-index: 2;
-		line-height: 0.8;
-		color: rgba(0, 0, 0, 0);
-	}
+		.service {
+			position: absolute;
+			text-transform: uppercase;
+			z-index: 2;
+			font-size: 3vw;
+			font-family: "KSBD";
+		}
 
-	.chiffreOnImg-1 {
-		right: 40px;
-		bottom: 94px;
-	}
+		.service-1 {
+			left: 60px;
+			bottom: 18vw;
+		}
 
-	.chiffreOnImg-2 {
-		padding: 0 auto;
-		bottom: 83px;
-		left: 19%;
-		font-size: 12vw;
+		.service-description {
+			left: 60px;
+			bottom: 15vw;
+			text-transform: none;
+			font-size: 2vw;
+			font-family: "KR";
+		}
+
+		.service-btn {
+			left: 60px;
+			bottom: 8vw;
+			width: 6vw;
+			cursor: pointer;
+		}
+
+		.service-2 {
+			top: 75px;
+			left: 40%;
+			writing-mode: vertical-lr;
+		}
+
+		.chiffre {
+			position: absolute;
+			text-transform: uppercase;
+			z-index: 2;
+			line-height: 0.8;
+			color: rgba(0, 0, 0, 0);
+		}
+
+		.chiffre-1 {
+			right: 40px;
+			bottom: 94px;
+		}
+
+		.chiffre-2 {
+			padding: 0 auto;
+			bottom: 83px;
+			left: 21%;
+			font-size: 12vw;
+		}
 	}
 
 	.logo {
 		justify-content: space-between;
+	}
 
-		img {
+	.apropos {
+		.img-apropos {
+			aspect-ratio: 5 / 8;
+			border-radius: 45px;
+			object-fit: cover;
+			object-position: 20%;
 			width: 100%;
+		}
+
+		.btn-enSavoirPlus {
+			width: 10vw;
+			cursor: pointer;
+		}
+
+		.display-3 {
+			font-family: "KSBD";
+			font-size: 2.5rem;
+			line-height: 1.2;
 		}
 	}
 
-	.footer {
-		.footer-intro {
-			font-family: "KELI";
+	.elements {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		top: 150vw;
+		z-index: -1;
+
+		.element {
+			content: "";
+			display: inline-block;
+			-webkit-background-clip: padding-box; /* for Safari */
+			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 		}
-		.footer-text {
+		.element-1 {
+			height: 1px;
+			height: 30vw;
 			position: absolute;
-			z-index: 2;
-			display: flex;
-			width: calc(100% - 6rem);
+			margin-top: 100px;
+			left: 20vw;
+			border-left: 1px solid rgba(34, 41, 80, 0.16);
+			top: 0;
 		}
 
-		li,
-		.footer-contact,
-		.footer-langues {
-			font-family: "KR";
-			text-transform: uppercase;
-			margin-bottom: 0.5rem;
+		.element-2 {
+			height: 1px;
+			width: 15vw;
+			position: absolute;
+			margin-left: -50px;
+			margin-top: 300px;
+			border-bottom: 1px solid rgba(34, 41, 80, 0.16);
 		}
+
+		.element-3 {
+			width: 30vw;
+			margin-left: 90vw;
+			margin-top: -100px;
+		}
+	}
+}
+
+.footer {
+	.footer-intro {
+		font-family: "KELI";
+	}
+	.footer-text {
+		position: absolute;
+		z-index: 2;
+		display: flex;
+		width: calc(100% - 6rem);
+	}
+
+	.footer-logo {
+		width: 80%;
+	}
+	li,
+	.footer-contact,
+	.footer-langues {
+		font-family: "KR";
+		text-transform: uppercase;
+		margin-bottom: 0.5rem;
+	}
+	li,
+	.footer-langues {
+		cursor: pointer;
+		transition: transform 0.2s; /* Animation */
+	}
+
+	li:hover,
+	.footer-langues:hover {
+		color: #1db1ff;
+		transform: scale(1.1);
+	}
+
+	.footer-action {
+		font-family: "KSBD";
+		font-size: 3.7rem;
+		line-height: 1.1;
+		color: rgba(0, 0, 0, 0);
+		text-align: end;
+		-webkit-text-stroke: 1px #1db1ff;
+	}
+
+	.footer-action:hover {
+		transform: scale(1.1);
+		cursor: pointer;
 	}
 }

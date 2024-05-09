@@ -1,9 +1,0 @@
-.nav-item {
-	height: 20px;
-}
-
-.nav-item:not(:last-child):after {
-	content: "";
-	margin: 0 1rem;
-	border-left: 1px solid #d0d0d0;
-}
