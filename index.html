@@ -15,7 +15,7 @@
 </head>
 <body>
 
-    <header class="d-flex justify-content-between mx-4 mt-4 header">
+    <header class="d-flex justify-content-between align-items-center mx-4 my-4 header">
         <a href=""><img class="header-logo" src="https://proximityagency.ca/wp-content/themes/proximityagency/assets/imgs/logo/proximity-logo.png" alt="Site Logo" ></a>
         <div >
           <a href="" class="nav-item">
@@ -23,10 +23,10 @@
             <span></span>
           </a>
           <span class="nav-item ">
-            <i class="fa-solid fa-phone nav-item"></i>
+            <i class="fa-solid fa-phone fa-lg"></i>          
           </span>
           <span class="nav-item ">
-            <i class="fa-solid fa-bars nav-item"></i>
+            <i class="fa-solid fa-bars fa-lg"></i>
           </span>
         </div>
     </header>
@@ -60,8 +60,11 @@
             <img class="icon icon-panier" src="assets/img/svg/panier.svg" alt="">
           </div>
         </div>
-
-        <img src="assets/img/png/banner.png" alt="La bannière du site" class="img-fluid image">
+        <div class="d-flex row">
+          <img class="banner-image1 col-md-6 col-sm-12 px-0" src="assets/img/png/c.png" alt="">
+          <img class="banner-image2 col-md-6 col-sm-12 px-0"  src="assets/img/png/terre.png" alt="">
+        </div>
+        <!-- <img src="assets/img/png/banner.png" alt="La bannière du site" class="img-fluid image"> -->
       </section>
       <span class="display-1 mb-5">STRATÉGIE&nbsp;·&nbsp;360</span>
 
@@ -69,9 +72,9 @@
       <!-- Nos services -->
       <section class="services mx-5 mb-5">
         <h2 class="mb-5"><span class="mb-4">Nos services</span></h2>
-        <div class="d-flex text-white mb-5">
+        <div class="d-flex row text-white mb-5">
 
-          <div class="col-6 pl-0">
+          <div class="col-md-6 col-sm-12 pl-0 pr-sm-0 mb-md-0 mb-sm-4">
             <span class="service service-1">Stratégie 360</span>
             <span class="service service-description">Lorem Ipsum texte 1</span>
             <div class="service service-btn">
@@ -81,13 +84,13 @@
             <img class="imageService" src="assets/img/png/service-1.png" alt="">
           </div>
 
-          <div class="col-3">
+          <div class="col-md-3 col-sm-6 pl-sm-0">
             <span class="service service-2">Web & App</span>
             <span class="chiffre chiffre-2 display-2">02</span>
             <img class="imageService" src="assets/img/png/service-2.png" alt="">
           </div>
 
-          <div class="col-3 pr-0">
+          <div class="col-md-3 col-sm-6 pr-0">
             <span class="service service-2">Marketing digital</span>
             <span class="chiffre chiffre-2 display-2">03</span>
             <img class="imageService" src="assets/img/png/service-3.png" alt="">
@@ -97,30 +100,32 @@
       </section>
 
       <!-- Nos certifications -->
-      <section class="row mx-5 my-5 pt-4 pb-5 px-5 justify-content-center">
-        <div class="logo col-1 p-1 m-3">
-          <img src="assets/img/png/logo-microsoft.png" alt="Logo du Microsoft Advertising Certified Professional">
-        </div>
-        <div class="logo col-1 p-1 m-3">
-          <img src="assets/img/png/logo-google-creative.png" alt="Logo de Google Ads Creative Certified">
-        </div>
-        <div class="logo col-1 p-1 m-3">
-          <img src="assets/img/png/logo-google-ads-search.png" alt="Logo de Google Ads Serach Certified">
-        </div>
-        <div class="logo col-1 p-1 m-3">
-          <img src="assets/img/png/logo-google-video.png" alt="Logo de Google Ads Video Certified">
-        </div>
-        <div class="logo col-1 p-1 m-3">
-          <img src="assets/img/png/logo-google-shopping.png" alt="Logo de Google Shopping Ads Certified">
-        </div>
-        <div class="logo col-1 p-1 m-3">
-          <img src="assets/img/png/logo-google-ads-display.png" alt="Logo de Google Ads Display Certified">
-        </div>
-        <div class="logo col-1 p-1 m-3">
-          <img src="assets/img/png/logo-google-ads-apps.png" alt="Logo de Google Ads App Certified">
-        </div>
-        <div class="logo col-1 p-1 m-3">
-          <img src="assets/img/png/logo-microsoft-advertising.png" alt="Logo de Microsoft Advertising Native & Display Certification">
+      <section class="pre-scrollable mx-5 my-5 pt-4 pb-5 px-5">
+        <div class="d-flex flex-row">
+          <div class="logo col-md-1 col-sm-4 p-1 m-3">
+            <img src="assets/img/png/logo-microsoft.png" alt="Logo du Microsoft Advertising Certified Professional">
+          </div>
+          <div class="logo col-md-1 col-sm-4 p-1 m-3">
+            <img src="assets/img/png/logo-google-creative.png" alt="Logo de Google Ads Creative Certified">
+          </div>
+          <div class="logo col-md-1 col-sm-4 p-1 m-3">
+            <img src="assets/img/png/logo-google-ads-search.png" alt="Logo de Google Ads Serach Certified">
+          </div>
+          <div class="logo col-md-1 col-sm-4 p-1 m-3">
+            <img src="assets/img/png/logo-google-video.png" alt="Logo de Google Ads Video Certified">
+          </div>
+          <div class="logo col-md-1 col-sm-4 p-1 m-3">
+            <img src="assets/img/png/logo-google-shopping.png" alt="Logo de Google Shopping Ads Certified">
+          </div>
+          <div class="logo col-md-1 col-sm-4 col-1 p-1 m-3">
+            <img src="assets/img/png/logo-google-ads-display.png" alt="Logo de Google Ads Display Certified">
+          </div>
+          <div class="logo col-md-1 col-sm-4 col-1 p-1 m-3">
+            <img src="assets/img/png/logo-google-ads-apps.png" alt="Logo de Google Ads App Certified">
+          </div>
+          <div class="logo col-md-1 col-sm-4 col-1 p-1 m-3">
+            <img src="assets/img/png/logo-microsoft-advertising.png" alt="Logo de Microsoft Advertising Native & Display Certification">
+          </div>
         </div>
       </section>
 
@@ -178,8 +183,9 @@
 
     </main>
 
-    <footer class="mx-5 footer">
-        <div class="footer-text text-white my-5 px-5">
+    <footer class="mx-5">
+      <div class="footer">
+        <div class="footer-text text-white d-flex align-items-center justify-content-center px-5">
           <div class="col-3 d-flex flex-column">
             <img class="footer-logo" src="https://proximityagency.ca/wp-content/themes/proximityagency/assets/imgs/logo/proximity-logo-blanc.png" alt="">
             
@@ -187,7 +193,7 @@
           </div>
           <div class="row col-6">
             <div class="col-3 d-flex flex-column">
-              <h3 class="mb-5"><span>Accueil</span></h3>
+              <h3 class="mb-xl-5 mb-lg-4"><span>Accueil</span></h3>
               <ul>
                 <li>Nos services</li>
                 <li>Certificats</li>
@@ -196,7 +202,7 @@
               </ul>
             </div>
             <div class="col-3 d-flex flex-column">
-              <h3 class="mb-5"><span>Nos services</span></h3>
+              <h3 class="mb-xl-5 mb-lg-4"><span>Nos&nbsp;services</span></h3>
               <ul>
                 <li>Stratégie 360</li>
                 <li>Web & App</li>
@@ -204,7 +210,7 @@
               </ul>
             </div>
             <div class="col-3 d-flex flex-column">
-              <h3 class="mb-5"><span>Suivez nous</span></h3>
+              <h3 class="mb-xl-5 mb-lg-4"><span>Suivez nous</span></h3>
               <ul>
                 <li>Instgram</li>
                 <li>Facebook</li>
@@ -214,20 +220,20 @@
               </ul>
             </div>
             <div class="col-3 d-flex flex-column">
-              <h3 class="mb-5"><span>Coordonnées</span></h3>
+              <h3 class="mb-xl-5 mb-lg-4"><span>Coordonnées</span></h3>
               <span class="footer-contact">+18882293252</span>
               <span class="footer-contact">info@proximityagency.ca</span>
               <span class="footer-contact">161 Av. Oneida, Pointe-claire</span>
-              <span class="footer-contact">Montréal, QC H9R 1A9</span>
+              <span class="footer-contact">Montréal, QC H9R&nbsp;1A9</span>
             </div>
           </div>
-          <div class="col-3 d-flex flex-column justify-content-between align-items-end">
+          <div class="col-3 d-flex flex-column justify-content-around align-items-end h-100">
             <p class="text-uppercase footer-action">Prenons un&nbsp;café</p>
             <span class="footer-langues">Langues</span>
           </div>
         </div>
-      
-      <img class="img-fluid image"src="assets/img/png/footer.png" alt="fond bleu">
+        <img class="img-fluid element-4"src="assets/img/png/element-4.png" alt="element-4">
+      </div>
       <p class="text-center my-3">© 2024 | Alrights reserved by Proximity</p>
     </footer>
 

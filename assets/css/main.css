@@ -177,7 +177,8 @@ li {
 			border: none;
 			display: inline-block;
 			position: relative;
-			font-family: "KSBD";
+			font-family: "KM";
+			font-size: 20px;
 			cursor: pointer;
 		}
 
@@ -189,23 +190,23 @@ li {
 			cursor: pointer;
 			z-index: -1;
 			position: absolute;
-			left: -3px;
-			top: -5px;
-			width: 80%;
+			left: -9px;
+			top: -10px;
+			width: 90%;
 			height: 100%;
-			padding: 1rem;
+			padding: 1.2rem;
 		}
 
 		.btn-prj + span::before {
 			content: "";
 			display: inline-block;
-			width: 112px;
+			width: 130px;
 			height: 47px;
 			border-bottom: 8px solid white;
 			-webkit-transform: translateY(20px) translateX(5px) rotate(26deg);
 			position: absolute;
-			top: -50px;
-			left: 2px;
+			top: -40px;
+			left: 15px;
 		}
 	}
 
@@ -218,6 +219,22 @@ li {
 
 .accueil {
 	.banner {
+		background: rgb(97, 136, 193);
+		background: linear-gradient(
+			126deg,
+			rgba(97, 136, 193, 1) 0%,
+			rgba(5, 14, 33, 1) 29%,
+			rgba(5, 14, 33, 1) 47%,
+			rgba(17, 43, 104, 1) 100%
+		);
+
+		height: 48vw;
+		position: relative;
+		overflow: clip;
+		-moz-border-radius: 2.5vw;
+		-webkit-border-radius: 2.5vw;
+		border-radius: 36vw;
+
 		.banner-content {
 			position: absolute;
 			text-transform: uppercase;
@@ -281,7 +298,7 @@ li {
 
 		.categorie-1 {
 			left: 15vw;
-			top: 3vw;
+			top: 2vw;
 		}
 
 		.categorie-2 {
@@ -308,40 +325,34 @@ li {
 			top: 33vw;
 		}
 
-		.icon-chat {
-			right: 10vw;
-			top: 33vw;
-		}
-
 		.icon-loupe {
-			left: 47vw;
-			top: 4vw;
+			left: 52vw;
+			top: 6vw;
 		}
 
 		.icon-globe {
-			left: 50vw;
+			left: 55vw;
 			top: 25vw;
 		}
 
 		.icon-panier {
-			width: 3vw;
 			right: 12vw;
 			top: 3vw;
 		}
 
 		.icon-location-1 {
-			right: 26.5vw;
-			top: 11vw;
-		}
-
-		.icon-location-2 {
-			right: 15vw;
+			right: 23vw;
 			top: 10vw;
 		}
 
+		.icon-location-2 {
+			right: 12vw;
+			top: 9vw;
+		}
+
 		.icon-location-3 {
-			right: 15.5%;
-			top: 15vw;
+			right: 13%;
+			top: 14vw;
 		}
 
 		.categorie:hover,
@@ -494,6 +505,27 @@ li {
 }
 
 .footer {
+	background: rgb(24, 60, 130);
+	background: linear-gradient(
+		99deg,
+		rgba(24, 60, 130, 1) 0%,
+		rgba(25, 59, 131, 1) 29%,
+		rgba(23, 59, 131, 1) 47%,
+		rgba(0, 0, 0, 1) 100%
+	);
+
+	height: 20vw;
+	position: relative;
+	overflow: clip;
+	border-radius: 200px;
+
+	.element-4 {
+		mix-blend-mode: lighten;
+		position: absolute;
+		margin-top: -65vw;
+		margin-left: -50px;
+	}
+
 	.footer-intro {
 		font-family: "KELI";
 	}
@@ -501,7 +533,8 @@ li {
 		position: absolute;
 		z-index: 2;
 		display: flex;
-		width: calc(100% - 6rem);
+		width: 100%;
+		height: 100%;
 	}
 
 	.footer-logo {
@@ -528,7 +561,7 @@ li {
 
 	.footer-action {
 		font-family: "KSBD";
-		font-size: 3.7rem;
+		font-size: 3.5vw;
 		line-height: 1.1;
 		color: rgba(0, 0, 0, 0);
 		text-align: end;
@@ -539,4 +572,162 @@ li {
 		transform: scale(1.1);
 		cursor: pointer;
 	}
+}
+
+@media screen and (max-width: 768px) {
+	.accueil {
+		.banner {
+			height: 100%;
+			border-radius: 50vw;
+
+			.banner-content {
+				position: absolute;
+				text-transform: uppercase;
+				z-index: 2;
+				width: calc(100% - 2rem);
+			}
+
+			.banner-titre {
+				margin-left: 20vw;
+				margin-top: 22vw;
+
+				.titre {
+					font-size: 6vw;
+				}
+
+				.titre-1 {
+					font-size: 11vw;
+				}
+
+				.titre-2 {
+					font-size: 4.5vw;
+				}
+
+				.titre-3 {
+					font-size: 4.5vw;
+				}
+			}
+
+			.categorie {
+				font-size: 2.5vw;
+			}
+
+			.categorie:before {
+				width: 6vw;
+				height: 6vw;
+				margin-right: -19%;
+				margin-bottom: -8%;
+			}
+
+			.categorie-1 {
+				left: 20vw;
+				top: 8vw;
+			}
+
+			.categorie-2 {
+				left: 65vw;
+				top: 45vw;
+			}
+
+			.categorie-3 {
+				left: 45vw;
+				top: 70vw;
+			}
+
+			.icon {
+				width: 6vw;
+			}
+
+			.icon-chat {
+				right: 16vw;
+				top: 160vw;
+			}
+
+			.icon-loupe {
+				left: 10vw;
+				top: 105vw;
+			}
+
+			.icon-globe {
+				left: 12vw;
+				top: 140vw;
+			}
+
+			.icon-panier {
+				right: 20vw;
+				top: 103vw;
+			}
+
+			.icon-location-1 {
+				right: 46vw;
+				top: 115vw;
+			}
+
+			.icon-location-2 {
+				right: 24vw;
+				top: 113vw;
+			}
+
+			.icon-location-3 {
+				right: 25vw;
+				top: 125vw;
+			}
+
+			.categorie:hover,
+			.icon:hover {
+				transform: scale(1.2);
+			}
+		}
+
+		.services {
+			.display-2 {
+				font-size: 8vw;
+			}
+
+			.service {
+				font-size: 7vw;
+			}
+
+			.service-1 {
+				bottom: 30vw;
+			}
+
+			.service-description {
+				bottom: 25vw;
+				font-size: 4vw;
+			}
+
+			.service-btn {
+				left: 60px;
+				bottom: 10vw;
+				width: 10vw;
+			}
+
+			.service-2 {
+				left: 39%;
+			}
+
+			.chiffre-1 {
+				font-size: 17vw;
+				right: 60px;
+				bottom: 80px;
+			}
+
+			.chiffre-2 {
+				padding: 0 auto;
+				bottom: 83px;
+				left: 25%;
+				font-size: 20vw;
+			}
+		}
+
+		.certifications {
+			overflow-x: scoll;
+			width: 100%;
+			background-color: red;
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
 }
