@@ -93,8 +93,8 @@ html {
 	width: 100%;
 	max-width: 100%;
 	overflow-x: hidden;
-	/* background-color: #fff; */
-	font-size: 15px;
+	font-size: 14px;
+
 }
 
 h1,
@@ -143,7 +143,8 @@ h3:after {
 
 p {
 	margin-bottom: 0;
-	line-height: normal;
+	line-height: 120%;
+	font-size: 14px;
 }
 a {
 	text-decoration: none;
@@ -459,7 +460,7 @@ li {
 
 		.display-3 {
 			font-family: "KSBD";
-			font-size: 2.5rem;
+			font-size: 1.5rem;
 			line-height: 1.2;
 		}
 	}
@@ -576,6 +577,70 @@ li {
 
 @media screen and (max-width: 768px) {
 	.accueil {
+
+		.services {
+
+			.service {
+				font-size: 5vw;
+			}
+
+			.service-1 {
+				bottom: 30vw;
+			}
+
+			.service-description {
+				bottom: 25vw;
+				font-size: 3vw;
+			}
+
+			.service-btn {
+				left: 60px;
+				bottom: 10vw;
+				width: 10vw;
+			}
+
+			.service-2 {
+				left: 42%;
+			}
+
+			.chiffre-1 {
+				font-size: 17vw;
+				right: 60px;
+				bottom: 80px;
+			}
+
+			.chiffre-2 {
+				padding: 0 auto;
+				bottom: 83px;
+				left: 25%;
+				font-size: 20vw;
+			}
+
+
+
+		}
+
+		.certifications {
+			overflow-x: scoll;
+			width: 100%;
+			background-color: red;
+		}
+
+		.apropos {
+			.img-apropos {
+				margin-bottom: 2rem;
+			}
+	
+			.btn-enSavoirPlus {
+				width: 15vw;
+			}
+
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.accueil {
 		.banner {
 			height: 100%;
 			border-radius: 50vw;
@@ -680,13 +745,6 @@ li {
 		}
 
 		.services {
-			.display-2 {
-				font-size: 8vw;
-			}
-
-			.service {
-				font-size: 7vw;
-			}
 
 			.service-1 {
 				bottom: 30vw;
@@ -727,7 +785,4 @@ li {
 			background-color: red;
 		}
 	}
-}
-
-@media screen and (max-width: 650px) {
 }
