@@ -92,6 +92,7 @@ html {
 	background-repeat: repeat;
 	width: 100%;
 	max-width: 100%;
+
 	font-size: 14px;
 }
 
@@ -164,8 +165,10 @@ li {
 	.header-logo {
 		cursor: pointer;
 	}
-	.nav-item {
+	.nav-item,
+	.btn-container {
 		height: 20px;
+		padding: 1rem;
 		cursor: pointer;
 		position: relative;
 
@@ -179,6 +182,7 @@ li {
 			font-family: "KM";
 			font-size: 20px;
 			cursor: pointer;
+			padding: 1rem;
 		}
 
 		.btn-prj + span {
@@ -189,11 +193,10 @@ li {
 			cursor: pointer;
 			z-index: -1;
 			position: absolute;
-			left: -9px;
-			top: -10px;
-			width: 90%;
+			left: 0px;
+			top: 0px;
+			width: 100%;
 			height: 100%;
-			padding: 1.2rem;
 		}
 
 		.btn-prj + span::before {
@@ -206,13 +209,30 @@ li {
 			position: absolute;
 			top: -40px;
 			left: 15px;
+			transition: all 0.3s;
+		}
+
+		.btn-prj:hover {
+			color: white;
 		}
 	}
 
+	.btn-container:hover {
+		background-color: #284e91;
+	}
+
+	.btn-container:hover .btn-prj {
+		color: white;
+	}
+
 	.nav-item:not(:last-child)::after {
+		position: absolute;
 		content: "";
-		margin: 0 1rem;
-		border-left: 1px solid #d0d0d0;
+		width: 1px;
+		height: 20px;
+		right: 0px;
+		top: 15px;
+		background-color: #d0d0d0;
 	}
 }
 
@@ -469,9 +489,24 @@ li {
 			width: 100%;
 		}
 
-		.btn-enSavoirPlus {
-			width: 10vw;
+		.enSavoirPlus {
+			width: 12rem;
+			height: 12rem;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			border: 1px solid #1e3463;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.1rem;
 			cursor: pointer;
+			transition: all 0.3s;
+		}
+		.enSavoirPlus:hover {
+			background-color: #1e3463;
+			color: white;
+			border: 1px solid white;
 		}
 
 		.display-3 {
@@ -603,7 +638,79 @@ li {
 	}
 }
 
+#cursor-1 {
+	background: #1e3463;
+	height: 10px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	position: fixed;
+}
+
+#cursor-2 {
+	background: transparent;
+	border: 1px solid #1e3463;
+	height: 50px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	left: -10%;
+	top: -10%;
+	transform: translate(10%, -50%);
+	position: fixed;
+}
+/* footer on 768px */
 @media screen and (max-width: 768px) {
+	.footer {
+		height: 63vw;
+		position: relative;
+		overflow: clip;
+		-moz-border-radius: 45px;
+		-webkit-border-radius: 45px;
+		border-radius: 45px;
+		padding: 1rem;
+
+		.element-4 {
+			mix-blend-mode: lighten;
+			position: absolute;
+			margin-top: -30vw;
+			margin-left: -30px;
+		}
+
+		.footer-text {
+			flex-wrap: wrap;
+			width: 90%;
+			height: auto;
+			gap: 1rem;
+			margin: 1rem;
+		}
+
+		.col-3 {
+			margin-top: 1.5rem;
+		}
+		.footer-logo {
+			width: 30%;
+		}
+		.actionEtLangues {
+			.footer-action {
+				font-size: 7vw;
+				margin-right: -2rem;
+			}
+
+			.footer-langues {
+				margin-right: -2rem;
+			}
+		}
+	}
+}
+
+/* the real 768px */
+@media screen and (max-width: 767px) {
 	h2 {
 		font-size: 2rem;
 	}
@@ -639,7 +746,7 @@ li {
 
 		.services {
 			.service {
-				font-size: 7vw;
+				font-size: 4vw;
 			}
 
 			.service-1 {
@@ -677,7 +784,7 @@ li {
 				padding: 0 auto;
 				bottom: 8vw;
 				left: 10%;
-				font-size: 30vw;
+				font-size: 20vw;
 			}
 
 			.chiffre-3 {
@@ -701,9 +808,9 @@ li {
 				margin-bottom: 2rem;
 			}
 
-			.btn-enSavoirPlus {
+			/* .enSavoirPlus {
 				width: 25vw;
-			}
+			} */
 
 			p {
 				font-size: 1.2rem;
@@ -719,87 +826,9 @@ li {
 			}
 		}
 	}
-	.footer {
-		height: 63vw;
-		position: relative;
-		overflow: clip;
-		-moz-border-radius: 45px;
-		-webkit-border-radius: 45px;
-		border-radius: 45px;
-		padding: 1rem;
-
-		.element-4 {
-			mix-blend-mode: lighten;
-			position: absolute;
-			margin-top: -30vw;
-			margin-left: -30px;
-		}
-
-		.footer-text {
-			flex-wrap: wrap;
-			width: 90%;
-			height: auto;
-			gap: 1rem;
-			margin: 1rem;
-		}
-
-		.col-3 {
-			padding-left: 0;
-			padding-right: 0;
-			margin-top: 1.5rem;
-		}
-		.footer-logo {
-			width: 30%;
-		}
-		.actionEtLangues {
-			.footer-action {
-				font-size: 7vw;
-			}
-		}
-	}
 }
 
 @media screen and (max-width: 650px) {
-	/* .header {
-		.header-logo {
-			width: 30vw;
-		}
-		.nav-item {
-			height: 20px;
-
-			.btn-prj {
-				font-size: 14px;
-			}
-
-			.btn-prj + span {
-				left: -2px;
-				top: -7px;
-				width: 80%;
-				height: 100%;
-				padding: 1rem;
-			}
-
-			.btn-prj + span::before {
-				content: "";
-				display: inline-block;
-				width: 130px;
-				height: 47px;
-				border-bottom: 8px solid white;
-				-webkit-transform: translateY(20px) translateX(5px)
-					rotate(26deg);
-				position: absolute;
-				top: -40px;
-				left: 15px;
-			}
-		}
-
-		.nav-item:not(:last-child)::after {
-			content: "";
-			margin: 0 1rem;
-			border-left: 1px solid #d0d0d0;
-		}
-	} */
-
 	.accueil {
 		.banner {
 			height: 100%;
@@ -910,56 +939,58 @@ li {
 		}
 
 		.services {
+			.service {
+				font-size: 6vw;
+			}
 			.service-1 {
-				bottom: 30vw;
+				bottom: 35vw;
 			}
 
 			.service-description {
-				bottom: 25vw;
+				bottom: 29vw;
 				font-size: 4vw;
 			}
 
 			.service-btn {
-				left: 40px;
+				left: 7%;
 				bottom: 10vw;
 				width: 13vw;
 			}
 
 			.service-2 {
-				top: 50px;
-
+				top: 8%;
 				left: 37%;
 			}
 			.service-3 {
-				top: 50px;
+				top: 8%;
 				left: 43%;
 			}
 
 			.chiffre-1 {
 				font-size: 19vw;
-				right: 20px;
-				bottom: 60px;
+				right: 5%;
+				bottom: 10%;
 			}
 
 			.chiffre-2 {
 				padding: 0 auto;
-				bottom: 50px;
+				bottom: 8%;
 				left: 16%;
 				font-size: 25vw;
 			}
 
 			.chiffre-3 {
 				padding: 0 auto;
-				bottom: 50px;
+				bottom: 8%;
 				left: 22%;
 				font-size: 25vw;
 			}
 		}
 
 		.apropos {
-			.btn-enSavoirPlus {
+			/* .enSavoirPlus {
 				width: 30vw;
-			}
+			} */
 		}
 
 		.elements {
@@ -982,6 +1013,9 @@ li {
 			scale: 1.2;
 		}
 
+		.col-3 {
+			padding: 0;
+		}
 		.footer-text {
 			margin: 1rem 0;
 			font-size: 12px;
