@@ -397,84 +397,95 @@ li {
 			-moz-border-radius: 50px;
 			-webkit-border-radius: 50px;
 			border-radius: 50px;
+			object-fit: cover;
 		}
 
-		.display-2 {
-			font-family: "KSBD";
-			font-size: 8vw;
-			line-height: 1.2;
-			-webkit-text-stroke: 1px white;
+		.services-wrapper {
+			display: flex;
+			gap: 1rem;
+			position: relative;
+
+			.service-wrapper {
+				flex: 1 1 20vw;
+				height: 700px;
+			}
+
 		}
 
-		.service {
+		.service-text {
+		
 			position: absolute;
 			text-transform: uppercase;
 			z-index: 2;
-			font-size: 3vw;
+			font-size: 40px;
 			font-family: "KSBD";
-		}
-
-		.service-1 {
-			left: 60px;
-			bottom: 18vw;
-		}
-
-		.service-description {
-			left: 60px;
-			bottom: 15vw;
-			text-transform: none;
-			font-size: 2vw;
-			font-family: "KR";
-		}
-
-		.service-btn {
-			left: 60px;
-			bottom: 8vw;
-			width: 6vw;
-			cursor: pointer;
-		}
-
-		.service-2 {
-			top: 75px;
-			left: 38%;
+			margin-left: 13%;
+			margin-top:50px;
 			writing-mode: vertical-lr;
+			width: 100%;
+
+			
+			.service-description {
+				display: none;
+				position: absolute;
+				text-transform: none;
+				font-size: 2vw;
+				font-family: "KR";
+			}
+
+			.service-btn {
+				display: none;
+				position: absolute;
+				width: 6vw;
+				cursor: pointer;
+				margin-top: 4rem;
+			}
 		}
 
-		.service-3 {
-			top: 75px;
-			left: 40%;
-			writing-mode: vertical-lr;
+
+		.service-wrapper:hover {
+			flex: 1 1 40vw;
+		}
+
+		.service-wrapper:hover .service-text{
+			writing-mode: horizontal-tb; 
+			bottom: 190px;
+			margin-left: 5%;
+		}
+
+		.service-wrapper:hover .service-description,
+		.service-wrapper:hover .service-btn
+		{
+			display:block;
+			writing-mode: horizontal-tb; 
 		}
 
 		.chiffre {
 			position: absolute;
+			font-family: "KSBD";
 			text-transform: uppercase;
 			z-index: 2;
 			line-height: 0.8;
 			color: rgba(0, 0, 0, 0);
-		}
-
-		.chiffre-1 {
-			right: 40px;
-			bottom: 94px;
-		}
-
-		.chiffre-2 {
 			padding: 0 auto;
-			bottom: 83px;
-			left: 19%;
+			bottom: 30px;
 			font-size: 12vw;
+			margin-left: 9%;
+			line-height: 1.2;
+			-webkit-text-stroke: 1px white;
+			
 		}
 
-		.chiffre-3 {
-			padding: 0 auto;
-			bottom: 83px;
-			left: 21%;
-			font-size: 12vw;
+		.service-wrapper:hover .chiffre {
+			font-size: 8vw;
+			margin-left: 30%;
+			margin-right: 9%;
 		}
 	}
 
+
 	.logo {
+		width: 15%;
 		justify-content: space-between;
 	}
 
@@ -587,9 +598,7 @@ li {
 		position: absolute;
 		z-index: 2;
 		display: flex;
-		justify-content: flex-start;
-		align-items: start;
-		width: 100%;
+		justify-content: space-between;
 		height: 100%;
 	}
 
