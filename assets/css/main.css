@@ -404,166 +404,179 @@ li {
 			display: flex;
 			gap: 1rem;
 			position: relative;
+			height: 900px;
+		}
 
-			.service-wrapper {
-				flex: 1 1 20vw;
-				height: 700px;
-			}
+		.service-wrapper {
+			/* width: 33vw; */
+			width: 33%;
+			overflow: hidden;
+			height: 100%;
+			transition: width 1s ease-in-out;
+		}
 
+		.service-wrapper:hover {
+			width: 50%;
 		}
 
 		.service-text {
-		
 			position: absolute;
-			text-transform: uppercase;
 			z-index: 2;
-			font-size: 40px;
-			font-family: "KSBD";
-			margin-left: 13%;
-			margin-top:50px;
-			writing-mode: vertical-lr;
-			width: 100%;
 
-			
+			.service-name {
+				display: block;
+				position: absolute;
+				white-space: nowrap;
+				font-size: 56px;
+				font-family: "KSBD";
+				left: 13vw;
+				margin-top: 50px;
+				writing-mode: vertical-lr;
+				text-transform: uppercase;
+			}
+
 			.service-description {
 				display: none;
-				position: absolute;
-				text-transform: none;
-				font-size: 2vw;
-				font-family: "KR";
 			}
 
 			.service-btn {
 				display: none;
-				position: absolute;
+			}
+		}
+
+		.service-wrapper:hover .service-text {
+			bottom: 5vw;
+			margin-left: 5%;
+
+			.service-name {
+				writing-mode: horizontal-tb;
+				font-size: 40px;
+				font-family: "KSBD";
+				margin-top: 0px;
+				left: 0;
+				text-transform: uppercase;
+			}
+
+			.service-description {
+				text-transform: none;
+				font-size: 2vw;
+				font-family: "KR";
+				margin-top: 4rem;
+				display: block;
+			}
+
+			.service-btn {
+				display: block;
 				width: 6vw;
 				cursor: pointer;
 				margin-top: 4rem;
 			}
 		}
-
-
-		.service-wrapper:hover {
-			flex: 1 1 40vw;
-		}
-
-		.service-wrapper:hover .service-text{
-			writing-mode: horizontal-tb; 
-			bottom: 190px;
-			margin-left: 5%;
-		}
-
-		.service-wrapper:hover .service-description,
-		.service-wrapper:hover .service-btn
-		{
-			display:block;
-			writing-mode: horizontal-tb; 
-		}
-
-		.chiffre {
-			position: absolute;
-			font-family: "KSBD";
-			text-transform: uppercase;
-			z-index: 2;
-			line-height: 0.8;
-			color: rgba(0, 0, 0, 0);
-			padding: 0 auto;
-			bottom: 30px;
-			font-size: 12vw;
-			margin-left: 9%;
-			line-height: 1.2;
-			-webkit-text-stroke: 1px white;
-			
-		}
-
-		.service-wrapper:hover .chiffre {
-			font-size: 8vw;
-			margin-left: 30%;
-			margin-right: 9%;
-		}
 	}
 
-
-	.logo {
-		width: 15%;
-		justify-content: space-between;
-	}
-
-	.apropos {
-		.img-apropos {
-			aspect-ratio: 5 / 8;
-			-moz-border-radius: 45px;
-			-webkit-border-radius: 45px;
-			border-radius: 45px;
-			object-fit: cover;
-			object-position: 20%;
-			width: 100%;
-		}
-
-		.enSavoirPlus {
-			width: 12rem;
-			height: 12rem;
-			-moz-border-radius: 50%;
-			-webkit-border-radius: 50%;
-			border-radius: 50%;
-			border: 1px solid #1e3463;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 1.1rem;
-			cursor: pointer;
-			transition: all 0.3s;
-		}
-		.enSavoirPlus:hover {
-			background-color: #1e3463;
-			color: white;
-			border: 1px solid white;
-		}
-
-		.display-3 {
-			font-family: "KSBD";
-			font-size: 1.5rem;
-			line-height: 1.2;
-		}
-	}
-
-	.elements {
+	.service-number {
 		position: absolute;
-		width: 100vw;
-		height: 100vh;
-		top: 160vw;
-		z-index: -1;
+		font-family: "KSBD";
+		text-transform: uppercase;
+		z-index: 2;
+		line-height: 0.8;
+		color: rgba(0, 0, 0, 0);
+		padding: 0 auto;
+		bottom: 30px;
+		font-size: 12vw;
+		margin-left: 9%;
+		line-height: 1.2;
+		-webkit-text-stroke: 1px white;
+		transition: all 1s ease-in-out;
+	}
 
-		.element {
-			content: "";
-			display: inline-block;
-			-webkit-background-clip: padding-box; /* for Safari */
-			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
-		}
-		.element-1 {
-			height: 1px;
-			height: 30vw;
-			position: absolute;
-			margin-top: 100px;
-			left: 20vw;
-			border-left: 1px solid rgba(34, 41, 80, 0.16);
-			top: 0;
-		}
+	.service-wrapper:hover .service-number {
+		font-size: 8vw;
+		margin-left: 30%;
+		margin-right: 9%;
+		bottom: 5vw;
+	}
+}
 
-		.element-2 {
-			height: 1px;
-			width: 15vw;
-			position: absolute;
-			margin-left: -50px;
-			margin-top: 300px;
-			border-bottom: 1px solid rgba(34, 41, 80, 0.16);
-		}
+.logo {
+	width: 15%;
+	justify-content: space-between;
+}
 
-		.element-3 {
-			width: 30vw;
-			margin-left: 90vw;
-			margin-top: 80px;
-		}
+.apropos {
+	.img-apropos {
+		aspect-ratio: 5 / 8;
+		-moz-border-radius: 45px;
+		-webkit-border-radius: 45px;
+		border-radius: 45px;
+		object-fit: cover;
+		object-position: 20%;
+		width: 100%;
+	}
+
+	.enSavoirPlus {
+		width: 12rem;
+		height: 12rem;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		border: 1px solid #1e3463;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.1rem;
+		cursor: pointer;
+		transition: all 0.3s;
+	}
+	.enSavoirPlus:hover {
+		background-color: #1e3463;
+		color: white;
+		border: 1px solid white;
+	}
+
+	.display-3 {
+		font-family: "KSBD";
+		font-size: 1.5rem;
+		line-height: 1.2;
+	}
+}
+
+.elements {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 160vw;
+	z-index: -1;
+
+	.element {
+		content: "";
+		display: inline-block;
+		-webkit-background-clip: padding-box; /* for Safari */
+		background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+	}
+	.element-1 {
+		height: 1px;
+		height: 30vw;
+		position: absolute;
+		margin-top: 100px;
+		left: 20vw;
+		border-left: 1px solid rgba(34, 41, 80, 0.16);
+		top: 0;
+	}
+
+	.element-2 {
+		height: 1px;
+		width: 15vw;
+		position: absolute;
+		margin-left: -50px;
+		margin-top: 300px;
+		border-bottom: 1px solid rgba(34, 41, 80, 0.16);
+	}
+
+	.element-3 {
+		width: 30vw;
+		margin-left: 90vw;
+		margin-top: 80px;
 	}
 }
 
@@ -758,11 +771,6 @@ li {
 				font-size: 4vw;
 			}
 
-			.service-1 {
-				left: 6vw;
-				bottom: 27vw;
-			}
-
 			.service-description {
 				left: 6vw;
 				bottom: 22vw;
@@ -773,10 +781,6 @@ li {
 				left: 6vw;
 				bottom: 6vw;
 				width: 12vw;
-			}
-
-			.service-2 {
-				left: 36%;
 			}
 
 			.service-3 {

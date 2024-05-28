@@ -1,7 +1,6 @@
 let cursor1 = document.querySelector('#cursor-1'),
     cursor2 = document.querySelector('#cursor-2');
 
-console.log(cursor1);
 
 
 document.body.onpointermove = event => 
@@ -21,3 +20,4 @@ document.body.onpointermove = event =>
         }, {duration: 100, fill: "forwards"})
     
 }
+
