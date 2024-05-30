@@ -98,17 +98,6 @@
       arrows: false,
       pauseOnHover:false
     });
-    $(".slider-filiales").slick({
-      dots: false,
-      infinite: true,
-      speed: 900,
-      autoplay: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      pauseOnHover:false
-    });
-
   </script>
 </body>
 </html>

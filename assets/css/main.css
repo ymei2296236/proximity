@@ -78,6 +78,12 @@
 	font-display: swap;
 }
 
+:root {
+	--color_proximity: #2e4586;
+	--color_webapp: #55d0ff;
+	--color_highlight: #1db1ff;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -88,7 +94,7 @@ html {
 	font-family: "KR", sans-serif;
 	overflow-x: hidden;
 	line-height: normal;
-	color: #1e3463;
+	color: var(--color_proximity);
 	background-repeat: repeat;
 	width: 100%;
 	max-width: 100%;
@@ -119,12 +125,12 @@ h2::after {
 	width: 120px;
 	margin-right: -100%;
 	margin-left: 10px;
-	border-top: 1px solid #1e3463;
+	border-top: 1px solid var(--color_proximity);
 }
 
 h3 {
 	font-size: 15px;
-	color: #1db1ff;
+	color: var(--color_highlight);
 	overflow: clip;
 }
 
@@ -136,7 +142,7 @@ h3::after {
 	width: 30px;
 	margin-right: -100%;
 	margin-left: 10px;
-	border-top: 1px solid #1db1ff;
+	border-top: 1px solid var(--color_highlight);
 }
 
 p {
@@ -160,19 +166,66 @@ li {
 	list-style: none;
 }
 
+.nav {
+	.header-logo {
+		cursor: pointer;
+	}
+	.nav-item {
+		padding: 1rem;
+		cursor: pointer;
+		position: relative;
+	}
+}
+
+.btn {
+	background-color: #8ddffe;
+	padding: 1rem 2rem;
+	border-radius: 30px;
+	cursor: pointer;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: white;
+
+	.bold {
+		font-family: "KSBD";
+	}
+}
+
+.marquee {
+	position: relative;
+	width: 100vw;
+	max-width: 100%;
+	height: 14vw;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+	.marquee-track {
+		position: absolute;
+		white-space: nowrap;
+		will-change: transform;
+		animation: marquee 40s linear infinite;
+	}
+}
+
 .display-1 {
 	font-family: "KSBD";
 	font-size: 13.6vw;
 	line-height: 1.2;
 	-webkit-text-fill-color: white;
-	-webkit-text-stroke: 1px #284e91;
+	-webkit-text-stroke: 1px var(--color_proximity);
 }
 
-.header {
+.display-2 {
+	font-family: "KSBD";
+	font-size: 3rem;
+	line-height: 1.2;
+}
+
+.nav-proximity {
 	.header-logo {
 		cursor: pointer;
 	}
-	.nav-item,
+
 	.btn-container {
 		height: 20px;
 		padding: 1rem;
@@ -182,7 +235,7 @@ li {
 		.btn-prj {
 			background-color: transparent;
 			z-index: 1;
-			color: #284e91;
+			color: var(--color_proximity);
 			border: none;
 			display: inline-block;
 			position: relative;
@@ -193,8 +246,8 @@ li {
 		}
 
 		.btn-prj + span {
-			border: 3px solid #284e91;
-			color: #284e91;
+			border: 3px solid var(--color_proximity);
+			color: var(--color_proximity);
 			background-color: #fff;
 			font-family: "KSBD";
 			cursor: pointer;
@@ -209,13 +262,13 @@ li {
 		.btn-prj + span::before {
 			content: "";
 			display: inline-block;
-			width: 130px;
+			width: 160px;
 			height: 47px;
 			border-bottom: 8px solid white;
 			-webkit-transform: translateY(20px) translateX(5px) rotate(26deg);
 			position: absolute;
 			top: -40px;
-			left: 15px;
+			left: 13px;
 			transition: all 0.3s;
 		}
 
@@ -225,14 +278,14 @@ li {
 	}
 
 	.btn-container:hover {
-		background-color: #284e91;
+		background-color: var(--color_proximity);
 	}
 
 	.btn-container:hover .btn-prj {
 		color: white;
 	}
 
-	.nav-item:not(:last-child)::after {
+	.nav-item::after {
 		position: absolute;
 		content: "";
 		width: 1px;
@@ -243,7 +296,7 @@ li {
 	}
 }
 
-.accueil {
+.home {
 	.banner {
 		background: rgb(97, 136, 193);
 		background: linear-gradient(
@@ -268,11 +321,11 @@ li {
 			width: calc(100% - 2rem);
 		}
 
-		.banner-titre {
+		.banner-title {
 			margin-left: 10vw;
 			margin-top: 10vw;
 
-			.titre {
+			.title {
 				display: block;
 				left: 50px;
 				font-family: "KSBD";
@@ -281,18 +334,18 @@ li {
 				cursor: pointer;
 			}
 
-			.titre-1 {
+			.title-1 {
 				font-size: 6vw;
 				line-height: 70%;
 			}
 
-			.titre-2 {
+			.title-2 {
 				font-family: "KT";
 				font-size: 2.4vw;
 				line-height: 110%;
 			}
 
-			.titre-3 {
+			.title-3 {
 				font-size: 2.4vw;
 			}
 		}
@@ -317,7 +370,7 @@ li {
 			-moz-border-radius: 2.5vw;
 			-webkit-border-radius: 2.5vw;
 			border-radius: 50%;
-			background-color: #1db1ff;
+			background-color: var(--color_highlight);
 			margin-right: -19%;
 			margin-bottom: -8%;
 		}
@@ -384,22 +437,6 @@ li {
 		.categorie:hover,
 		.icon:hover {
 			transform: scale(1.2);
-		}
-	}
-
-	.marquee {
-		position: relative;
-		width: 100vw;
-		max-width: 100%;
-		height: 14vw;
-		overflow-x: hidden;
-		overflow-y: hidden;
-
-		.marquee-track {
-			position: absolute;
-			white-space: nowrap;
-			will-change: transform;
-			animation: marquee 40s linear infinite;
 		}
 	}
 
@@ -523,7 +560,6 @@ li {
 		.service-wrapper:hover .service-number {
 			font-size: 8vw;
 			margin-left: 28%;
-
 			bottom: 5vw;
 		}
 	}
@@ -545,7 +581,7 @@ li {
 			-moz-border-radius: 50%;
 			-webkit-border-radius: 50%;
 			border-radius: 50%;
-			border: 1px solid #1e3463;
+			border: 1px solid var(--color_proximity);
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -554,15 +590,9 @@ li {
 			transition: all 0.3s;
 		}
 		.enSavoirPlus:hover {
-			background-color: #1e3463;
+			background-color: var(--color_proximity);
 			color: white;
 			border: 1px solid white;
-		}
-
-		.display-3 {
-			font-family: "KSBD";
-			font-size: 1.5rem;
-			line-height: 1.2;
 		}
 
 		.elements {
@@ -610,15 +640,209 @@ li {
 	}
 }
 
-.webApp {
+.nav-webapp {
+	height: 62px;
+	.header-logo::after {
+		position: absolute;
+		content: "";
+		width: 1px;
+		height: 30px;
+		top: 1px;
+		margin-left: 10px;
+		background-color: var(--color_proximity);
+	}
+	.site-name {
+		color: var(--color_highlight);
+		font-family: "KSBD";
+	}
+	.nav-item {
+		text-transform: uppercase;
+		margin-right: 3rem;
+		font-family: "KSBD";
+		padding: 0;
+
+		.nav-link {
+			color: var(--color_proximity);
+		}
+
+		i {
+			color: var(--color_webapp);
+		}
+	}
+	.btn {
+		padding: 1rem 5rem;
+		font-family: "KSBD";
+	}
+}
+
+.webapp-home {
 	.banner {
-		background-image: url("assets/img/png/banner.png");
 		height: 48vw;
 		position: relative;
-		overflow: clip;
-		-moz-border-radius: 36vw;
-		-webkit-border-radius: 36vw;
-		border-radius: 36vw;
+
+		.banner-content {
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			width: 100%;
+			height: 100%;
+
+			.banner-text {
+				padding: 8vw 10vw;
+				padding-right: 0;
+				color: white;
+				display: flex;
+				flex-direction: column;
+				gap: 3vw;
+
+				.banner-title {
+					margin-right: 10vw;
+				}
+
+				.title {
+					font-family: "KSBD";
+					font-size: 4vw;
+					line-height: 100%;
+					display: block;
+				}
+
+				.title-lg {
+					position: absolute;
+					font-family: "KSBD";
+					font-size: 9vw;
+					margin-bottom: 1rem;
+					color: rgba(0, 0, 0, 0);
+					text-align: end;
+					-webkit-text-stroke: 2px white;
+					top: 20%;
+					right: 9%;
+				}
+
+				.banner-p {
+					padding-right: 8rem;
+				}
+
+				.btn {
+					padding: 0;
+				}
+				.btn-acheter {
+					border: 1px solid white;
+					background-color: white;
+					padding-right: 1rem;
+					color: var(--color_webapp);
+					display: flex;
+					align-items: center;
+
+					.bold {
+						padding: 1rem;
+						padding-right: 0.5rem;
+						border-radius: 30px;
+						color: white;
+
+						font-family: "KBD";
+						background-color: var(--color_webapp);
+					}
+				}
+
+				.btn-demander {
+					background-color: #1e3463;
+					padding: 1rem;
+				}
+			}
+		}
+
+		.visual {
+			position: absolute;
+			z-index: 2;
+			cursor: pointer;
+		}
+
+		.visual-play {
+			width: 5vw;
+			left: 16%;
+			top: 4vw;
+		}
+		.visual-cible {
+			width: 5vw;
+			left: 2%;
+			bottom: 10vw;
+		}
+
+		.visual-rocket {
+			width: 3vw;
+			left: 60%;
+			top: 10%;
+		}
+		.visual-loupe {
+			width: 5vw;
+			right: 0%;
+			top: 33%;
+		}
+
+		.visual:hover {
+			transform: scale(1.2);
+		}
+
+		.banner-image {
+			overflow: clip;
+			-moz-border-radius: 36vw;
+			-webkit-border-radius: 36vw;
+			border-radius: 36vw;
+			height: 100%;
+		}
+	}
+
+	.display-1 {
+		-webkit-text-stroke: 1px #61d2fe;
+	}
+
+	.apropos {
+		color: #1e3463;
+		margin: 8vw;
+		padding: 5vw;
+		background-color: #f9f9fb;
+
+		p,
+		li {
+			color: #333a3d;
+			font-family: "KL";
+		}
+
+		> div:last-child {
+			border-radius: 20px;
+		}
+		img {
+			height: 100%;
+			object-fit: cover;
+			padding: 0 0.5rem;
+			border-radius: 20px;
+		}
+
+		.list-group-item {
+			border: 0px;
+			padding: 0.75rem 0;
+			font-size: 18px;
+
+			i {
+				color: var(--color_webapp);
+				margin-right: 0.5rem;
+			}
+		}
+
+		.ceo {
+			color: #333a3d;
+			font-size: 18px;
+			font-family: "KL";
+			border-top: 1px solid #333a3d;
+		}
+
+		.ceo-image {
+			border-radius: 100px;
+		}
+		.ceo-name {
+			font-family: "KM";
+			font-size: 20px;
+		}
 	}
 }
 .footer {
@@ -674,7 +898,7 @@ li {
 
 	li:hover,
 	.footer-langues:hover {
-		color: #1db1ff;
+		color: var(--color_highlight);
 		transform: scale(1.1);
 	}
 
@@ -691,7 +915,7 @@ li {
 			margin-bottom: 1rem;
 			color: rgba(0, 0, 0, 0);
 			text-align: end;
-			-webkit-text-stroke: 1px #1db1ff;
+			-webkit-text-stroke: 1px var(--color_highlight);
 		}
 
 		.footer-action:hover {
@@ -702,7 +926,7 @@ li {
 }
 
 #cursor-1 {
-	background: #1e3463;
+	background: var(--color_proximity);
 	height: 10px;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -716,7 +940,7 @@ li {
 
 #cursor-2 {
 	background: transparent;
-	border: 1px solid #1e3463;
+	border: 1px solid var(--color_proximity);
 	height: 50px;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -900,9 +1124,6 @@ li {
 		}
 
 		.apropos {
-			.display-3 {
-				font-size: 2rem;
-			}
 			.img-apropos {
 				margin-bottom: 2rem;
 			}
@@ -941,23 +1162,23 @@ li {
 				width: calc(100% - 2rem);
 			}
 
-			.banner-titre {
+			.banner-title {
 				margin-left: 20vw;
 				margin-top: 22vw;
 
-				.titre {
+				.title {
 					font-size: 6vw;
 				}
 
-				.titre-1 {
+				.title-1 {
 					font-size: 11vw;
 				}
 
-				.titre-2 {
+				.title-2 {
 					font-size: 4.5vw;
 				}
 
-				.titre-3 {
+				.title-3 {
 					font-size: 4.5vw;
 				}
 			}
