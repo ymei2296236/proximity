@@ -28,7 +28,7 @@
 
   <footer class="mx-lg-5 mx-3">
     <div class="footer">
-      <div class="footer-text text-white d-flex align-items-center justify-content-between">
+      <div class="footer-text text-white d-flex align-items-center justify-content-between px-5">
         <div class="col-lg-3 col-md-12 d-flex flex-column pl-5">
           <img class="footer-logo" src="https://proximityagency.ca/wp-content/themes/proximityagency/assets/imgs/logo/proximity-logo-blanc.png" alt="">
           
@@ -98,17 +98,6 @@
       arrows: false,
       pauseOnHover:false
     });
-    $(".slider-filiales").slick({
-      dots: false,
-      infinite: true,
-      speed: 900,
-      autoplay: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      pauseOnHover:false
-    });
-
   </script>
 </body>
 </html>
