@@ -10,14 +10,14 @@ require_once("nav-proximity.php");
     <section class="banner mx-3 mb-4">
       <div class="banner-content mx-5 my-5 text-white">
 
-        <div class="banner-titre">
-          <span class="titre">The</span>
-          <span class="titre titre-1">Proximity</span>
-          <span class="titre ">agency</span>
-          <span class="titre titre-2">closer to</span>
-          <span class="titre titre-3">the future</span>
-          <span class="titre titre-2">than</span>
-          <span class="titre titre-2">the present</span>
+        <div class="banner-title">
+          <span class="title">The</span>
+          <span class="title title-1">Proximity</span>
+          <span class="title ">agency</span>
+          <span class="title title-2">closer to</span>
+          <span class="title title-3">the future</span>
+          <span class="title title-2">than</span>
+          <span class="title title-2">the present</span>
         </div>
         <div>
           <span class="categorie categorie-1"><span class="darkText">Mar</span>keting&nbsp;digital</span>
