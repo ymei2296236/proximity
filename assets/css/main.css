@@ -651,7 +651,6 @@ li {
 
 .nav-webapp {
 	height: 62px;
-
 	.header-logo::after {
 		position: absolute;
 		content: "";
@@ -860,6 +859,12 @@ li {
 		margin: 8vw;
 		padding: 5vw;
 		background-color: #f9f9fb;
+
+		p,
+		li {
+			color: #333a3d;
+			font-family: "KL";
+		}
 
 		> div:last-child {
 			border-radius: 20px;
