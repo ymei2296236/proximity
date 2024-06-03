@@ -21,3 +21,16 @@ let cursor1 = document.querySelector('#cursor-1'),
     
 // }
 
+
+let elProgress = document.querySelector('[data-js-progress]'),
+    elProgressBar = elProgress.querySelector('[data-js-progress-bar]');
+
+elProgress.addEventListener('mouseover', function(){
+    elProgressBar.style="width:100%";
+});
+elProgress.addEventListener('mouseout', function(){
+    elProgressBar.style="width:40%";
+});
+
+console.log(elProgress);
+

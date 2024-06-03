@@ -1,7 +1,7 @@
 <?php 
 $title="Home";
 require_once("header.php"); 
-require_once("nav-proximity.php"); 
+require_once("nav.php"); 
 ?>
 
 
@@ -157,7 +157,7 @@ require_once("nav-proximity.php");
           </div>
         </div>
       </div>
-      <p class="text-center text-uppercase my-5">« Nous avons accompagné les plus grandes marques dans le développement et la continuité de leur histoire. »</p>
+
       <div class="elements">
         <span class="element element-1"></span>
         <span class="element element-2"></span>

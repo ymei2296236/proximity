@@ -1,3 +1,6 @@
+    <p class="text-center text-uppercase my-5">« Nous avons accompagné les plus grandes marques dans le développement et la continuité de leur histoire. »</p>
+      
+    
     <!-- Nos partenaires -->
     <section class=" row my-md-5 my-sm-0 pt-4 pb-5 mx-5 px-5 justify-content-center">
 
@@ -64,7 +67,7 @@
           </div>
           <div class="col-3 d-flex flex-column">
             <h3 class="mb-xl-5 mb-lg-4 mb-sm-4"><span>Coordonnées</span></h3>
-            <span class="footer-contact">+18882293252</span>
+            <span class="footer-contact">+1 888 229 3252</span>
             <span class="footer-contact">info@proximityagency.ca</span>
             <span class="footer-contact">161 Av. Oneida, Pointe-claire</span>
             <span class="footer-contact">Montréal, QC H9R&nbsp;1A9</span>
@@ -98,6 +101,7 @@
       arrows: false,
       pauseOnHover:false
     });
+
   </script>
 </body>
 </html>

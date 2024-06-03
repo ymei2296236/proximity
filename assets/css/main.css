@@ -178,9 +178,9 @@ li {
 }
 
 .btn {
-	background-color: #8ddffe;
+	background-color: #55d0ff;
 	padding: 1rem 2rem;
-	border-radius: 30px;
+	border-radius: 100px;
 	cursor: pointer;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -191,6 +191,7 @@ li {
 		font-family: "KSBD";
 	}
 }
+
 
 .marquee {
 	position: relative;
@@ -228,6 +229,23 @@ li {
 
 .w-60 {
 	width: 60% !important;
+}
+
+.icon-tick{
+	width: 25px;
+	height: 25px;
+	border-radius: 50px;
+	background-color: var(--color_webapp);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.4rem;
+}
+
+.icon-arrow {
+	width: 25px;
+	height: 25px;
+	transform: rotate(90deg);
 }
 
 .nav-proximity {
@@ -651,6 +669,8 @@ li {
 
 .nav-webapp {
 	height: 62px;
+	font-size: 20px;
+
 	.header-logo::after {
 		position: absolute;
 		content: "";
@@ -666,7 +686,7 @@ li {
 	}
 	.nav-item {
 		text-transform: uppercase;
-		margin-right: 3rem;
+		margin-right: 1rem;
 		font-family: "KSBD";
 		padding: 0;
 
@@ -679,12 +699,57 @@ li {
 		}
 	}
 	.btn {
-		padding: 1rem 5rem;
+		padding: 1rem 3rem;
 		font-family: "KSBD";
+		color: #2e4586;
+		font-size: 26px;
+	}
+	
+	.btn:hover {
+		color: white;
 	}
 }
 
 .webapp-home {
+
+	.progress {
+		
+		color: red;
+		position: relative;
+		height:57px;
+		width: 250px;
+		font-family: "KL";
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		border-radius: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 16px;
+
+	 }
+	
+	 .progress-bar {
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		width:40%;
+		height: 100%;
+
+		padding: 1rem 2rem;
+		transition: width 1s ease-in; 
+		background-color: #55d0ff;
+		border-radius: 100px;
+		cursor: pointer;
+		color: white;
+	 }
+	
+	 .progress-bar-back {
+		position: absolute;
+		z-index: 1;
+		margin: 1rem 0;
+
+	 }
 	p,
 	li {
 		color: #333a3d;
@@ -723,8 +788,8 @@ li {
 		color: rgba(0, 0, 0, 0);
 		text-align: end;
 		-webkit-text-stroke: 2px white;
-		top: 20%;
-		right: 59%;
+		top: 23%;
+		right: 54%;
 	}
 
 	.display-1 {
@@ -739,6 +804,9 @@ li {
 	.section-title {
 		margin-left: 8vw;
 	}
+
+
+
 	.btn-lire {
 		text-transform: uppercase;
 		font-size: 18px;
@@ -781,7 +849,8 @@ li {
 				}
 
 				.banner-p {
-					padding-right: 8rem;
+					padding-right: 4vw;
+
 				}
 
 				.btn {
@@ -809,6 +878,10 @@ li {
 				.btn-demander {
 					background-color: #1e3463;
 					padding: 1rem;
+				}
+
+				.btn-demander:hover {
+					color:var(--color_webapp)
 				}
 			}
 		}
@@ -945,12 +1018,13 @@ li {
 	.chiffres {
 		background-color: #fafafb;
 		position: relative;
-		padding-bottom: 10vw;
+		padding-bottom: 18vw;
 
 		.chiffres-list {
 			position: absolute;
 			z-index: 2;
 			bottom: 10%;
+			width: 90%;
 		}
 		.chiffre {
 			background-color: white;
@@ -1020,13 +1094,16 @@ li {
 		background-color: #fafafb;
 	}
 
-	.tarif {
+	.tarifs {
+		background-image: url('../img/png/banner-webapp.png');
 		background-color: var(--color_webapp);
-		color: white;
+
 
 		h2::after {
 			border-top: 1px solid white;
 		}
+		
+		
 
 		.toggle {
 			font-size: 20px;
@@ -1061,6 +1138,112 @@ li {
 			margin-left: 0.5rem;
 			font-size: 16px;
 		}
+
+		.tarif {
+			background-color: white;
+			border-radius: 200px;
+			font-family: 'KM';
+			flex:1;
+
+			.tarif-name {
+				font-size: 29px;
+				color:#1e3463;
+			}
+			.tarif-amount {
+				color:var(--color_webapp);
+				font-size: 78px;
+				
+			}
+			
+			sup {
+				font-size: 40px;
+				top:-0.8em;
+			}
+
+			.tarif-time {
+				font-size: 25.5px;
+				color: #a6a6a6;
+				font-family: 'KL';
+
+			}
+
+			.tarif-image{
+				width: 150px;
+				height: 150px;
+			}
+
+
+
+			.tarif-items {
+				font-family: "KR";
+
+				.tarif-item {
+					color: #1e3463;
+				}
+
+				.tarif-item-disabled{
+					color: #e6e6e7;
+				}
+
+				.icon-tick-disabled {
+					background-color: #e6e6e7;
+				}
+
+			}
+		}
+	}
+
+	.faq {
+		.faq-banner{
+			border-radius: 200px;
+			overflow: hidden;
+			height: 600px;
+			width: 400px;
+
+			>img{
+				width: 100%;
+				height: 100%;
+				aspect-ratio: 2 / 3;
+				object-fit: cover;
+
+			}
+		}
+
+
+		.display-2 {
+			font-size: 88px;
+		}
+		.accordion{
+			border: 1px solid #9d9d9d;
+			color: #070808;
+
+		}
+
+
+
+		.accordion-button {
+			font-size: 23px;
+			font-family: 'KSBD';
+		}
+		.accordion-button:not(.collapsed) {
+			color: #070808;
+			background-color: white;
+			box-shadow: none;
+		}
+		.accordion-button:not(.collapsed)::after {
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+		}
+		
+		.accordion-body {
+			border: 0px;
+			line-height: 200%;
+			font-family: 'KL';
+			text-align: justify;
+			padding-top: 0;
+			
+
+		}
+
 	}
 }
 .footer {
