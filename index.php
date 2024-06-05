@@ -1,7 +1,7 @@
 <?php 
 $title="Home";
+require_once("head.php"); 
 require_once("header.php"); 
-require_once("nav.php"); 
 ?>
 
 
@@ -21,7 +21,10 @@ require_once("nav.php");
         </div>
         <div>
           <span class="categorie categorie-1"><span class="darkText">Mar</span>keting&nbsp;digital</span>
-          <span class="categorie categorie-2"><span class="darkText">We</span>b&nbsp;&&nbsp;App</span>
+          <a href="webapp.php">
+
+            <span class="categorie categorie-2"><span class="darkText">We</span>b&nbsp;&&nbsp;App</span>
+          </a>
           <span class="categorie categorie-3"><span class="darkText">Str</span>ategy&nbsp;360</span>
         </div>
         <div>
@@ -53,7 +56,7 @@ require_once("nav.php");
       <h2 class="mb-5"><span class="mb-4">Nos services</span></h2>
       <div class="services-wrapper text-white mb-5">
 
-        <div class="service-wrapper">
+        <a class="service-wrapper" href="#">
           <div class="service-text-top">
             <div class="service-name">Stratégie&nbsp;360</div>
           </div>
@@ -66,11 +69,11 @@ require_once("nav.php");
           </div>
           <div class="service-number">01</div>
           <img class="imageService" src="assets/img/png/service-1.png" alt="">
-        </div>
+        </a>
 
-        <div class="service-wrapper">
+        <a class="service-wrapper" href="webapp.php">
           <div class="service-text-top">
-            <div class="service-name">Web&nbsp;&&nbsp;App</div>
+              <div class="service-name">Web&nbsp;&&nbsp;App</div>
           </div>
           <div class="service-text">
             <div class="service-name-open">Web&nbsp;&&nbsp;App</div>
@@ -81,9 +84,9 @@ require_once("nav.php");
           </div>
           <div class="service-number">02</div>
           <img class="imageService" src="assets/img/png/service-2.png" alt="">
-        </div>
+        </a>
 
-        <div class="service-wrapper">
+        <a class="service-wrapper" href="#">
           <div class="service-text-top">
             <div class="service-name">Marketing&nbsp;digital</div>
           </div>
@@ -96,8 +99,8 @@ require_once("nav.php");
           </div>
           <div class="service-number">03</div>
           <img class="imageService" src="assets/img/png/service-3.png" alt="">
-        </div>
-
+        </a>
+      </div>
     </section>
 
     <!-- Nos certifications -->
@@ -141,16 +144,16 @@ require_once("nav.php");
     <section class="apropos mx-5">
       <h2 class="mb-5 pb-4"><span class="pb-3">À propos de nous</span></h2>
       <div class="row">
-        <div class="col-md-6 col-sm-12 d-flex justify-content-end pr-5">
+        <div class="col-md-6 col-sm-12 d-flex justify-content-end pe-5">
           <div class="col-md-8 col-sm-10 mt-md-5 mt-sm-0 pt-4 " >
             <img class="img-fluid img-apropos" src="assets/img/webp/about-home.webp" alt="
             Un homme regarde le ciel étoilé avec des lunettes VR">
           </div>
         </div>
-        <div class="col-md-6 col-sm-12 pt-sm-5 pl-5">
+        <div class="col-md-6 col-sm-12 pt-sm-5 ps-5">
           <p class="col-9 display-2 mb-5 pb-2">NOUS NE LIMITONS PAS À ÉLABORER DE SIMPLES STRATÉGIES MARKETING, NOUS CRÉONS DES HISTOIRES DE MARQUES.</p>
-          <div class="ml-5 pl-5">
-            <p class="col-9 ml-4 pl-1">Proximity est le fruit de plusieurs années d’expérience dans le domaine du marketing digital. Ayant travaillé avec les plus grandes marques dans le monde entier, nous combinons les idées et les connaissances avec la conception et les données technologiques afin de donner naissance à un résultat adapté à vos besoins et sur-mesure.</p>
+          <div class="ms-5 ps-5">
+            <p class="col-9 ms-4 ps-1">Proximity est le fruit de plusieurs années d’expérience dans le domaine du marketing digital. Ayant travaillé avec les plus grandes marques dans le monde entier, nous combinons les idées et les connaissances avec la conception et les données technologiques afin de donner naissance à un résultat adapté à vos besoins et sur-mesure.</p>
             <div class="enSavoirPlus mt-5 mx-4">
               <p class="enSavoirPlus__btn">En Savoir Plus&nbsp;<i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i></p>
             </div>

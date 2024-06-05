@@ -1,28 +1,31 @@
-    <p class="text-center text-uppercase my-5">« Nous avons accompagné les plus grandes marques dans le développement et la continuité de leur histoire. »</p>
-      
     
     <!-- Nos partenaires -->
-    <section class=" row my-md-5 my-sm-0 pt-4 pb-5 mx-5 px-5 justify-content-center">
-
-        <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
-          <img src="assets/img/png/logo-banque-pupulaire.png" alt="Logo de Banque Populaire">
-        </div>
-        <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
-          <img src="assets/img/png/logo-be.png" alt="Logo de Brands Event">
-        </div>
-        <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
-          <img src="assets/img/png/logo-chateau.png" alt="Logo de Chateau">
-        </div>
-        <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
-          <img src="assets/img/png/logo-desjardins.png" alt="Logo de Desjardins">
-        </div>
-        <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
-          <img src="assets/img/png/logo-frenzy-ducks.png" alt="Logo de Frenzy Ducks">
-        </div>
-        <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
-          <img src="assets/img/png/logo-royal-air-maroc.png" alt="Logo de Royal Air Maroc">
-        </div>
+    <section class="partenaire my-5 pt-5">
+      <p class="text-center text-uppercase my-5 pt-5">« Nous avons accompagné les plus grandes marques dans le développement et la continuité de leur histoire. »</p>
+      
+      <div class=" row my-md-5 my-sm-0 py-4 mx-5 px-5 justify-content-center">
+  
+          <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
+            <img src="assets/img/png/logo-banque-pupulaire.png" alt="Logo de Banque Populaire">
+          </div>
+          <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
+            <img src="assets/img/png/logo-be.png" alt="Logo de Brands Event">
+          </div>
+          <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
+            <img src="assets/img/png/logo-chateau.png" alt="Logo de Chateau">
+          </div>
+          <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
+            <img src="assets/img/png/logo-desjardins.png" alt="Logo de Desjardins">
+          </div>
+          <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
+            <img src="assets/img/png/logo-frenzy-ducks.png" alt="Logo de Frenzy Ducks">
+          </div>
+          <div class="logo col-lg-2 col-md-4 col-sm-6 px-4 pb-5">
+            <img src="assets/img/png/logo-royal-air-maroc.png" alt="Logo de Royal Air Maroc">
+          </div>
+      </div>
     </section>
+      
 
     <!-- éléments visuels au fond -->
     <!-- <div id="cursor-1" data-js-cursor></div>
@@ -31,8 +34,8 @@
 
   <footer class="mx-lg-5 mx-3">
     <div class="footer">
-      <div class="footer-text text-white d-flex align-items-center justify-content-between px-5">
-        <div class="col-lg-3 col-md-12 d-flex flex-column pl-5">
+      <div class="footer-text text-white d-flex gap-5 align-items-center justify-content-center px-3">
+        <div class="col-lg-2 col-md-12 d-flex flex-column align-items-start gap-4">
           <img class="footer-logo" src="https://proximityagency.ca/wp-content/themes/proximityagency/assets/imgs/logo/proximity-logo-blanc.png" alt="">
           
           <p class="footer-intro">Nous combinons notre expertise dans le digital avec les dernières tendances en marketing pour booster votre image de marque.</p>
@@ -73,7 +76,7 @@
             <span class="footer-contact">Montréal, QC H9R&nbsp;1A9</span>
           </div>
         </div>
-        <div class="actionEtLangues col-lg-3 col-md-12 h-lg-100 pr-5">
+        <div class="actionEtLangues col-lg-2 col-md-12 h-lg-100">
           <p class="text-uppercase footer-action">Prenons un&nbsp;café</p>
           <span class="footer-langues">Langues</span>
         </div>

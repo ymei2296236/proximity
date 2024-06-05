@@ -1,21 +1,12 @@
 <?php 
 $title="Web & App";
-require_once("header.php"); 
-require_once("nav-webapp.php"); 
+require_once("head.php"); 
+require_once("header-webapp.php"); 
 ?>
 
     <main class="webapp-home">
 
-    <!-- <div class="progress progress-striped active w-25" data-js-progress> 
-        <div class=" progress-bar progress-bar-success bold"  data-js-progress-bar
-            > 
-            Acheter maintenant
-        </div> 
-        <div class=" progress-bar-back">
-            Acheter maintenant
-        </div>
-    </div>  -->
-        <section class="banner mx-3 mb-4 position-relative">
+        <section class="banner mx-3 position-relative">
  
             <div class="banner-content d-flex p-4">
                 <div class="banner-text col-6 text-end">
@@ -27,14 +18,13 @@ require_once("nav-webapp.php");
                         <span class="title title-lg">&</span>
                     </div>
                     <p class="banner-p text-start text-white">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum.</p>
-                    <div class="d-flex ">
-                        <!-- <a class="btn btn-acheter me-3"><div class="bold">Acheter</div>&nbsp;maintenant</a> -->
+                    <div class="d-flex gap-4 justify-content-end">
                         <div class="progress progress-striped active" data-js-progress> 
-                            <div class=" progress-bar progress-bar-success bold"  data-js-progress-bar> 
-                                Acheter maintenant
+                            <div class=" progress-bar progress-bar-success "  data-js-progress-bar> 
+                                <span class="bold">Acheter</span><span class="regular"> maintenant</span>
                             </div> 
-                            <div class=" progress-bar-back">
-                                Acheter maintenant
+                            <div>
+                                <span class="bold">Acheter</span><span class="regular">&nbsp;&nbsp;maintenant</span>
                             </div>
                         </div>
 
@@ -64,7 +54,7 @@ require_once("nav-webapp.php");
             </div>
         </section>
 
-        <section class="marquee mb-5">
+        <section class="marquee">
             <div class="marquee-track">
                 <div class="display-1">
                 &nbsp;&nbsp;WEB & APP&nbsp;&nbsp;&nbsp;&nbsp;WEB & APP&nbsp;&nbsp;&nbsp;&nbsp;WEB & APP
@@ -72,22 +62,18 @@ require_once("nav-webapp.php");
             </div>
         </section>
 
-        <section class="apropos d-flex gap-4">
-            <div class="col-6 d-flex">
+        <section class="apropos d-flex align-items-start gap-4 my-5">
+            <div class="col-6 d-flex ">
                 <div class="w-50">
                     <img class="object-fit-fill" src="assets/img/png/webapp-apropos-1.png" alt="Bannière déroulable de la place du 350">
                 </div>
-                <div class="w-50">
-                    <div class="h-50 pb-2">
+                <div class="w-50 d-flex flex-column justify-content-between gap-3">
                         <img src="assets/img/png/webapp-apropos-2.png" alt="Bannière déroulable de la place du 350">
-                    </div>
-                    <div class="h-50 pt-2">
                         <img src="assets/img/png/webapp-apropos-3.png" alt="Bannière déroulable de la place du 350">
-                    </div>
 
                 </div>
             </div>
-            <div class="col-6 bg-white py-3 px-5 ml-3">
+            <div class="bg-white pt-3 pb-4 px-5">
                 <h2 class="pb-4">À propos</h2>
                 <div class="display-2 my-4">Découvrir votre digital evolution.</div>
                 <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
@@ -105,12 +91,12 @@ require_once("nav-webapp.php");
                         Avantage 3
                     </li>
                 </ul>
-                <div class="ceo d-flex align-items-center my-4">
-                    <div class="col-2 p-0 pt-4 me-3">
-                        <img class="ceo-image" src="assets/img/png/ceo.png" alt="photo du CEO">
+                <div class="ceo d-flex align-items-center my-4 pt-4 gap-4">
+                    <div class="p-0 ceo-image">
+                        <img class="" src="assets/img/png/ceo.png" alt="photo du CEO">
                     </div>
                     <div class="">
-                        <div class="ceo-name" >Mohamed Squalli</div>
+                        <div class="ceo-name mb-2" >Mohamed Squalli</div>
                         <div>CEO & Fondateur</div>
                     </div>
                 </div>
@@ -119,14 +105,14 @@ require_once("nav-webapp.php");
         </section>
 
 
-        <section class="services ">
-            <div class="services-title my-5 py-5">
+        <section class="services py-5">
+            <div class="section-title">
                 <h2 class="pb-5">Services</h2>
                 <div class="d-flex justify-content-center">
-                    <div class="display-2 pt-5 col-7 text-center">Le Lorem Ipsum est simplement du faux texte</div>
+                    <div class="display-2 py-5 col-6 text-center">Le Lorem Ipsum est simplement du faux texte</div>
                 </div>
             </div>
-            <div class="d-flex mx-5 px-3 ">
+            <div class="d-flex mx-5 px-5 ">
                 <div class="service p-5 ">
                     <div class="service-number">
                         01
@@ -134,8 +120,8 @@ require_once("nav-webapp.php");
                     <div class="service-image w-50 mb-4">
                         <img src="assets/img/png/site-dynamique.png" alt="image d'un portable">
                     </div>
-                    <div class="d-grid gap-3">
-                        <h3>Site Web Dynamiques</h3>
+                    <div class="d-grid gap-4">
+                        <h3>Sites Web Dynamiques</h3>
                         <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                         <a href="#" class="btn-lire">Lire la suite<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
@@ -147,8 +133,8 @@ require_once("nav-webapp.php");
                     <div class="service-image w-50 mb-4">
                         <img src="assets/img/png/site-transactionnel.png" alt="image d'une tablette">
                     </div>
-                    <div class="d-grid gap-3">
-                        <h3>Site Web transactionnels</h3>
+                    <div class="d-grid gap-4">
+                        <h3>Sites Web transactionnels</h3>
                         <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                         <a href="#" class="btn-lire">Lire la suite<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
@@ -160,7 +146,7 @@ require_once("nav-webapp.php");
                     <div class="service-image w-60 mb-4">
                         <img src="assets/img/png/application.png" alt="image d'une cloche, d'un coeur, de deux hashtags">
                     </div>
-                    <div class="d-grid gap-3">
+                    <div class="d-grid gap-4">
                         <h3>Applications</h3>
                         <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                         <a href="#" class="btn-lire">Lire la suite<i class="fa-solid fa-arrow-right"></i></a>
@@ -171,9 +157,9 @@ require_once("nav-webapp.php");
                         04
                     </div>
                     <div class="service-image w-60 mb-4">
-                        <img src="assets/img/png/SEO.png" alt="image d'un portable avec lettre SE sur l'écran">
+                        <img src="assets/img/png/seo.png" alt="image d'un portable avec lettre SE sur l'écran">
                     </div>
-                    <div class="d-grid gap-3">
+                    <div class="d-grid gap-4">
                         <h3>SEO</h3>
                         <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                         <a href="#" class="btn-lire">Lire la suite<i class="fa-solid fa-arrow-right"></i></a>
@@ -182,7 +168,7 @@ require_once("nav-webapp.php");
             </div>
         </section>
 
-        <section class="chiffres px-3 my-5">
+        <section class="chiffres my-5">
             <div class="section-title mt-5 pt-5">
                 <h2 class="pb-5">Chiffres clé </h2>
             </div>
@@ -194,7 +180,7 @@ require_once("nav-webapp.php");
                     <img src="assets/img/png/banner-chiffres.png" alt="">
                 </div>
             </div>
-            <div class="chiffres-list d-flex mx-5 px-3 ">
+            <div class="chiffres-list d-flex mx-5 px-5 ">
 
                 <div class="chiffre">
                     <div class="chiffre-image w-35">
@@ -203,21 +189,21 @@ require_once("nav-webapp.php");
                         <div class="chiffre-number">+1000</div>
                         <span class="chiffre-description">Projets en ligne</span>
                 </div>
-                <div class="chiffre mt-4">
+                <div class="chiffre mt-5">
                     <div class="chiffre-image w-35">
                         <img src="assets/img/png/chiffre-ans.png" alt="image d'un cible">
                     </div>
                         <div class="chiffre-number">+20</div>
                         <span class="chiffre-description">Ans d’expérience</span>
                 </div>
-                <div class="chiffre mt-5">
+                <div class="chiffre">
                     <div class="chiffre-image w-35">
                         <img src="assets/img/png/chiffre-secteurs.png" alt="image d'un cible">
                     </div>
                         <div class="chiffre-number">+50</div>
                         <span class="chiffre-description">Secteurs d’activité</span>
                 </div>
-                <div class="chiffre mt-4">
+                <div class="chiffre mt-5">
                     <div class="chiffre-image w-35">
                         <img src="assets/img/png/chiffre-partenaires.png" alt="image d'un cible">
                     </div>
@@ -227,7 +213,7 @@ require_once("nav-webapp.php");
             </div>
         </section>
 
-        <section class="comment">
+        <section class="comment pb-5">
             <div class="d-flex justify-content-start align-content-start">
                 <h2 class="section-title">Comment ça marche ? </h2>
                 <div class="col-5 text-center">
@@ -235,8 +221,8 @@ require_once("nav-webapp.php");
                     <p class="my-5">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page. Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                 </div>
             </div>
-            <div class="container my-5 d-flex">
-                <div class="col-5 d-grid gap-3 pe-5">
+            <div class="container my-5 d-flex align-items-center">
+                <div class="d-flex flex-column gap-4 me-4">
                     <h3>Sélectionnez les prestations</h3>
                     <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page. Le Lorem.</p>
                     <div>
@@ -304,139 +290,14 @@ require_once("nav-webapp.php");
                 <div class="toggle col-4 d-flex gap-2 justify-content-center align-items-end">
                     <div class="form-check-label">Mensuel</div>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" >
-                        <label class="form-check-label" >Annuel <span class="chip">20% off</span></label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="tarif" >
+                        <label class="form-check-label" >Annuel <div class="chip">20% off</div></label>
                     </div>
                 </div>
 
             </div>
-            <div class="container d-flex my-5 gap-4">
-                <div class="tarif d-flex flex-column align-items-center py-5">
-                    <div class="tarif-name mt-3">Basic Plan</div>
-                    <div class="tarif-amount"><sup clas="tarif-dollar">$</sup>01.00<span class="tarif-time">/Mensuel</span></div>
-                    <div class="tarif-image mt-4 ">
-                        <img src="assets/img/png/plan-basic.png" alt="un image de rochet">
-                    </div>
-                    <div class='tarif-items my-5 d-flex flex-column gap-3'>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item tarif-item-disabled d-flex">
-                            <div class="icon-tick icon-tick-disabled me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item tarif-item-disabled d-flex">
-                            <div class="icon-tick icon-tick-disabled me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                    </div>
-                    <div class="mb-5">
-                        <a class="btn" href=""><span class="bold">Choisir </span>un forfait</a>
-                    </div>
-                </div>
-                <div class="tarif d-flex flex-column align-items-center py-5">
-                    <div class="tarif-name mt-3">Standard Plan</div>
-                    <div class="tarif-amount"><sup clas="tarif-dollar">$</sup>02.00<span class="tarif-time">/Mensuel</span></div>
-                    <div class="tarif-image mt-4 ">
-                        <img src="assets/img/png/plan-standard.png" alt="un image de rochet">
-                    </div>
-                    <div class='tarif-items my-5 d-flex flex-column gap-3'>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                    </div>
-                    <div class="mb-5">
-                        <a class="btn" href=""><span class="bold">Choisir </span>un forfait</a>
-                    </div>
-                </div>
-                <div class="tarif d-flex flex-column align-items-center py-5">
-                    <div class="tarif-name mt-3">Silver Plan</div>
-                    <div class="tarif-amount"><sup clas="tarif-dollar">$</sup>03.00<span class="tarif-time">/Mensuel</span></div>
-                    <div class="tarif-image mt-4 ">
-                        <img src="assets/img/png/plan-silver.png" alt="un image de rochet">
-                    </div>
-                    <div class='tarif-items my-5 d-flex flex-column gap-3'>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                        <div class="tarif-item d-flex">
-                            <div class="icon-tick me-3">
-                                <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                            </div>
-                            Lorem Ipsum Texte
-                        </div>
-                    </div>
-                    <div class="mb-5">
-                        <a class="btn" href=""><span class="bold">Choisir </span>un forfait</a>
-                    </div>
-                </div>
+            <div class="container d-flex my-5 pt-5 gap-4" data-js-tarifs>
+
             </div>
         </section>
 
@@ -444,9 +305,8 @@ require_once("nav-webapp.php");
             <div class="section-title ">
                 <h2 class="pb-5">FAQ </h2>
             </div>
-            <div class="d-flex mx-5 px-5 gap-5 justify-content-between">
-
-                <div class="ml-5">
+            <div class="faq-content d-flex gap-5 justify-content-between">
+                <div class="">
                     <div class="display-2 mb-5">Le Lorem Ipsum est du faux texte</div>
 
                     <div class="accordion accordion-flush" id="accordionFlush">
@@ -493,7 +353,7 @@ require_once("nav-webapp.php");
                     </div>
                 </div>
 
-                <div class="faq-banner col-5 me-5">
+                <div class="faq-banner col-4 me-5">
                     <img src="assets/img/png/banner-faq.png" alt="">
                 </div>
             </div>
