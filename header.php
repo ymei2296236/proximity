@@ -1,15 +1,13 @@
 <body>
-  <header class="header header-proximity sticky-top bg-white d-flex justify-content-between align-items-center px-5 ">
-    <div class="d-flex position-relative">
-        <a class="header-logo mr-4"  href="index.php">
-            <span>
-                <img src="assets/img/png/logo-proximity.png" alt="Site Logo" >
-            </span>
-        </a>
-    </div>      
+  <header class="header header-proximity sticky-top bg-white d-flex justify-content-between align-items-center px-lg-5 ps-4 pe-2">
+    <a class="header-logo" href="">
+      <div class="d-flex position-relative h-100">
+          <img src="assets/img/png/logo-proximity.png" alt="Site Logo" >
+        </div>      
+      </a>
     <div class="nav">
-        <span class="nav-item">
-          <a href="" class="btn-container">
+        <span class="nav-item btn-container">
+          <a href="" class="">
             <button class="btn-prj">J'ai un projet</button>
             <span></span>
           </a>
