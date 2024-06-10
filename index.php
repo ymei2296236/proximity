@@ -140,9 +140,9 @@ require_once("header.php");
     </section>
 
     <!-- À propos de nous -->
-    <section class="apropos mx-md-5 mx-3">
+    <section class="mx-md-5 mx-3">
       <h2 class="mb-lg-5 mb-0 pb-4"><span class="pb-3">À propos de nous</span></h2>
-      <div class="row">
+      <div class="apropos">
         <div class="apropos-col d-flex justify-content-end pe-md-5 pe-3">
           <div class="col-md-8 col-10 mt-md-5 mt-sm-0 pt-4 " >
             <img class="img-fluid img-apropos" src="assets/img/webp/about-home.webp" alt="

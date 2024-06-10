@@ -50,7 +50,7 @@ let elHeader = document.querySelector('header');
 window.addEventListener('scroll', ()=> 
 {
     let scrolled = window.scrollY;
-    
+  
     if (scrolled > 0 ) elHeader.classList.add('header-sticky');
     else elHeader.classList.remove('header-sticky');
 
@@ -67,7 +67,7 @@ let elCheckbox = document.querySelector('#tarif'),
 if (elCheckbox) 
     {
     // initialise le dom au chargement de la page
-    window.addEventListener('DOMContentLoaded',function(){new Plan(tarifsContainer);})
+    window.addEventListener('DOMContentLoaded',function(){new Plans(tarifsContainer);})
     
     // basculer entre plan mensuel et plan annuel
     elCheckbox.addEventListener('click', function()
@@ -76,10 +76,10 @@ if (elCheckbox)
         tarifsContainer.innerHTML ='';
         
         // réinjecte le dom
-        new Plan(tarifsContainer);
+        new Plans(tarifsContainer);
     })
     
-    class Plan 
+    class Plans 
     {
         #_el;
         
