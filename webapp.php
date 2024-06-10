@@ -38,16 +38,16 @@ require_once("header-webapp.php");
             </div>
 
             <div class="visual visual-play">
-                <img src="assets/img/png/play.png" alt="un rochet">
+                <img src="assets/img/png/play.png" alt="une icône d'afficher la vidéo">
             </div>
             <div class="visual visual-cible">
-                <img src="assets/img/png/cible.png" alt="un rochet">
+                <img src="assets/img/png/cible.png" alt="une image d'un cible">
             </div>
             <div class="visual visual-rocket">
-                <img src="assets/img/png/rocket.png" alt="un rochet">
+                <img src="assets/img/png/rocket.png" alt="une image d'un rochet">
             </div>
             <div class="visual visual-loupe">
-                <img src="assets/img/png/loupe.png" alt="un loupe">
+                <img src="assets/img/png/loupe.png" alt="une image d'un loupe">
             </div>
             <div class="banner-image">
                 <img src="assets/img/png/banner-webapp.png" alt="des composants graphiques de site">

@@ -178,6 +178,7 @@ a {
 
 a:hover {
 	text-decoration: none;
+	color: white;
 }
 img {
 	width: 100%;
@@ -190,13 +191,19 @@ li {
 }
 
 .header {
-	height: 110px;
+	height: 100px;
 	transition: height 1s ease-in-out;
 }
 
 .header-logo {
 	cursor: pointer;
 }
+
+.header-sticky {
+	height: 80px;
+	border-bottom: 1px solid #ecedf2;
+}
+
 .topbar-phone {
 	font-family: 'KR';
 }
@@ -209,10 +216,6 @@ li {
 	position: relative;
 }
 
-.header-sticky {
-	height: 80px;
-	border-bottom: 1px solid #ecedf2;
-}
 
 .btn {
 	background-color: #55d0ff;
@@ -435,6 +438,28 @@ a {
 .home-title-3 {
 	font-size: 2.4vw;
 }
+
+.visual {
+	position: absolute;
+	z-index: 2;
+	cursor: pointer;
+	width: 5vw;
+	top: 10%;
+	left: 40%;
+	transition: transform 0.5s ease-in-out;
+}
+
+.visual:hover {
+	transform: scale(1.2);
+}
+
+.home-banner-video {
+	position: absolute;
+	z-index: 3;
+	width: 100vw;
+	top: 0;
+}
+
 
 .categorie {
 	position: absolute;
@@ -931,11 +956,7 @@ a {
 			}
 		}
 
-		.visual {
-			position: absolute;
-			z-index: 2;
-			cursor: pointer;
-		}
+
 
 		.visual-play {
 			width: 5vw;
@@ -959,9 +980,6 @@ a {
 			top: 33%;
 		}
 
-		.visual:hover {
-			transform: scale(1.2);
-		}
 
 		.banner-image {
 			overflow: clip;

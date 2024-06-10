@@ -21,10 +21,13 @@ require_once("header.php");
         <div>
           <span class="categorie categorie-1"><span class="darkText">Mar</span>keting&nbsp;digital</span>
           <a href="webapp.php">
-
             <span class="categorie categorie-2"><span class="darkText">We</span>b&nbsp;&&nbsp;App</span>
           </a>
           <span class="categorie categorie-3"><span class="darkText">Str</span>ategy&nbsp;360</span>
+          <div class="visual visual-play">
+            <img src="assets/img/png/play.png" alt="une icône d'afficher la vidéo">
+          </div>
+
         </div>
         <div>
           <img class="icon icon-location-1" src="assets/img/png/location.png" alt="">
@@ -39,6 +42,9 @@ require_once("header.php");
       <div class="d-flex row">
         <img class="home-banner-image col-md-6 px-0" src="assets/img/png/c.png" alt="">
         <img class="home-banner-image col-md-6 px-0"  src="assets/img/png/terre.png" alt="">
+      </div>
+      <div  class='home-banner-video'>
+        <video src="https://proximityagency.ca/wp-content/themes/proximityagency/assets/video/Proximity.mp4" loop="" muted="" autoplay="" playsinline=""></video>
       </div>
     </section>
 

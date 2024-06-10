@@ -1,8 +1,8 @@
 <body>
   <div class="topbar text-white py-2">
     <div class="container d-flex gap-5 justify-content-between">
-    <div class="topbar-phone d-flex gap-2 align-items-center"><i class="fa-solid fa-phone"></i> +1 514 600 3343 </div>
-
+      
+      <div class="topbar-phone d-flex gap-2 align-items-center"><i class="fa-solid fa-phone"></i> +1 514 600 3343 </div>
       <div class="topbar-slogan">Le digital ? C'est nous. </div>
       <div class="d-flex gap-3">
         <img src="assets/img/svg/Youtube.svg" alt="">
