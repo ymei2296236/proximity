@@ -16,3 +16,36 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
+<div class="topbar text-white py-2 px-lg-5 px-4">
+    <div class="d-flex gap-sm-5 gap-1 justify-content-between flex-wrap">
+        <div class="topbar-slogan d-flex gap-sm-3 gap-2">
+            <span>Le&nbsp;digital?</span>
+            <span>C'est&nbsp;nous.</span>
+        </div>
+        <div class="d-md-flex gap-3 d-flex align-items-center">
+            <div class="topbar-phone d-flex gap-2 align-items-center pe-lg-5 pe-sm-2 pe-0">
+                <span class="d-sm-inline d-none">Téléphone&nbsp;:</span>
+                <span>+1&nbsp;514&nbsp;600 3343 </span>
+            </div>
+            <div class="d-md-flex d-none gap-lg-3 gap-1 d-flex align-items-center">
+                <span class="text-nowrap">Suivez-nous&nbsp;:</span>
+                <a class="social" href="https://www.instagram.com/proximity.agency/">
+                    <img src="assets/img/svg/instagram.svg" alt="">
+                </a>
+                <a class="social" href="https://www.facebook.com/proximityagency.ca/">
+                    <img src="assets/img/svg/facebook.svg" alt="">
+                </a>
+                <a class="social" href="https://www.linkedin.com/in/proximity-agency-392b97263/">
+                    <img src="assets/img/svg/linkedin.svg" alt="">
+                </a>
+                <a class="social" href="https://x.com/agencyproximity?mx=2">
+                    <img src="assets/img/svg/twitter.svg" alt="">
+                </a>
+                <a class="social" href="https://www.tiktok.com/@proximity_agency">
+                    <img src="assets/img/svg/tiktok.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>
+  </div>

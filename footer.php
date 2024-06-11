@@ -42,7 +42,7 @@
         </div>
         <div class="footer-menu d-flex flex-wrap h-100">
           <div class="col-sm-3 col-6 d-flex flex-column ">
-            <h3 class="mb-4"><span>Accueil</span></h3>
+            <h3 class="mb-sm-4 mb-2"><span>Accueil</span></h3>
             <ul>
               <li>Nos services</li>
               <li>Certificats</li>
@@ -51,7 +51,7 @@
             </ul>
           </div>
           <div class="col-sm-3 col-6 d-flex flex-column">
-            <h3 class="mb-4"><span>Nos services</span></h3>
+            <h3 class="mb-sm-4 mb-2"><span>Nos services</span></h3>
             <ul>
               <li>Stratégie 360</li>
               <li>Web & App</li>
@@ -59,7 +59,7 @@
             </ul>
           </div>
           <div class="col-sm-3 col-6 d-flex flex-column">
-            <h3 class="mb-4"><span>Suivez nous</span></h3>
+            <h3 class="mb-sm-4 mb-2"><span>Suivez nous</span></h3>
             <ul>
               <li>Instgram</li>
               <li>Facebook</li>
@@ -69,8 +69,8 @@
             </ul>
           </div>
           <div class="col-sm-3 col-6 d-flex flex-column">
-            <h3 class="mb-4"><span>Coordonnées</span></h3>
-            <span class="footer-contact">+1 888 229 3252</span>
+            <h3 class="mb-sm-4 mb-2"><span>Coordonnées</span></h3>
+            <span class="footer-contact">+1 514 600 3343</span>
             <span class="footer-contact text-break">info@proximityagency.ca</span>
             <span class="footer-contact">161 Av. Oneida, Pointe-claire</span>
             <span class="footer-contact">Montréal, QC H9R&nbsp;1A9</span>

@@ -183,4 +183,46 @@ if (elCheckbox)
     }
 }
 
+/**
+ * Contrôle la vidéo à la bannière hero à la page d'accueil de Proximity
+ */
+
+let btnPlay = document.querySelector('[data-js-btn-play]'),
+    btnPause = document.querySelector('[data-js-btn-pause]'),  
+    constainerVideo = document.querySelector('[data-js-video]'),
+    video = constainerVideo.querySelector('video'),
+    banner = document.querySelector('[data-js-home-banner]');
+
+// Démarrer la vidéo  
+btnPlay.addEventListener('click',function()
+{
+    video.play();
+    constainerVideo.classList.add('home-banner-video-open');
+    btnPlay.classList.add('visual-hidden');
+    btnPause.classList.remove('visual-hidden');
+    banner.classList.add('home-banner-close');
+
+    // Arrêter la vidéo
+    btnPause.addEventListener('click', function()
+    {
+        video.pause();
+        btnPause.classList.add('visual-hidden');
+        btnPlay.classList.remove('visual-hidden');
+    })
+})
+
+// Gérer l'effet visuel lorsque le souris survole sur le bouton
+btnPlay.addEventListener('mouseover',function(e){
+    e.target.classList.remove('animated');
+})
+
+btnPlay.addEventListener('mouseout',function(e){
+    e.target.classList.add('animated');
+})
+
+
+
+
+
+
 

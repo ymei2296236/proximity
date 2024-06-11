@@ -46,15 +46,13 @@
 	font-display: swap;
 }
 
-
 @font-face {
 	font-family: "KRI";
 	src: url("../fonts/Kanit/Kanit-Italic.ttf");
 	font-weight: 400;
-	font-style: italic;
+	font-style: normal;
 	font-display: swap;
 }
-
 
 @font-face {
 	font-family: "KL";
@@ -66,9 +64,9 @@
 
 @font-face {
 	font-family: "KLI";
-	src: url("../fonts/Kanit/Kanit-Italic.ttf");
+	src: url("../fonts/Kanit/Kanit-LightItalic.ttf");
 	font-weight: 300;
-	font-style: italic;
+	font-style: normal;
 	font-display: swap;
 }
 
@@ -84,7 +82,7 @@
 	font-family: "KELI";
 	src: url("../fonts/Kanit/Kanit-ExtraLightItalic.ttf");
 	font-weight: 200;
-	font-style: italic;
+	font-style: normal;
 	font-display: swap;
 }
 
@@ -110,7 +108,8 @@
 body,
 html {
 	font-family: "KR", sans-serif;
-	/* overflow-x: hidden; */
+	position: relative;
+	overflow-x: clip;
 	line-height: normal;
 	color: var(--color_proximity);
 	background-repeat: repeat;
@@ -204,18 +203,31 @@ li {
 	border-bottom: 1px solid #ecedf2;
 }
 
-.topbar-phone {
-	font-family: 'KR';
+.topbar {
+	background-color: var(--color_proximity);
+	font-family: "KL";
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+	font-size: 15px;
 }
-.topbar-slogan{
-	font-family: 'KRI';
+
+.social {
+	width: 25px;
+	height: 25px;
+}
+
+.topbar-phone-icon {
+	width: 25px;
+}
+.topbar-slogan {
+	display: flex;
+	align-items: center;
 }
 .nav-item {
 	padding: 0 1rem;
 	cursor: pointer;
 	position: relative;
 }
-
 
 .btn {
 	background-color: #55d0ff;
@@ -226,7 +238,7 @@ li {
 	text-transform: uppercase;
 	color: white;
 	font-family: "KL";
-	font-size: 22px;
+	font-size: 1.5vw;
 }
 .bold {
 	font-family: "KSBD";
@@ -298,10 +310,6 @@ li {
 /* 1. Site de Proximity */
 /* 1.1 Navigation */
 
-.topbar {
-	background-color: var(--color_proximity);
-	font-family: 'KL';
-}
 .header-proximity {
 	display: flex;
 	justify-content: center;
@@ -399,6 +407,14 @@ li {
 	-moz-border-radius: 36vw;
 	-webkit-border-radius: 36vw;
 	border-radius: 36vw;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.home-banner-close {
+	height: 56vw;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .home-banner-content {
@@ -421,7 +437,7 @@ a {
 	font-family: "KSBD";
 	line-height: 100%;
 	font-size: 3vw;
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 .home-title-1 {
@@ -441,25 +457,43 @@ a {
 
 .visual {
 	position: absolute;
-	z-index: 2;
+	z-index: 4;
 	cursor: pointer;
 	width: 5vw;
-	top: 10%;
-	left: 40%;
 	transition: transform 0.5s ease-in-out;
 }
 
 .visual:hover {
 	transform: scale(1.2);
 }
+.visual-play {
+	top: 5%;
+	left: 47%;
+}
+.animated {
+	animation: battement 1.2s ease infinite alternate;
+}
 
+.visual-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
 .home-banner-video {
 	position: absolute;
-	z-index: 3;
-	width: 100vw;
+	z-index: -1;
 	top: 0;
 }
 
+.home-banner-video-open {
+	z-index: 3;
+	width: 100% !important;
+	height: auto !important;
+}
+
+.home-banner-video-open video {
+	width: 100% !important;
+	height: auto !important;
+}
 
 .categorie {
 	position: absolute;
@@ -666,9 +700,8 @@ a {
 }
 
 /* 1.4 À propos */
-.apropos{
+.apropos {
 	display: flex;
-
 }
 .apropos-col {
 	width: 50%;
@@ -956,8 +989,6 @@ a {
 			}
 		}
 
-
-
 		.visual-play {
 			width: 5vw;
 			left: 16%;
@@ -979,7 +1010,6 @@ a {
 			right: 0%;
 			top: 33%;
 		}
-
 
 		.banner-image {
 			overflow: clip;
@@ -1353,79 +1383,75 @@ a {
 	-moz-border-radius: 200px;
 	-webkit-border-radius: 200px;
 	border-radius: 200px;
+}
+.element-4 {
+	mix-blend-mode: lighten;
+	position: absolute;
+	margin-top: -75vw;
+	margin-left: -170px;
+}
+.footer-company {
+	width: 20%;
+}
 
-	}
-		.element-4 {
-			mix-blend-mode: lighten;
-			position: absolute;
-			margin-top: -75vw;
-			margin-left: -170px;
-		}
-		.footer-company {
-			width: 20%;
-		}
-	
-		.footer-menu {
-			width: 60%;
-		}
-		.footer-intro {
-			font-family: "KELI";
-		}
-		.footer-text {
-			position: absolute;
-			z-index: 2;
-			display: flex;
-			justify-content: center;
-			height: 100%;
-			padding: 4rem 4rem 4rem 4rem;
-		}
-	
-		.footer-logo {
-			width: 80%;
-		}
-		.footer li,
-		.footer-contact,
-		.footer-langues {
-			font-family: "KR";
-			text-transform: uppercase;
-			margin-bottom: 0.5rem;
-		}
-		.footer li,
-		.footer-langues {
-			cursor: pointer;
-			transition: transform 0.2s; /* Animation */
-		}
-	
-		.footer li:hover,
-		.footer-langues:hover {
-			color: var(--color_highlight);
-			transform: scale(1.1);
-		}
-	
-		.actionEtLangues {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
-			align-items: flex-end;
-			width: 20%;
-	
-			}
-		.footer-action {
-			font-family: "KSBD";
-			font-size: 3.5vw;
-			line-height: 1.1;
-			margin-bottom: 1rem;
-			color: rgba(0, 0, 0, 0);
-			text-align: end;
-			-webkit-text-stroke: 1px var(--color_highlight);
-		}
+.footer-menu {
+	width: 60%;
+}
+.footer-intro {
+	font-family: "KELI";
+}
+.footer-text {
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	padding: 4rem 4rem 4rem 4rem;
+}
 
-		.footer-action:hover {
-			transform: scale(1.1);
-			cursor: pointer;
-		}
+.footer-logo {
+	width: 80%;
+}
+.footer li,
+.footer-contact,
+.footer-langues {
+	font-family: "KR";
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+}
+.footer li,
+.footer-langues {
+	cursor: pointer;
+	transition: transform 0.2s; /* Animation */
+}
 
+.footer li:hover,
+.footer-langues:hover {
+	color: var(--color_highlight);
+	transform: scale(1.1);
+}
 
+.actionEtLangues {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-end;
+	width: 20%;
+}
+.footer-action {
+	font-family: "KSBD";
+	font-size: 3.5vw;
+	line-height: 1.1;
+	margin-bottom: 1rem;
+	color: rgba(0, 0, 0, 0);
+	text-align: end;
+	-webkit-text-stroke: 1px var(--color_highlight);
+}
+
+.footer-action:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
 
 #cursor-1 {
 	background: var(--color_proximity);
@@ -1452,6 +1478,17 @@ a {
 	top: -10%;
 	transform: translate(10%, -50%);
 	position: fixed;
+}
+
+@keyframes battement {
+	from {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+	to {
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+	}
 }
 
 @keyframes marquee {
@@ -1522,7 +1559,9 @@ a {
 		font-size: 15vw;
 		line-height: 100%;
 	}
-
+	.topbar {
+		font-size: 14px;
+	}
 	.marquee,
 	.marquee-track {
 		height: 18vw;
@@ -1670,9 +1709,8 @@ a {
 		-moz-border-radius: 45px;
 		-webkit-border-radius: 45px;
 		border-radius: 45px;
-
 	}
-	
+
 	.element-4 {
 		mix-blend-mode: lighten;
 		position: absolute;
@@ -1702,7 +1740,7 @@ a {
 	}
 
 	.footer-action {
-		font-size: 7vw;
+		font-size: 9vw;
 	}
 
 	.col-3 {
@@ -1820,12 +1858,33 @@ a {
 		margin-left: 90vw;
 		margin-top: 100px;
 	}
+	.element-4 {
+		mix-blend-mode: lighten;
+		position: absolute;
+		margin-top: -10vw;
+		scale: 1.2;
+		margin-left: -20vw;
+		transform: scale(2);
+	}
+	.visual-play {
+		width: 15vw;
+		top: 2%;
+		left: 43%;
+	}
 
 	.home-banner {
 		height: 100%;
 		-moz-border-radius: 50vw;
 		-webkit-border-radius: 50vw;
 		border-radius: 50vw;
+	}
+
+	.home-banner-close {
+		-moz-border-radius: 0vw;
+		-webkit-border-radius: 0vw;
+		border-radius: 0vw;
+		height: 56vw;
+		margin-top: 1rem;
 	}
 	.home-banner-image {
 		width: 100%;
@@ -1871,7 +1930,7 @@ a {
 
 	.categorie-1 {
 		left: 20vw;
-		top: 8vw;
+		top: 9vw;
 	}
 
 	.categorie-2 {
@@ -1928,10 +1987,10 @@ a {
 		transform: scale(1.2);
 	}
 	.nosServices .services-wrapper {
-		height: 600px;
+		height: 150vw;
 	}
 	.footer {
-		height: 38rem;
+		height: 37rem;
 	}
 	.footer-text {
 		padding: 1rem;

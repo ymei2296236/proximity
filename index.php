@@ -7,8 +7,14 @@ require_once("header.php");
 
   <main>
     <!-- la bannière -->
-    <section class="home-banner mx-3 mb-4">
+    <section class="home-banner mb-4" data-js-home-banner>
+      <span data-js-btn-video>
+        <img class="visual visual-play animated" data-js-btn-play src="assets/img/svg/play.svg" alt="une icône pour afficher la vidéo">
+        <img class="visual visual-play visual-hidden" data-js-btn-pause src="assets/img/svg/pause.svg" alt="une icône pour arreter la vidéo">
+      </span>
       <div class="home-banner-content mx-5 my-5 text-white">
+
+
         <div class="home-banner-title">
           <span class="home-title">The</span>
           <span class="home-title home-title-1">Proximity</span>
@@ -24,9 +30,6 @@ require_once("header.php");
             <span class="categorie categorie-2"><span class="darkText">We</span>b&nbsp;&&nbsp;App</span>
           </a>
           <span class="categorie categorie-3"><span class="darkText">Str</span>ategy&nbsp;360</span>
-          <div class="visual visual-play">
-            <img src="assets/img/png/play.png" alt="une icône d'afficher la vidéo">
-          </div>
 
         </div>
         <div>
@@ -43,8 +46,8 @@ require_once("header.php");
         <img class="home-banner-image col-md-6 px-0" src="assets/img/png/c.png" alt="">
         <img class="home-banner-image col-md-6 px-0"  src="assets/img/png/terre.png" alt="">
       </div>
-      <div  class='home-banner-video'>
-        <video src="https://proximityagency.ca/wp-content/themes/proximityagency/assets/video/Proximity.mp4" loop="" muted="" autoplay="" playsinline=""></video>
+      <div data-js-video  class='home-banner-video'>
+        <video src="https://proximityagency.ca/wp-content/themes/proximityagency/assets/video/Proximity.mp4" loop="" muted="" poster="assets/img/png/video-cover.png"></video>
       </div>
     </section>
 
