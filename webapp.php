@@ -4,27 +4,26 @@ require_once("head.php");
 require_once("header-webapp.php"); 
 ?>
 
-    <main class="webapp-home">
-
-        <section class="banner mx-3 position-relative">
+    <main class="webapp">
+        <section class="webapp-banner d-flex position-relative" >
  
-            <div class="banner-content d-flex p-4">
-                <div class="banner-text col-6 text-end">
-                    <div class="banner-title">
+            <div class="webapp-banner-content d-flex" data-js-home-banner>
+                <div class="webapp-banner-text col-md-6 col-12 text-end">
+                    <div class="webapp-banner-title">
                         <span class="title me-5">Création sur</span>
                         <span class="title me-3">mesure</span>
                         <span class="title me-5">Technologie</span>
                         <span class="title">de pointe.</span>
                         <span class="title title-lg">&</span>
                     </div>
-                    <p class="banner-p text-start text-white">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum.</p>
-                    <div class="d-flex gap-4 justify-content-end">
-                        <div class="progress progress-striped active" data-js-progress> 
-                            <div class=" progress-bar progress-bar-success "  data-js-progress-bar> 
-                                <span class="bold">Acheter</span><span class="regular"> maintenant</span>
+                    <p class="webapp-banner-p text-start text-white">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum.</p>
+                    <div class="d-flex flex-wrap gap-xl-4 gap-2 justify-content-end">
+                        <div class="progress progress-striped active me-lg-0 me-5" data-js-progress> 
+                            <div class=" progress-bar progress-bar-success d-lg-flex d-none align-items-center"  data-js-progress-bar> 
+                                <span class="bold">Acheter maintenant</span> 
                             </div> 
                             <div>
-                                <span class="bold">Acheter</span><span class="regular">&nbsp;&nbsp;maintenant</span>
+                                <span class="regular">Acheter&nbsp;maintenant</span>
                             </div>
                         </div>
 
@@ -32,26 +31,28 @@ require_once("header-webapp.php");
                     </div>
                     
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-12">
                     <img src="assets/img/png/c-white.png" alt="">
                 </div>
+                <div data-js-video  class='home-banner-video'>
+                <video src="https://proximityagency.ca/wp-content/themes/proximityagency/assets/video/Proximity.mp4" loop="" muted="" poster="assets/img/png/video-cover.png"></video>
+            </div>
             </div>
 
-            <div class="visual visual-play">
-                <img src="assets/img/png/play.png" alt="une icône d'afficher la vidéo">
-            </div>
-            <div class="visual visual-cible">
+            <span data-js-btn-video>
+                <img class="visual visual-play animated" data-js-btn-play src="assets/img/svg/play.svg" alt="une icône pour afficher la vidéo">
+                <img class="visual visual-play visual-hidden" data-js-btn-pause src="assets/img/svg/pause.svg" alt="une icône pour arreter la vidéo">
+            </span>
+            <div class="visual visual-cible" data-js-visual>
                 <img src="assets/img/png/cible.png" alt="une image d'un cible">
             </div>
-            <div class="visual visual-rocket">
+            <div class="visual visual-rocket" data-js-visual>
                 <img src="assets/img/png/rocket.png" alt="une image d'un rochet">
             </div>
-            <div class="visual visual-loupe">
+            <div class="visual visual-loupe" data-js-visual>
                 <img src="assets/img/png/loupe.png" alt="une image d'un loupe">
             </div>
-            <div class="banner-image">
-                <img src="assets/img/png/banner-webapp.png" alt="des composants graphiques de site">
-            </div>
+
         </section>
 
         <section class="marquee">
@@ -62,8 +63,8 @@ require_once("header-webapp.php");
             </div>
         </section>
 
-        <section class="apropos d-flex align-items-start gap-4 my-5">
-            <div class="col-6 d-flex ">
+        <section class="apropos d-flex align-items-start gap-4 my-xl-5 my-3">
+            <div class="col-lg-6 col-12 d-flex ">
                 <div class="w-50">
                     <img class="object-fit-fill" src="assets/img/png/webapp-apropos-1.png" alt="Bannière déroulable de la place du 350">
                 </div>
@@ -75,7 +76,7 @@ require_once("header-webapp.php");
             </div>
             <div class="bg-white pt-3 pb-4 px-5">
                 <h2 class="pb-4">À propos</h2>
-                <div class="display-2 my-4">Découvrir votre digital evolution.</div>
+                <div class="display-2 my-lg-4 my-2">Découvrir votre digital evolution.</div>
                 <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                 <ul class="list-group mt-3">
                     <li class="list-group-item">
@@ -105,61 +106,61 @@ require_once("header-webapp.php");
         </section>
 
 
-        <section class="services py-5">
+        <section class="services py-5 text-break">
             <div class="section-title">
                 <h2 class="pb-5">Services</h2>
                 <div class="d-flex justify-content-center">
-                    <div class="display-2 py-5 col-6 text-center">Le Lorem Ipsum est simplement du faux texte</div>
+                    <div class="display-2 pb-5 pt-xl-5 pt-0 col-6 text-center">Le Lorem Ipsum est simplement du faux texte</div>
                 </div>
             </div>
-            <div class="d-flex mx-5 px-5 ">
-                <div class="service p-5 ">
+            <div class="d-flex flex-wrap mx-5">
+                <div class="service p-xl-5 p-4">
                     <div class="service-number">
                         01
                     </div>
                     <div class="service-image w-50 mb-4">
                         <img src="assets/img/png/site-dynamique.png" alt="image d'un portable">
                     </div>
-                    <div class="d-grid gap-4">
+                    <div class="d-flex  flex-column gap-4">
                         <h3>Sites Web Dynamiques</h3>
                         <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                         <a href="#" class="btn-lire">Lire la suite<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service p-5">
+                <div class="service p-xl-5 p-4">
                     <div class="service-number">
                         02
                     </div>
                     <div class="service-image w-50 mb-4">
                         <img src="assets/img/png/site-transactionnel.png" alt="image d'une tablette">
                     </div>
-                    <div class="d-grid gap-4">
+                    <div class="d-flex  flex-column gap-4">
                         <h3>Sites Web transactionnels</h3>
                         <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                         <a href="#" class="btn-lire">Lire la suite<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service p-5 ">
+                <div class="service p-xl-5 p-4">
                     <div class="service-number">
                         03
                     </div>
                     <div class="service-image w-60 mb-4">
                         <img src="assets/img/png/application.png" alt="image d'une cloche, d'un coeur, de deux hashtags">
                     </div>
-                    <div class="d-grid gap-4">
+                    <div class="d-flex  flex-column gap-4">
                         <h3>Applications</h3>
                         <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                         <a href="#" class="btn-lire">Lire la suite<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service p-5 ">
+                <div class="service p-xl-5 p-4">
                     <div class="service-number">
                         04
                     </div>
                     <div class="service-image w-60 mb-4">
                         <img src="assets/img/png/seo.png" alt="image d'un portable avec lettre SE sur l'écran">
                     </div>
-                    <div class="d-grid gap-4">
+                    <div class="d-flex  flex-column gap-4">
                         <h3>SEO</h3>
                         <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                         <a href="#" class="btn-lire">Lire la suite<i class="fa-solid fa-arrow-right"></i></a>
@@ -174,7 +175,7 @@ require_once("header-webapp.php");
             </div>
             <div class="d-flex">
                 <div class="d-flex w-60 justify-content-end">
-                    <div class="display-2 pt-5 col-7 text-center">Le Lorem Ipsum est du faux texte</div>
+                    <div class="display-2 pt-xl-5 pt-0 col-7 text-center">Le Lorem Ipsum est du faux texte</div>
                 </div>
                 <div class="chiffres-banner w-35">
                     <img src="assets/img/png/banner-chiffres.png" alt="">
@@ -182,28 +183,28 @@ require_once("header-webapp.php");
             </div>
             <div class="chiffres-list d-flex mx-5 px-5 ">
 
-                <div class="chiffre">
+                <div class="chiffre p-4">
                     <div class="chiffre-image w-35">
                         <img src="assets/img/png/chiffre-projets.png" alt="image d'un cible">
                     </div>
                         <div class="chiffre-number">+1000</div>
                         <span class="chiffre-description">Projets en ligne</span>
                 </div>
-                <div class="chiffre mt-5">
+                <div class="chiffre p-4 mt-5">
                     <div class="chiffre-image w-35">
                         <img src="assets/img/png/chiffre-ans.png" alt="image d'un cible">
                     </div>
                         <div class="chiffre-number">+20</div>
                         <span class="chiffre-description">Ans d’expérience</span>
                 </div>
-                <div class="chiffre">
+                <div class="chiffre p-4">
                     <div class="chiffre-image w-35">
                         <img src="assets/img/png/chiffre-secteurs.png" alt="image d'un cible">
                     </div>
                         <div class="chiffre-number">+50</div>
                         <span class="chiffre-description">Secteurs d’activité</span>
                 </div>
-                <div class="chiffre mt-5">
+                <div class="chiffre p-4 mt-5">
                     <div class="chiffre-image w-35">
                         <img src="assets/img/png/chiffre-partenaires.png" alt="image d'un cible">
                     </div>
@@ -221,7 +222,7 @@ require_once("header-webapp.php");
                     <p class="my-5">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page. Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                 </div>
             </div>
-            <div class="container my-5 d-flex align-items-center">
+            <div class="container my-xl-5 my-0 d-flex align-items-center">
                 <div class="d-flex flex-column gap-4 me-4">
                     <h3>Sélectionnez les prestations</h3>
                     <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page. Le Lorem.</p>
@@ -274,7 +275,7 @@ require_once("header-webapp.php");
                 <div class="display-2 py-5 col-7 text-center">Regardez la vidéo démo</div>
             </div>
             <div class="container d-flex justify-content-center mb-5">
-                <video width="1120" height="630"  poster=
+                <video width="100%" height="100%"  poster=
                 "assets/img/png/banner-comment.png" controls>
                     <source src= "https://proximityagency.ca/wp-content/themes/proximityagency/assets/video/Proximity.mp4" type="video/mp4" >
                 </video>

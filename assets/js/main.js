@@ -191,18 +191,31 @@ let btnPlay = document.querySelector('[data-js-btn-play]'),
     btnPause = document.querySelector('[data-js-btn-pause]'),  
     constainerVideo = document.querySelector('[data-js-video]'),
     video = constainerVideo.querySelector('video'),
-    banner = document.querySelector('[data-js-home-banner]');
+    banner = document.querySelector('[data-js-home-banner]'),
+    elsVisual = document.querySelectorAll('[data-js-visual]');
 
-// Démarrer la vidéo  
+// Démarrer la vidéo au clic du bouton de play
 btnPlay.addEventListener('click',function()
 {
     video.play();
+
+    // Remonter la vidéo en haut 
     constainerVideo.classList.add('home-banner-video-open');
+
+    // Basculer entre le bouton de démarrage et le bouton d'arrêt
     btnPlay.classList.add('visual-hidden');
     btnPause.classList.remove('visual-hidden');
+
+    // Faire disparaitre la bannière héro lorsque le déroulement de la vidéo sur la version mobile
     banner.classList.add('home-banner-close');
 
-    // Arrêter la vidéo
+    // Cacher les éléments visuels lorsque le déroulement de la vidéo
+    for (let i = 0, l = elsVisual.length; i < l; i++) 
+    {
+        elsVisual[i].style = "display:none";
+    }
+
+    // Arrêter la vidéo au clic du bouton d'arrêt
     btnPause.addEventListener('click', function()
     {
         video.pause();

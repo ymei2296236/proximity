@@ -1,9 +1,9 @@
     
     <!-- Nos partenaires -->
-    <section class="partenaire my-5 pt-5 mx-3">
+    <section class="partenaire my-xl-5 my-0 pt-xl-5 pt-0 mx-3">
       <p class="text-center text-uppercase my-5 pt-md-5 pt-0">« Nous avons accompagné les plus grandes marques dans le développement et la continuité de leur histoire. »</p>
       
-      <div class=" row p-lg-4 p-2 m-lg-5 m-2 justify-content-center">
+      <div class=" row p-lg-4 p-2 m-xl-5 m-lg-0 m-5 justify-content-center">
   
           <div class="logo col-lg-2 col-md-4 col-6 px-lg-3 px-2 ">
             <img src="assets/img/png/logo-banque-pupulaire.png" alt="Logo de Banque Populaire">

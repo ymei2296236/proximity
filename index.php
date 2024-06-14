@@ -13,8 +13,6 @@ require_once("header.php");
         <img class="visual visual-play visual-hidden" data-js-btn-pause src="assets/img/svg/pause.svg" alt="une icône pour arreter la vidéo">
       </span>
       <div class="home-banner-content mx-5 my-5 text-white">
-
-
         <div class="home-banner-title">
           <span class="home-title">The</span>
           <span class="home-title home-title-1">Proximity</span>

@@ -1,7 +1,7 @@
 <body>
 
 
-  <header class="header bg-white sticky-top w-100 header-proximity bg-white d-flex justify-content-between align-items-center px-lg-5 ps-4 pe-2">
+  <header class="header bg-white sticky-top w-100 header-proximity bg-white d-flex justify-content-between align-items-center px-md-5 ps-4 pe-2">
     <a class="header-logo" href="">
       <div class="d-flex position-relative h-100">
         <img src="assets/img/png/logo-proximity.png" alt="Site Logo" >
