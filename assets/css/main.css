@@ -898,6 +898,7 @@ a {
 
 .section-title {
 	margin-left: 8vw;
+	/* margin-right: 8vw; */
 }
 
 .btn-lire {
@@ -940,8 +941,7 @@ a {
 	margin-right: 1rem;
 }
 .webapp-banner-text {
-	padding: 8.5vw 10vw;
-	padding-right: 0;
+	padding: 8.5vw 0vw 8.5vw 10vw;
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -1043,7 +1043,7 @@ a {
 .webapp.apropos > div:last-child {
 	border-radius: 20px;
 }
-.webapp .apropos img {
+.webapp .apropos-left img {
 	height: 100%;
 	object-fit: cover;
 	padding: 0 0.5rem;
@@ -1057,7 +1057,7 @@ a {
 	padding: 0.6rem 0;
 }
 
-.webapp i {
+.webapp .apropos i {
 	color: var(--color_webapp);
 	margin-right: 0.5rem;
 }
@@ -1071,17 +1071,17 @@ a {
 
 .ceo-image {
 	width: 100px;
+	height: 100px;
+	border-radius: 60px;
+	-moz-border-radius: 60px;
+	-webkit-border-radius: 60px;
 	overflow: hidden;
 
-	> img {
-		width: 100%;
-		height: 100%;
-		border-radius: 50px;
-		-moz-border-radius: 50px;
-		-webkit-border-radius: 50px;
+	}
+.ceo-image > img {
+
 		padding: 0;
 	}
-}
 .ceo-name {
 	font-family: "KM";
 }
@@ -1096,7 +1096,6 @@ a {
 	flex-direction: column;
 	justify-content: space-between;
 	position: relative;
-	/* width: calc(25% - 1.5rem); */
 	flex: 1;
 }
 
@@ -1120,9 +1119,6 @@ a {
 	border-radius: 0 0 0 15px;
 }
 
-.webapp i {
-	color: var(--color_webapp);
-}
 
 .chiffres {
 	background-color: #fafafb;
@@ -1171,42 +1167,42 @@ a {
 	margin-right: 1.5rem;
 }
 
-.comment {
-	.prestations-list {
-		background-color: #fafafb;
-		border-radius: 150px;
-		display: flex;
-		gap: 2rem;
-		padding: 2rem 4rem 2rem 6rem;
+.comment .prestations-list {
+	background-color: #fafafb;
+	border-radius: 150px;
+	display: flex;
+	gap: 2rem;
+	padding: 2rem 4rem 2rem 6rem;
 
-		.prestation {
-			background-color: white;
-			border-radius: 25px;
-			box-shadow: 10px 10px 10px #ecedf2;
-			height: 180px;
-
-			.fa-circle-check {
-				color: var(--color_webapp);
-				height: 20px;
-			}
-
-			h4 {
-				font-size: 20px;
-				font-family: "KM";
-				text-transform: none;
-			}
-
-			p {
-				color: #a6a6a6;
-			}
-		}
-		.prestation:nth-child(2) {
-			margin-top: 5rem;
-		}
-		.prestation:nth-child(3) {
-			margin-top: 3rem;
-		}
 	}
+
+.comment .prestation {
+	background-color: white;
+	border-radius: 25px;
+	box-shadow: 10px 10px 10px #ecedf2;
+	height: 100%;
+
+}
+
+.comment .fa-circle-check {
+		color: var(--color_webapp);
+		height: 20px;
+	}
+	
+.comment h4 {
+	font-size: 20px;
+	font-family: "KM";
+	text-transform: none;
+}
+
+.comment p {
+	color: #a6a6a6;
+}
+.prestation:nth-child(2) {
+	margin-top: 5rem;
+}
+.prestation:nth-child(3) {
+	margin-top: 3rem;
 }
 
 .demo {
@@ -1262,6 +1258,7 @@ a {
 	font-size: 16px;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .tarif {
@@ -1270,64 +1267,64 @@ a {
 	font-family: "KM";
 	flex: 1;
 
-	.tarif-name {
-		font-size: 2vw;
-		color: #1e3463;
 	}
-	.tarif-amount {
-		color: var(--color_webapp);
-		font-size: 4.5vw;
-	}
-
-	sup {
-		font-size: 1.5vw;
-		top: -0.8em;
-	}
-
-	.tarif-time {
-		font-size: 1.5vw;
-		color: #a6a6a6;
-		font-family: "KL";
-	}
-
-	.tarif-image {
-		width: 150px;
-		height: 150px;
-	}
-
-	.tarif-items {
-		font-family: "KR";
-	}
-
-	.tarif-item {
-		color: #1e3463;
-		font-size: 1.8vw;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.tarif-item-disabled {
-		color: #e6e6e7;
-	}
-
-	.icon-tick-disabled {
-		background-color: #e6e6e7;
-	}
-}
+		.tarif-name {
+			font-size: 2vw;
+			color: #1e3463;
+		}
+		.tarif-amount {
+			color: var(--color_webapp);
+			font-size: 4.5vw;
+		}
+	
+		.tarif sup {
+			font-size: 1.5vw;
+			top: -0.8em;
+		}
+	
+		.tarif-time {
+			font-size: 1.5vw;
+			color: #a6a6a6;
+			font-family: "KL";
+		}
+	
+		.tarif-image {
+			width: 150px;
+			height: 150px;
+		}
+	
+		.tarif-items {
+			font-family: "KR";
+		}
+	
+		.tarif-item {
+			color: #1e3463;
+			font-size: 1.8vw;
+			justify-content: center;
+			align-items: center;
+		}
+	
+		.tarif-item-disabled {
+			color: #e6e6e7;
+		}
+	
+		.tarif .icon-tick-disabled {
+			background-color: #e6e6e7;
+		}
 
 .faq-banner {
 	border-radius: 500px;
 	overflow: hidden;
-	/* height: 600px;
-	width: 400px; */
 
-	> img {
+
+	}
+.faq-banner > img {
 		width: 100%;
 		height: 100%;
 		aspect-ratio: 2 / 3;
 		object-fit: cover;
 	}
-}
+
 .faq-content {
 	margin: 0 10vw;
 }
@@ -1532,7 +1529,7 @@ a {
 	}
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
 	.footer-text {
 		font-size: 13px;
 		padding: 4rem 2rem 4rem 4rem;
@@ -1598,6 +1595,7 @@ a {
 	.topbar {
 		font-size: 14px;
 	}
+
 	.marquee,
 	.marquee-track {
 		height: 18vw;
@@ -1801,34 +1799,54 @@ a {
 		padding-right: 0;
 	}
 
-	.webapp-banner .title {
-		font-size: 3.5vw;
-	}
+	/* .webapp-banner .title {
+		font-size: 4vw;
+	} */
 	.btn,
 	.progress {
 		font-size: 1.8vw;
 	}
 
-	.webapp-banner .title-lg {
-		font-size: 10vw;
-		top: 19%;
-	}
 	.webapp-banner-text {
-		gap: 2vw;
+		padding:3vw 0vw 5vw 7vw;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		gap: 1vw;
 	}
 
 	.apropos .list-group-item {
 		padding: 0.3rem 0;
 	}
+
+	.webapp .service-number {
+		width: 7vw;
+		height: 7vw;
+		font-size: 5vw;
+	}
+
+	.webapp .chiffres {
+		padding-bottom: 15vw;
+	}
+
+	.webapp h2::after {
+		width: 80px;
+	}
+
+
+	.prestation:nth-child(2), .prestation:nth-child(3){
+
+		margin-top: 0;
+	}
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 651px) {
 	/* Site de Proximity */
 	.display-1 {
 		font-size: 25vw;
 	}
 	.display-2 {
-		font-size: 2rem;
+		font-size: 8vw;
 	}
 
 	.marquee,
@@ -1877,6 +1895,7 @@ a {
 		left: -9px;
 	}
 
+	
 	.service-1 {
 		bottom: 35vw;
 	}
@@ -1936,11 +1955,12 @@ a {
 		margin-left: -20vw;
 		transform: scale(2);
 	}
-	.home-banner.visual-play {
+	.home-banner .visual-play {
 		width: 15vw;
 		top: 2%;
 		left: 43%;
 	}
+
 
 	.home-banner {
 		height: 100%;
@@ -2069,10 +2089,24 @@ a {
 
 	/* Site de Web & App */
 
-	.btn-tarif {
-		padding: 0.5rem 1rem;
-		/* font-size: 22px; */
+	.header-webapp .header-logo::after {
+		right: 36%;
 	}
+
+	
+	.btn,
+	.progress {
+		font-size: 3.5vw;
+	}
+
+	.webapp h2 {
+		font-size: 16px;
+	}
+	.webapp-banner .title {
+		font-size: 8vw;
+	}
+
+	
 	.webapp-banner {
 		height: 100%;
 		position: relative;
@@ -2083,7 +2117,158 @@ a {
 		flex-direction: column;
 	}
 
-	.webapp-banner .visual-play {
-		left: 46%;
+	.webapp-banner .title-lg {
+		font-size: 22vw;
+		top: 12%;
+		right: 10%;
 	}
+	.webapp-banner-text {
+		justify-content: space-between;
+		height: 90vw;
+		padding: 8.5vw 4vw 8.5vw 4vw;
+
+	}
+
+	.webapp-banner-title {
+		margin-right: 18vw;
+	}
+
+
+
+	.webapp p,
+	.webapp li {
+
+		font-size: 3vw;
+	}
+
+	.webapp-banner-p {
+		padding-left: 4vw;
+	}
+
+	.webapp-banner .visual-play {
+		left: 42%;
+		width: 15vw;
+
+	}
+
+	.visual-cible {
+		width: 10vw;
+		bottom: 160vw;
+	}
+
+	.visual-rocket {
+		top: 50%;
+		width: 8vw;
+		left: 18%;
+	}
+
+	.visual-loupe {
+		width: 10vw;
+		top: 65%;
+		right: 5%;
+	}
+
+	.ceo {
+		font-size: 18px;
+	}
+
+	.webapp .service {
+		flex: 45%;
+	}
+
+	.webapp .service:not(:last-child) {
+		margin-right: 0;
+	}
+
+	.webapp .service-number {
+		width: 16vw;
+		height: 16vw;
+		font-size: 8vw;
+	}
+
+	.webapp h3 {
+		font-size: 4vw;
+	}
+	.btn-lire {
+		font-size: 3vw;
+	}
+
+	.webapp .chiffres {
+		padding-bottom: 70vw;
+
+	}
+
+	.section-title {
+		margin-left: 4vw;
+	}
+
+	.chiffres-list {
+		display: flex;
+		justify-content: flex-end;
+		gap: 1rem;
+		height: 80vw;
+	}
+	.chiffre {
+		width: 30vw;
+		height: 30vw;
+	}
+
+	.chiffre:not(:last-child) {
+		margin-right: 0;
+	}
+
+	.chiffre:nth-child(3) {
+		position:absolute;
+		bottom: 5%;
+		left:  24%;
+	}
+	.chiffre:last-child {
+		position:absolute;
+		bottom: 20%;
+		right:4%;
+	}
+
+	.chiffre-number {
+		font-size: 8vw;
+	}
+
+	.chiffre-description {
+		font-size: 2.2vw;
+	}
+
+	.comment .prestations-list {
+		padding: 2rem;
+		flex-direction: column;
+		border-radius: 50px;
+	}
+
+	.tarif {
+		flex: 100%;
+	}
+	.tarif-amount {
+		font-size: 15vw;
+	}
+	.tarif-name {
+		font-size: 6vw;
+	}
+
+	.tarif sup {
+		font-size: 5vw;
+		top: -1.5em;
+	}
+
+	.tarif-item {
+		font-size: 4vw;
+		/* width: 48%; */
+	}
+
+	.tarif-time {
+		font-size: 4vw;
+	}
+	.btn-tarif {
+		padding: 0.5rem 1rem;
+		font-size:3vw;
+	}
+
+	
 }

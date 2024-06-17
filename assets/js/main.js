@@ -95,7 +95,7 @@ if (elCheckbox)
                 paymentTerm = 'Mensuel',
                 aInfo = [
                 {
-                    'plan': 'Basci',
+                    'plan': 'Basic',
                     'tarif':'01.00', 
                     'img': "assets/img/png/plan-basic.png",
                     'alt':' Une fusée s\'élève dans le ciel'
@@ -132,15 +132,15 @@ if (elCheckbox)
         {
             let dom = 
                     `
-                        <div class="tarif d-flex flex-column align-items-center py-5">
+                        <div class="tarif d-flex flex-column align-items-center py-sm-5 py-2">
                             <div class="tarif-name mt-3">${plan.plan} Plan</div>
                             <div class="tarif-amount" >
                                 <sup clas="tarif-dollar">$</sup><span data-js-tarif="standard">${plan.tarif}</span><span class="tarif-time">/${paymentTerm}</span>
                             </div>
-                            <div class="tarif-image mt-4 ">
+                            <div class="tarif-image mt-sm-4 mt-0">
                                 <img src="${plan.img}" alt="${plan.alt}">
                             </div>
-                            <div class='tarif-items my-5 d-flex flex-column gap-4'>
+                            <div class='tarif-items my-5 d-flex flex-column gap-sm-4 gap-3 mx-sm-4 mx-3'>
                                 <div class="tarif-item d-flex">
                                     <div class="icon-tick me-3">
                                         <i class="fa-solid fa-check" style="color: #ffffff;"></i>
