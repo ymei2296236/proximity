@@ -5,18 +5,18 @@ require_once("header-webapp.php");
 ?>
 
     <main class="webapp">
-        <section class="webapp-banner d-flex position-relative" >
+        <section class="banner d-flex position-relative" data-js-banner>
  
-            <div class="webapp-banner-content d-flex" data-js-home-banner>
-                <div class="webapp-banner-text col-md-6 col-12 mt-lg-0 mt-5 text-end">
-                    <div class="webapp-banner-title">
+            <div class="banner-content d-flex" >
+                <div class="banner-text col-md-6 col-12 mt-lg-0 mt-5 text-end">
+                    <div class="banner-title">
                         <span class="title me-5">Création sur</span>
                         <span class="title me-3">mesure</span>
                         <span class="title me-5">Technologie</span>
                         <span class="title">de pointe.</span>
                         <span class="title title-lg">&</span>
                     </div>
-                    <p class="webapp-banner-p text-start text-white">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum.</p>
+                    <p class="banner-p text-start text-white">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum.</p>
                     <div class="d-flex flex-wrap gap-xl-4 gap-2 justify-content-end">
                         <div class="progress progress-striped active me-lg-0 me-5" data-js-progress> 
                             <div class=" progress-bar progress-bar-success d-lg-flex d-none align-items-center"  data-js-progress-bar> 
@@ -31,10 +31,10 @@ require_once("header-webapp.php");
                     </div>
                     
                 </div>
-                <div class="col-md-6 col-12">
+                <div class="col-md-6 col-12 p-lg-5 p-1">
                     <img src="assets/img/png/c-white.png" alt="">
                 </div>
-                <div data-js-video  class='home-banner-video'>
+                <div data-js-video  class='banner-video'>
                 <video src="https://proximityagency.ca/wp-content/themes/proximityagency/assets/video/Proximity.mp4" loop="" muted="" poster="assets/img/png/video-cover.png"></video>
             </div>
             </div>
@@ -63,8 +63,8 @@ require_once("header-webapp.php");
             </div>
         </section>
 
-        <section class="apropos d-flex align-items-start gap-4 my-xl-5 my-3">
-            <div class="apropos-left col-lg-6 col-12 d-flex ">
+        <section class="apropos d-flex flex-wrap align-items-start justify-content-between my-5">
+            <div class="apropos-left col-lg-6 col-12 d-flex pe-lg-2 pe-0 mb-lg-0 mb-4">
                 <div class="w-50">
                     <img class="object-fit-fill" src="assets/img/png/webapp-apropos-1.png" alt="Bannière déroulable de la place du 350">
                 </div>
@@ -73,47 +73,49 @@ require_once("header-webapp.php");
                         <img src="assets/img/png/webapp-apropos-3.png" alt="Bannière déroulable de la place du 350">
                 </div>
             </div>
-            <div class="bg-white pt-3 pb-4 px-sm-5 px-3">
-                <h2 class="pb-4">À propos</h2>
-                <div class="display-2 my-lg-4 my-2">Découvrir votre digital evolution.</div>
-                <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
-                <ul class="list-group mt-3">
-                    <li class="list-group-item">
-                        <i class="fa-solid fa-square-check"></i>
-                        Avantage 1
-                    </li>
-                    <li class="list-group-item"> 
-                        <i class="fa-solid fa-square-check"></i>
-                        Avantage 2
-                    </li>
-                    <li class="list-group-item">
-                        <i class="fa-solid fa-square-check"></i>
-                        Avantage 3
-                    </li>
-                </ul>
-                <div class="ceo d-flex align-items-center my-4 pt-4 gap-4">
-                    <div class="p-0 ceo-image">
-                        <img class="" src="assets/img/png/ceo.png" alt="photo du CEO">
+            <div class="col-lg-6 col-12 ps-lg-2 ps-0">
+                <div class="bg-white pt-3 pb-4 px-sm-5 px-4">
+                    <h2 class="pb-4">À propos</h2>
+                    <div class="display-2 my-lg-4 my-2">Découvrir votre digital evolution.</div>
+                    <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
+                    <ul class="list-group mt-3">
+                        <li class="list-group-item">
+                            <i class="fa-solid fa-square-check"></i>
+                            Avantage 1
+                        </li>
+                        <li class="list-group-item"> 
+                            <i class="fa-solid fa-square-check"></i>
+                            Avantage 2
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa-solid fa-square-check"></i>
+                            Avantage 3
+                        </li>
+                    </ul>
+                    <div class="ceo d-flex align-items-center my-4 pt-4 gap-4">
+                        <div class="p-0 ceo-image">
+                            <img class="" src="assets/img/png/ceo.png" alt="photo du CEO">
+                        </div>
+                        <div class="">
+                            <div class="ceo-name mb-2" >Mohamed Squalli</div>
+                            <div>CEO & Fondateur</div>
+                        </div>
                     </div>
-                    <div class="">
-                        <div class="ceo-name mb-2" >Mohamed Squalli</div>
-                        <div>CEO & Fondateur</div>
-                    </div>
+                    <a class="btn" href=""><span class="bold">Découvrir </span>plus</a>
                 </div>
-                <a class="btn" href=""><span class="bold">Découvrir </span>plus</a>
             </div>
         </section>
 
 
-        <section class="services py-5 text-break">
-            <div class="section-title">
-                <h2 class="pb-5">Services</h2>
+        <section class="services my-5 text-break">
+            <div class="">
+                <h2 class="section-title pb-sm-5 pb-4">Services</h2>
                 <div class="d-flex justify-content-center">
-                    <div class="display-2 pb-5 pt-xl-5 pt-0 col-sm-6 col-10 text-center">Le Lorem Ipsum est simplement du faux texte</div>
+                    <div class="display-2 pb-5 pt-xl-5 pt-0 col-lg-6 col-md-8 col-10 text-center">Le Lorem Ipsum est simplement du faux texte</div>
                 </div>
             </div>
-            <div class="d-flex flex-wrap mx-sm-5 mx-3 gap-md-0 gap-3">
-                <div class="service p-xl-5 p-4">
+            <div class="d-flex flex-wrap mx-sm-5 mx-3 px-sm-3 px-0 gap-md-0 gap-3">
+                <div class="service d-flex flex-column justify-content-between p-xl-5 p-4">
                     <div class="service-number">
                         01
                     </div>
@@ -126,7 +128,7 @@ require_once("header-webapp.php");
                         <a href="#" class="btn-lire">Lire la suite<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service p-xl-5 p-4">
+                <div class="service d-flex flex-column justify-content-between p-xl-5 p-4">
                     <div class="service-number">
                         02
                     </div>
@@ -139,7 +141,7 @@ require_once("header-webapp.php");
                         <a href="#" class="btn-lire">Lire la suite<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service p-xl-5 p-4">
+                <div class="service d-flex flex-column justify-content-between p-xl-5 p-4">
                     <div class="service-number">
                         03
                     </div>
@@ -152,7 +154,7 @@ require_once("header-webapp.php");
                         <a href="#" class="btn-lire">Lire la suite<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service p-xl-5 p-4">
+                <div class="service d-flex flex-column justify-content-between p-xl-5 p-4">
                     <div class="service-number">
                         04
                     </div>
@@ -169,9 +171,7 @@ require_once("header-webapp.php");
         </section>
 
         <section class="chiffres my-5">
-            <div class="section-title mt-5 pt-5">
-                <h2 class="pb-5">Chiffres clé </h2>
-            </div>
+            <h2 class="section-title pb-sm-5 pb-4 mt-5 pt-5">Chiffres clé </h2>
             <div class="d-flex">
                 <div class="d-flex w-60 justify-content-end">
                     <div class="display-2 pt-xl-5 pt-0 col-lg-7 col-10 text-center">Le Lorem Ipsum est du faux texte</div>
@@ -180,30 +180,30 @@ require_once("header-webapp.php");
                     <img src="assets/img/png/banner-chiffres.png" alt="">
                 </div>
             </div>
-            <div class="chiffres-list d-flex flex-wrap mx-lg-5 mx-3 ps-5 pe-3">
+            <div class="chiffres-list d-flex flex-wrap mx-lg-5 mx-3 px-3">
 
-                <div class="chiffre p-4 mt-lg-0 mt-5">
+                <div class="chiffre p-2 mt-lg-0 mt-5">
                     <div class="chiffre-image w-35">
                         <img src="assets/img/png/chiffre-projets.png" alt="image d'un cible">
                     </div>
                         <div class="chiffre-number">+1000</div>
                         <span class="chiffre-description">Projets en ligne</span>
                 </div>
-                <div class="chiffre p-4 mt-lg-5 mt-0">
+                <div class="chiffre p-2 mt-lg-5 mt-0">
                     <div class="chiffre-image w-35">
                         <img src="assets/img/png/chiffre-ans.png" alt="image d'un cible">
                     </div>
                         <div class="chiffre-number">+20</div>
                         <span class="chiffre-description">Ans d’expérience</span>
                 </div>
-                <div class="chiffre p-4">
+                <div class="chiffre p-2">
                     <div class="chiffre-image w-35">
                         <img src="assets/img/png/chiffre-secteurs.png" alt="image d'un cible">
                     </div>
                         <div class="chiffre-number">+50</div>
                         <span class="chiffre-description">Secteurs d’activité</span>
                 </div>
-                <div class="chiffre p-4 mt-lg-5 mt-0">
+                <div class="chiffre p-2 mt-lg-5 mt-0">
                     <div class="chiffre-image w-35">
                         <img src="assets/img/png/chiffre-partenaires.png" alt="image d'un cible">
                     </div>
@@ -213,15 +213,15 @@ require_once("header-webapp.php");
             </div>
         </section>
 
-        <section class="comment pb-5 ">
-            <div class="d-flex justify-content-start align-content-start gap-3 my-xl-5 my-0 me-xl-0 me-3">
-                <h2 class="section-title text-wrap col-lg-5  col-5">Comment ça marche ? </h2>
-                <div class="col-5 text-center col-lg-5  col-6">
+        <section class="comment my-5">
+            <div class="d-flex flex-wrap justify-content-start align-content-start gap-sm-5 gap-3 my-xl-5 my-0 me-xl-0 me-3">
+                <h2 class="section-title text-wrap col-xl-3 col-md-2 col-12">Comment ça marche ? </h2>
+                <div class="text-center col-xl-4 col-lg-6 col-md-7 col-12 me-2 px-4">
                     <div class="display-2">Lorem Ipsum</div>
                     <p class="my-lg-5 my-2">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page. Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page.</p>
                 </div>
             </div>
-            <div class="container my-xl-5 my-3 d-flex flex-wrap align-items-center justify-content-between">
+            <div class="container my-xl-5 my-4 d-flex flex-wrap align-items-center justify-content-between">
                 <div class="d-flex flex-column  col-lg-4 col-12 gap-4 me-4 mb-4">
                     <h3>Sélectionnez les prestations</h3>
                     <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page. Le Lorem.</p>
@@ -260,7 +260,7 @@ require_once("header-webapp.php");
                             </div>
                         </div>
                         <div>
-                            <h4>Prestation Numéro 3</h4>
+                            <h4>Prestation Numéro 3</h4> 
                             <p>Le Lorem Ipsum</p>
                         </div>
                     </div>
@@ -269,7 +269,7 @@ require_once("header-webapp.php");
 
         </section>
 
-        <section class="demo p-md-5 p-0">
+        <section class="demo my-5">
             <div class="d-flex justify-content-center">
                 <div class="display-2 py-5 col-md-7 col-12 text-center">Regardez la vidéo démo</div>
             </div>
@@ -282,9 +282,7 @@ require_once("header-webapp.php");
         </section>
 
         <section class="tarifs py-5">
-            <div class="section-title ">
-                <h2 class="pb-5 text-white">Plan tarifaire </h2>
-            </div>
+            <h2 class="section-title pb-sm-5 pb-4 text-white">Plan tarifaire </h2>
             <div class="container d-flex flex-wrap text-white">
                 <div class="display-2 col-lg-8 col-12">Des sites web et applications incroyables aux meilleurs prix.</div>
                 <div class="toggle col-lg-4 col-12 d-flex gap-2 align-items-end mt-3">
@@ -296,16 +294,14 @@ require_once("header-webapp.php");
                 </div>
 
             </div>
-            <div class="container d-flex flex-wrap my-5 pt-lg-5 pt-0 gap-lg-4 gap-2" data-js-tarifs>
+            <div class="container d-flex flex-wrap mt-5 pt-lg-5 pt-3 gap-lg-4 gap-2" data-js-tarifs>
 
             </div>
         </section>
 
-        <section class="faq my-5 py-5">
-            <div class="section-title ">
-                <h2 class="pb-5">FAQ </h2>
-            </div>
-            <div class="faq-content d-flex flex-wrap gap-5 justify-content-between">
+        <section class="faq py-5 my-5">
+            <h2 class="section-title pb-sm-5 pb-4">FAQ </h2>
+            <div class="faq-content d-flex flex-sm-row flex-column-reverse gap-5 justify-content-between">
                 <div class="col-sm-6 col-12">
                     <div class="display-2 mb-5">Le Lorem Ipsum est du faux texte</div>
 

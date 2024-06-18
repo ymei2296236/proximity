@@ -5,22 +5,22 @@ require_once("header.php");
 ?>
 
 
-  <main>
+  <main class="proximity">
     <!-- la bannière -->
-    <section class="home-banner mb-4" data-js-home-banner>
+    <section class="banner mb-4" data-js-banner>
       <span data-js-btn-video>
         <img class="visual visual-play animated" data-js-btn-play src="assets/img/svg/play.svg" alt="une icône pour afficher la vidéo">
         <img class="visual visual-play visual-hidden" data-js-btn-pause src="assets/img/svg/pause.svg" alt="une icône pour arreter la vidéo">
       </span>
-      <div class="home-banner-content mx-5 my-5 text-white">
-        <div class="home-banner-title">
-          <span class="home-title">The</span>
-          <span class="home-title home-title-1">Proximity</span>
-          <span class="home-title ">agency</span>
-          <span class="home-title home-title-2">closer to</span>
-          <span class="home-title home-title-3">the future</span>
-          <span class="home-title home-title-2">than</span>
-          <span class="home-title home-title-2">the present</span>
+      <div class="banner-content mx-5 my-5 text-white">
+        <div class="banner-titles">
+          <span class="banner-title">The</span>
+          <span class="banner-title banner-title-1">Proximity</span>
+          <span class="banner-title ">agency</span>
+          <span class="banner-title banner-title-2">closer to</span>
+          <span class="banner-title banner-title-3">the future</span>
+          <span class="banner-title banner-title-2">than</span>
+          <span class="banner-title banner-title-2">the present</span>
         </div>
         <div>
           <span class="categorie categorie-1"><span class="darkText">Mar</span>keting&nbsp;digital</span>
@@ -31,20 +31,20 @@ require_once("header.php");
 
         </div>
         <div>
-          <img class="icon icon-location-1" src="assets/img/png/location.png" alt="">
-          <img class="icon icon-location-2" src="assets/img/png/location.png" alt="">
-          <img class="icon icon-location-3" src="assets/img/png/location.png" alt="">
-          <img class="icon icon-chat" src="assets/img/svg/chat.svg" alt="">
-          <img class="icon icon-globe" src="assets/img/svg/globe.svg" alt="">
-          <img class="icon icon-loupe" src="assets/img/svg/loupe.svg" alt="">
-          <img class="icon icon-panier" src="assets/img/svg/panier.svg" alt="">
+          <img class="visual visual-location-1" src="assets/img/png/location.png" alt="">
+          <img class="visual visual-location-2" src="assets/img/png/location.png" alt="">
+          <img class="visual visual-location-3" src="assets/img/png/location.png" alt="">
+          <img class="visual visual-chat" src="assets/img/svg/chat.svg" alt="">
+          <img class="visual visual-globe" src="assets/img/svg/globe.svg" alt="">
+          <img class="visual visual-loupe" src="assets/img/svg/loupe.svg" alt="">
+          <img class="visual visual-panier" src="assets/img/svg/panier.svg" alt="">
         </div>
       </div>
       <div class="d-flex row">
-        <img class="home-banner-image col-md-6 px-0" src="assets/img/png/c.png" alt="">
-        <img class="home-banner-image col-md-6 px-0"  src="assets/img/png/terre.png" alt="">
+        <img class="banner-image col-md-6 px-0" src="assets/img/png/c.png" alt="">
+        <img class="banner-image col-md-6 px-0"  src="assets/img/png/terre.png" alt="">
       </div>
-      <div data-js-video  class='home-banner-video'>
+      <div data-js-video  class='banner-video'>
         <video src="https://proximityagency.ca/wp-content/themes/proximityagency/assets/video/Proximity.mp4" loop="" muted="" poster="assets/img/png/video-cover.png"></video>
       </div>
     </section>
@@ -149,14 +149,14 @@ require_once("header.php");
     <!-- À propos de nous -->
     <section class="mx-md-5 mx-3">
       <h2 class="mb-lg-5 mb-0 pb-4"><span class="pb-3">À propos de nous</span></h2>
-      <div class="apropos">
-        <div class="apropos-col d-flex justify-content-end pe-md-5 pe-3">
+      <div class="apropos d-flex flex-wrap">
+        <div class="col-lg-6 col-12 d-flex justify-content-end pe-md-5 pe-3">
           <div class="col-md-8 col-10 mt-md-5 mt-sm-0 pt-4 " >
             <img class="img-fluid img-apropos" src="assets/img/webp/about-home.webp" alt="
             Un homme regarde le ciel étoilé avec des lunettes VR">
           </div>
         </div>
-        <div class="apropos-col pt-sm-5 ps-5">
+        <div class="col-lg-6 col-12 pt-sm-5 ps-5">
           <p class="col-9 display-2 mb-5 pb-2">NOUS NE LIMITONS PAS À ÉLABORER DE SIMPLES STRATÉGIES MARKETING, NOUS CRÉONS DES HISTOIRES DE MARQUES.</p>
           <div class="ms-md-5 ms-0 ps-5">
             <p class="col-9 ms-4 ps-1">Proximity est le fruit de plusieurs années d’expérience dans le domaine du marketing digital. Ayant travaillé avec les plus grandes marques dans le monde entier, nous combinons les idées et les connaissances avec la conception et les données technologiques afin de donner naissance à un résultat adapté à vos besoins et sur-mesure.</p>

@@ -132,15 +132,15 @@ if (elCheckbox)
         {
             let dom = 
                     `
-                        <div class="tarif d-flex flex-column align-items-center py-sm-5 py-2">
+                        <div class="tarif d-flex flex-column align-items-center py-lg-5 py-4  mx-sm-0 mx-3">
                             <div class="tarif-name mt-3">${plan.plan} Plan</div>
                             <div class="tarif-amount" >
-                                <sup clas="tarif-dollar">$</sup><span data-js-tarif="standard">${plan.tarif}</span><span class="tarif-time">/${paymentTerm}</span>
+                                <sup>$</sup><span data-js-tarif="standard">${plan.tarif}</span><span class="tarif-time">/${paymentTerm}</span>
                             </div>
-                            <div class="tarif-image mt-sm-4 mt-0">
+                            <div class="tarif-image mt-lg-4 mt-2">
                                 <img src="${plan.img}" alt="${plan.alt}">
                             </div>
-                            <div class='tarif-items my-5 d-flex flex-column gap-sm-4 gap-3 mx-sm-4 mx-3'>
+                            <div class='tarif-items my-lg-5 my-3 d-flex flex-column gap-lg-4 gap-3 mx-sm-4 mx-3'>
                                 <div class="tarif-item d-flex">
                                     <div class="icon-tick me-3">
                                         <i class="fa-solid fa-check" style="color: #ffffff;"></i>
@@ -191,7 +191,7 @@ let btnPlay = document.querySelector('[data-js-btn-play]'),
     btnPause = document.querySelector('[data-js-btn-pause]'),  
     constainerVideo = document.querySelector('[data-js-video]'),
     video = constainerVideo.querySelector('video'),
-    banner = document.querySelector('[data-js-home-banner]'),
+    banner = document.querySelector('[data-js-banner]'),
     elsVisual = document.querySelectorAll('[data-js-visual]');
 
 // Démarrer la vidéo au clic du bouton de play
@@ -200,14 +200,14 @@ btnPlay.addEventListener('click',function()
     video.play();
 
     // Remonter la vidéo en haut 
-    constainerVideo.classList.add('home-banner-video-open');
+    constainerVideo.classList.add('banner-video-open');
 
     // Basculer entre le bouton de démarrage et le bouton d'arrêt
     btnPlay.classList.add('visual-hidden');
     btnPause.classList.remove('visual-hidden');
 
     // Faire disparaitre la bannière héro lorsque le déroulement de la vidéo sur la version mobile
-    banner.classList.add('home-banner-close');
+    banner.classList.add('banner-close');
 
     // Cacher les éléments visuels lorsque le déroulement de la vidéo
     for (let i = 0, l = elsVisual.length; i < l; i++) 
