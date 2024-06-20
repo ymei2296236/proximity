@@ -1,5 +1,5 @@
 <body>
-  <header class="header header-webapp sticky-top bg-white d-flex justify-content-between align-items-center px-md-5 px-4">
+  <header class="header header-webapp bg-white sticky-top d-flex justify-content-between align-items-center px-md-5 px-4">
     <div class="d-flex position-relative align-items-center ms-xxl-5 ms-0">
         <a class="header-logo me-4 d-flex justify-content-center"  href="index.php">
                 <img src="assets/img/png/logo-proximity.png" alt="Site Logo" >

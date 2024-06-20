@@ -121,13 +121,14 @@ body,
 html {
 	font-family: "KR", sans-serif;
 	position: relative;
-	overflow-x: clip;
 	line-height: normal;
 	color: var(--color_proximity);
 	background-repeat: repeat;
 	width: 100%;
+	height: 100%;
 	max-width: 100%;
 	font-size: 16px;
+	overflow-x: hidden;
 }
 
 main {
@@ -258,6 +259,9 @@ video {
 
 /* 0.4.2 Header */
 
+.header-container {
+	position: relative;
+}
 .header {
 	height: 100px;
 	transition: height 1s ease-in-out;
@@ -314,7 +318,16 @@ video {
 
 .logo {
 	width: 15%;
+	height: 100%;
 	justify-content: space-between;
+	display: flex;
+	align-items: center;
+}
+
+.logo > img {
+	flex: 1;
+
+	object-fit: contain;
 }
 
 .icon-tick {
@@ -981,6 +994,7 @@ a {
 
 .webapp h2 {
 	font-size: 20.9px;
+	color: #1e3463;
 }
 .webapp h3 {
 	font-size: 1.5vw;
@@ -995,8 +1009,12 @@ a {
 	width: 0px;
 }
 
+.webapp h4 {
+	color: #1e3463;
+}
+
 .section-title {
-	margin-left: 8vw;
+	padding: 3rem 8vw 3rem 8vw;
 }
 .webapp .display-1 {
 	-webkit-text-stroke: 1px var(--color_webapp);
@@ -1005,6 +1023,7 @@ a {
 .webapp .display-2 {
 	font-family: "KM";
 	font-size: 3.5rem;
+	color: #1e3463;
 }
 /* 2.2 Navigation */
 
@@ -1201,6 +1220,10 @@ a {
 .webapp.apropos > div:last-child {
 	border-radius: 20px;
 }
+
+.webapp .apropos .section-title {
+	padding: 1rem 0 1.5rem 0;
+}
 .webapp .apropos-left img {
 	height: 100%;
 	object-fit: cover;
@@ -1299,6 +1322,11 @@ a {
 	position: relative;
 	padding-bottom: 8vw;
 }
+
+.chiffres-banner {
+	width: 35%;
+}
+
 .chiffres-list {
 	position: absolute;
 	z-index: 2;
@@ -1341,6 +1369,10 @@ a {
 	margin-right: 1.5rem;
 }
 
+.chiffre:last-child {
+	margin-top: 3rem;
+}
+
 /* 2.6 Comment ça marche */
 
 .comment h4 {
@@ -1349,8 +1381,15 @@ a {
 	text-transform: none;
 }
 
+.comment-intro {
+	text-align: center;
+}
+
 .comment p {
 	color: #a6a6a6;
+}
+.comment .section-title {
+	padding: 0 8vw 0 8vw;
 }
 
 .comment .fa-circle-check {
@@ -1449,12 +1488,12 @@ a {
 	flex: 1;
 }
 .tarif-name {
-	font-size: 2vw;
+	font-size: 1.5vw;
 	color: #1e3463;
 }
 .tarif-amount {
 	color: var(--color_webapp);
-	font-size: 4.5vw;
+	font-size: 4vw;
 }
 
 .tarif sup {
@@ -1632,15 +1671,14 @@ a {
 	}
 
 	.chiffres-list {
-		bottom: 5%;
+		bottom: 4%;
 	}
 }
 
 @media screen and (max-width: 769px) {
 	/* Generic */
 
-	body,
-	html {
+	body {
 		overflow-x: hidden;
 	}
 
@@ -1900,9 +1938,10 @@ a {
 	.webapp .display-2 {
 		font-size: 5.5vw;
 	}
-	.btn,
-	.progress {
-		font-size: 1.8vw;
+	.webapp .banner .btn,
+	.webapp .banner .progress {
+		width: 70%;
+		justify-content: center;
 	}
 
 	.webapp .banner-text {
@@ -1910,7 +1949,7 @@ a {
 		color: white;
 		display: flex;
 		flex-direction: column;
-		gap: 1vw;
+		gap: 2vw;
 	}
 
 	.progress .regular {
@@ -1929,6 +1968,10 @@ a {
 
 	.webapp .chiffres {
 		padding-bottom: 15vw;
+	}
+
+	.chiffre:hover {
+		transform: translateY(0px);
 	}
 
 	.btn-lire {
@@ -1963,6 +2006,10 @@ a {
 
 @media screen and (max-width: 651px) {
 	/* Generic */
+
+	h2 {
+		font-size: 5vw;
+	}
 	p,
 	li {
 		font-size: 3.5vw;
@@ -1983,6 +2030,7 @@ a {
 		margin-left: -20vw;
 		transform: scale(2);
 	}
+
 	/* Site de Proximity */
 	.display-1 {
 		font-size: 25vw;
@@ -2001,9 +2049,11 @@ a {
 		padding: 0;
 	}
 	.header {
-		height: 80px;
 		overflow: hidden;
-		padding: 1rem;
+	}
+
+	.header-sticky {
+		height: 70px;
 	}
 
 	.header-logo {
@@ -2042,6 +2092,8 @@ a {
 		-moz-border-radius: 50vw;
 		-webkit-border-radius: 50vw;
 		border-radius: 50vw;
+		margin-left: 0.75rem;
+		margin-right: 0.75rem;
 	}
 
 	.proximity .banner-close {
@@ -2174,38 +2226,24 @@ a {
 	.logo {
 		width: 40vw;
 	}
-	.elements {
-		top: 490vw;
-	}
 
-	.element-1 {
-		left: 40vw;
-		top: 100vw;
-	}
-
-	.element-2 {
-		margin-left: 30px;
-		margin-top: 200px;
-	}
-
+	.element-1,
+	.element-2,
 	.element-3 {
-		margin-left: 90vw;
-		margin-top: 300px;
+		display: none;
 	}
 
 	/* Site de Web & App */
 
-	.webapp h2 {
+	.webapp h3 {
+		font-size: 6vw;
+	}
+	.section-title,
+	.comment .section-title {
+		padding: 3rem 0.75rem 3rem 0.75rem;
 		font-size: 5vw;
 	}
 
-	.webapp h3 {
-		font-size: 4.5vw;
-	}
-
-	.section-title {
-		margin-left: 4vw;
-	}
 	.header-webapp .header-logo::after {
 		right: 40%;
 	}
@@ -2219,6 +2257,8 @@ a {
 	.webapp .banner {
 		height: 100%;
 		position: relative;
+		margin-left: 0.75rem;
+		margin-right: 0.75rem;
 	}
 
 	.webapp .banner .title {
@@ -2285,15 +2325,25 @@ a {
 		right: -2%;
 	}
 	.webapp .apropos {
-		margin-left: 1rem;
-		margin-right: 1rem;
+		margin-left: 0.75rem;
+		margin-right: 0.75rem;
 	}
+
+	.webapp .apropos-left img {
+		padding: 0 0.25rem 0 0;
+		border-radius: 20px;
+		-webkit-border-radisu: 20px;
+	}
+	.webapp .apropos-left .image-right {
+		padding: 0 0 0 0.25rem;
+	}
+
 	.ceo {
 		font-size: 18px;
 	}
 
 	.webapp .service {
-		flex: 45%;
+		flex: 100%;
 	}
 
 	.webapp .service:not(:last-child) {
@@ -2301,53 +2351,61 @@ a {
 	}
 
 	.webapp .service-number {
-		width: 16vw;
-		height: 16vw;
-		font-size: 8vw;
+		width: 22vw;
+		height: 22vw;
+		font-size: 13vw;
 	}
 
 	.btn-lire {
-		font-size: 3.5vw;
+		font-size: 4vw;
+		width: 45%;
 	}
 
 	.webapp .chiffres {
-		padding-bottom: 85vw;
+		padding-bottom: 86vw;
+		position: relative;
 	}
 
 	.chiffres-list {
 		display: flex;
 		justify-content: flex-end;
-		gap: 1rem;
-		height: 87vw;
+		gap: 0.5rem;
+		height: 112vw;
+		width: calc(100% - 0.5rem);
 	}
 	.chiffre {
-		width: 35vw;
-		height: 35vw;
+		width: calc(50vw - 1rem);
+		height: calc(50vw - 1rem);
 	}
-
+	.chiffres-banner {
+		width: 40%;
+	}
 	.chiffre:not(:last-child) {
 		margin-right: 0;
 	}
 
 	.chiffre:nth-child(3) {
 		position: absolute;
-		bottom: 1%;
-		left: 13%;
+		margin-top: calc(50vw + 2.5rem);
+		left: 0.5rem;
 	}
 	.chiffre:last-child {
 		position: absolute;
-		bottom: 15%;
-		right: 4%;
+		margin-top: calc(50vw - 0.5rem);
+		right: 0.5rem;
 	}
 
 	.chiffre-number {
-		font-size: 8vw;
+		font-size: 10vw;
 	}
 
 	.chiffre-description {
 		font-size: 3vw;
 	}
 
+	.comment-intro {
+		text-align: left;
+	}
 	.prestations-list {
 		padding: 2rem;
 		flex-direction: column;
@@ -2385,6 +2443,6 @@ a {
 	}
 
 	.faq-content {
-		margin: 0 2rem;
+		margin: 0 0.75rem;
 	}
 }

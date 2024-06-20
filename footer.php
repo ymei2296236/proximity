@@ -3,24 +3,24 @@
     <section class="partenaire my-5 pt-xl-5 pt-0 mx-3">
       <p class="text-center text-uppercase my-5 pt-md-5 pt-0">« Nous avons accompagné les plus grandes marques dans le développement et la continuité de leur histoire. »</p>
       
-      <div class=" row p-2 m-xl-5 m-lg-0 my-5 mx-0 justify-content-center">
+      <div class=" row p-sm-5 p-0 m-xl-5 m-lg-0 my-5 mx-2 justify-content-between">
   
-          <div class="logo col-lg-2 col-md-4 col-5 px-lg-3 px-2 ">
+          <div class="logo col-lg-2 col-md-4 col-5 px-xl-5 px-2">
             <img src="assets/img/png/logo-banque-pupulaire.png" alt="Logo de Banque Populaire">
           </div>
-          <div class="logo col-lg-2 col-md-4 col-5 px-lg-3 px-2 ">
-            <img src="assets/img/png/logo-be.png" alt="Logo de Brands Event">
+          <div class="logo col-lg-2 col-md-4 col-5 px-xl-5 px-2">
+            <img src="assets/img/png/logo-brands-event.png" alt="Logo de Brands Event">
           </div>
-          <div class="logo col-lg-2 col-md-4 col-5 px-lg-3 px-2 ">
+          <div class="logo col-lg-2 col-md-4 col-5 px-xl-5 px-2">
             <img src="assets/img/png/logo-chateau.png" alt="Logo de Chateau">
           </div>
-          <div class="logo col-lg-2 col-md-4 col-5 px-lg-3 px-2 ">
+          <div class="logo col-lg-2 col-md-4 col-5 px-xl-5 px-2">
             <img src="assets/img/png/logo-desjardins.png" alt="Logo de Desjardins">
           </div>
-          <div class="logo col-lg-2 col-md-4 col-5 px-lg-3 px-2 ">
+          <div class="logo col-lg-2 col-md-4 col-5 px-xl-5 px-2">
             <img src="assets/img/png/logo-frenzy-ducks.png" alt="Logo de Frenzy Ducks">
           </div>
-          <div class="logo col-lg-2 col-md-4 col-5 px-lg-3 px-2 ">
+          <div class="logo col-lg-2 col-md-4 col-5 px-xl-5 px-2">
             <img src="assets/img/png/logo-royal-air-maroc.png" alt="Logo de Royal Air Maroc">
           </div>
       </div>
@@ -32,8 +32,8 @@
     <div id="cursor-2" data-js-cursor></div> -->
   </main>
 
-  <footer class="mx-xl-5 mx-3">
-    <div class="footer">
+  <footer class="mx-xl-5 mx-2">
+    <div class="footer mx-1">
       <div class="footer-text text-white d-flex gap-xl-5 gap-3 align-items-center">
         <div class="footer-company d-flex flex-column align-items-start gap-lg-4 gap-2">
           <img class="footer-logo" src="https://proximityagency.ca/wp-content/themes/proximityagency/assets/imgs/logo/proximity-logo-blanc.png" alt="">

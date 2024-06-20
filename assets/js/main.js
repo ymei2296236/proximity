@@ -47,11 +47,11 @@ if (elProgress)
  */
 let elHeader = document.querySelector('header');
 
-window.addEventListener('scroll', ()=> 
+window.addEventListener('mousewheel', (e)=> 
 {
-    let scrolled = window.scrollY;
-  
-    if (scrolled > 0 ) elHeader.classList.add('header-sticky');
+    let delta = e.wheelDelta;
+
+    if (delta < 0 ) elHeader.classList.add('header-sticky');
     else elHeader.classList.remove('header-sticky');
 
 })
@@ -132,7 +132,7 @@ if (elCheckbox)
         {
             let dom = 
                     `
-                        <div class="tarif d-flex flex-column align-items-center py-lg-5 py-4  mx-sm-0 mx-3">
+                        <div class="tarif d-flex flex-column align-items-center py-lg-5 py-4">
                             <div class="tarif-name mt-3">${plan.plan} Plan</div>
                             <div class="tarif-amount" >
                                 <sup>$</sup><span data-js-tarif="standard">${plan.tarif}</span><span class="tarif-time">/${paymentTerm}</span>
@@ -192,7 +192,7 @@ let btnPlay = document.querySelector('[data-js-btn-play]'),
     constainerVideo = document.querySelector('[data-js-video]'),
     video = constainerVideo.querySelector('video'),
     banner = document.querySelector('[data-js-banner]'),
-    elsVisual = document.querySelectorAll('[data-js-visual]');
+    elsToHide = document.querySelectorAll('[data-js-hidden]');
 
 // Démarrer la vidéo au clic du bouton de play
 btnPlay.addEventListener('click',function()
@@ -210,9 +210,9 @@ btnPlay.addEventListener('click',function()
     banner.classList.add('banner-close');
 
     // Cacher les éléments visuels lorsque le déroulement de la vidéo
-    for (let i = 0, l = elsVisual.length; i < l; i++) 
+    for (let i = 0, l = elsToHide.length; i < l; i++) 
     {
-        elsVisual[i].style = "display:none";
+        elsToHide[i].style = "display:none";
     }
 
     // Arrêter la vidéo au clic du bouton d'arrêt
