@@ -1,0 +1,2544 @@
+/* 0.1 Settings */
+
+@font-face {
+    font-family: "KBK";
+    src: url("../fonts/Kanit/Kanit-Black.ttf");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KEBD";
+    src: url("../fonts/Kanit/Kanit-ExtraBold.ttf");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KBD";
+    src: url("../fonts/Kanit/Kanit-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KSBD";
+    src: url("../fonts/Kanit/Kanit-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KM";
+    src: url("../fonts/Kanit/Kanit-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KR";
+    src: url("../fonts/Kanit/Kanit-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KRI";
+    src: url("../fonts/Kanit/Kanit-Italic.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KL";
+    src: url("../fonts/Kanit/Kanit-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KLI";
+    src: url("../fonts/Kanit/Kanit-LightItalic.ttf");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KEL";
+    src: url("../fonts/Kanit/Kanit-ExtraLight.ttf");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KELI";
+    src: url("../fonts/Kanit/Kanit-ExtraLightItalic.ttf");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "KT";
+    src: url("../fonts/Kanit/Kanit-Thin.ttf");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+$color_proximity: #2e4586;
+$color_webapp: #55d0ff;
+$color_highlight: #1db1ff;
+
+.w-35 {
+    width: 35% !important;
+}
+
+.w-60 {
+    width: 60% !important;
+}
+
+/* 0.2 Generic */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: "KR", sans-serif;
+    position: relative;
+    line-height: normal;
+    color: $color_proximity;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+main {
+    overflow: hidden;
+}
+
+%title {
+    font-family: "KSBD", sans-serif;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h2 {
+    @extend %title;
+    font-size: 1.75rem;
+    overflow: hidden;
+}
+
+@mixin title-after($width: 30px, $border-color: $color_highlight) {
+    content: "";
+    display: inline-block;
+    height: 0.2em;
+    vertical-align: bottom;
+    width: $width;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 1px solid $border-color;
+}
+
+h2::after {
+    @include title-after($width: 120px, $border-color: $color_proximity)
+}
+
+h3 {
+    @extend %title;
+    font-size: 15px;
+    color: $color_highlight;
+    overflow: clip;
+}
+
+h3::after {
+    @include title-after;
+}
+
+p {
+    margin-bottom: 0;
+    line-height: 150%;
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    width: 100%;
+}
+
+video {
+    cursor: pointer;
+}
+
+/* 0.3 Elements */
+
+.display-1 {
+    font-family: "KSBD";
+    font-size: 13.6vw;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px $color_proximity;
+}
+
+.display-2 {
+    font-family: "KSBD";
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.animated {
+    animation: battement 1.2s ease infinite alternate;
+}
+
+.nav-item {
+    padding: 0 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.bold {
+    font-family: "KSBD";
+}
+
+/* 0.4 Components */
+/* 0.4.1 Topbar */
+
+.topbar {
+    background-color: $color_proximity;
+    font-family: "KL";
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-size: 15px;
+}
+
+.social {
+    width: 25px;
+    height: 25px;
+}
+
+.topbar-phone-icon {
+    width: 25px;
+}
+
+.topbar-slogan {
+    display: flex;
+    align-items: center;
+}
+
+/* 0.4.2 Header */
+
+.header-container {
+    position: relative;
+}
+
+.header {
+    height: 100px;
+    transition: height 1s ease-in-out;
+}
+
+.header-logo {
+    cursor: pointer;
+}
+
+.header-sticky {
+    height: 80px;
+    border-bottom: 1px solid #ecedf2;
+}
+
+/* 0.4.2 Boutons */
+
+.btn {
+    background-color: #55d0ff;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    font-family: "KL";
+    font-size: 1.2vw;
+}
+
+.btn:hover {
+    color: #2e4586;
+}
+
+/* 0.4.4 Marquee */
+
+.marquee {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 15vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.marquee-track {
+    position: absolute;
+    height: 15vw;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 40s linear infinite;
+    display: flex;
+    align-items: center;
+}
+
+/* 0.4.5 Icons and logo */
+
+.logo {
+    width: 15%;
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.logo>img {
+    flex: 1;
+    object-fit: contain;
+}
+
+.icon-tick {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: $color_webapp;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+}
+
+.icon-arrow {
+    width: 25px;
+    height: 25px;
+    transform: rotate(90deg);
+}
+
+.visual {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    width: 3vw;
+    transition: transform 0.5s ease-in-out;
+    font-size: 1vw;
+}
+
+.visual:hover {
+    transform: scale(1.2);
+}
+
+.visual-play {
+    top: 4vw;
+    width: 5vw;
+    z-index: 4;
+}
+
+.visual-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 0.4.6 Videos */
+
+.banner {
+    height: 48vw;
+    position: relative;
+    overflow: hidden;
+    -moz-border-radius: 36vw;
+    -webkit-border-radius: 36vw;
+    border-radius: 36vw;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.banner-close {
+    height: 54vw;
+}
+
+.banner-video {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+
+.banner-video-open {
+    z-index: 3;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.banner-video-open video {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* 0.4.6 Section Partenaire */
+
+.partenaire p {
+    font-size: 20px;
+}
+
+/* 0.4.7 Footer */
+
+.footer {
+    background: rgb(24, 60, 130);
+    background: linear-gradient(99deg,
+            rgba(24, 60, 130, 1) 0%,
+            rgba(25, 59, 131, 1) 29%,
+            rgba(23, 59, 131, 1) 47%,
+            rgba(0, 0, 0, 1) 100%);
+
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    border-radius: 200px;
+}
+
+.element-4 {
+    mix-blend-mode: lighten;
+    position: absolute;
+    margin-top: -75vw;
+    margin-left: -170px;
+}
+
+.footer-company {
+    width: 20%;
+}
+
+.footer-menu {
+    width: 60%;
+}
+
+.footer-intro {
+    font-family: "KELI";
+}
+
+.footer-text {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 4rem 4rem 4rem 4rem;
+}
+
+.footer-logo {
+    width: 80%;
+}
+
+.footer li,
+.footer-contact,
+.footer-langues {
+    font-family: "KR";
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.footer li,
+.footer-langues {
+    cursor: pointer;
+    transition: transform 0.2s;
+    /* Animation */
+}
+
+.footer li:hover,
+.footer-langues:hover {
+    color: $color_highlight;
+    transform: scale(1.1);
+}
+
+.actionEtLangues {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 20%;
+}
+
+.footer-action {
+    font-family: "KSBD";
+    font-size: 3.5vw;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0);
+    text-align: end;
+    -webkit-text-stroke: 1px $color_highlight;
+}
+
+.footer-action:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* 0.4.8 Animations */
+
+@keyframes battement {
+    from {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-74%);
+    }
+}
+
+@keyframes service-name-out {
+    0% {
+        opacity: 0;
+        left: -10%;
+        margin-top: -10px;
+    }
+
+    50% {
+        opacity: 0;
+        left: 20%;
+        margin-top: 25px;
+    }
+
+    100% {
+        opacity: 1;
+        left: 40%;
+        margin-top: 50px;
+    }
+}
+
+@keyframes service-name-in {
+    0% {
+        opacity: 1;
+        left: 40%;
+        margin-top: 50px;
+    }
+
+    50% {
+        opacity: 0;
+        left: 20%;
+        margin-top: 25px;
+    }
+
+    100% {
+        opacity: 0;
+        left: -10%;
+        margin-top: -10px;
+    }
+}
+
+/* #cursor-1 {
+	background: $color_proximity;
+	height: 10px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	position: fixed;
+}
+
+#cursor-2 {
+	background: transparent;
+	border: 1px solid $color_proximity;
+	height: 50px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	left: -10%;
+	top: -10%;
+	transform: translate(10%, -50%);
+	position: fixed;
+} */
+
+/* 1. Site de Proximity */
+/* 1.1 Navigation */
+
+.header-proximity {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container {
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-prj {
+    background-color: transparent;
+    z-index: 1;
+    color: $color_proximity;
+    border: none;
+    display: inline-block;
+    position: relative;
+    font-family: "KM";
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0.7rem;
+}
+
+.btn-prj+span {
+    border: 3px solid $color_proximity;
+    color: $color_proximity;
+    background-color: #fff;
+    font-family: "KSBD";
+    cursor: pointer;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-prj+span::before {
+    content: "";
+    display: inline-block;
+    width: 160px;
+    height: 47px;
+    border-bottom: 8px solid white;
+    -webkit-transform: translateY(20px) translateX(5px) rotate(26deg);
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    transition: all 0.3s;
+}
+
+.btn-prj:hover {
+    color: white;
+}
+
+.btn-container:hover {
+    background-color: $color_proximity;
+}
+
+.btn-container:hover .btn-prj {
+    color: white;
+}
+
+.header-proximity .nav-item {
+    padding: 0;
+    padding-left: 3rem;
+    padding-right: 0.5rem;
+}
+
+.header-proximity .nav-item:first-child {
+    padding-left: 0.5rem;
+}
+
+.header-proximity .nav-item:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 20px;
+    right: -20px;
+    top: 20px;
+    background-color: #d0d0d0;
+}
+
+/* 1.2 Bannière hero */
+
+.proximity .banner {
+    background: linear-gradient(126deg,
+            rgba(97, 136, 193, 1) 0%,
+            rgba(5, 14, 33, 1) 29%,
+            rgba(5, 14, 33, 1) 47%,
+            rgba(17, 43, 104, 1) 100%);
+}
+
+.proximity .banner-content {
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 2;
+    width: calc(100% - 2rem);
+}
+
+.proximity .banner a {
+    color: white;
+}
+
+.proximity .banner-titles {
+    margin-left: 10vw;
+    margin-top: 10vw;
+}
+
+.proximity .banner-title {
+    display: block;
+    left: 50px;
+    font-family: "KSBD";
+    line-height: 100%;
+    font-size: 3vw;
+}
+
+.proximity .banner-title-1 {
+    font-size: 6vw;
+    line-height: 70%;
+}
+
+.proximity .banner-title-2 {
+    font-family: "KT";
+    font-size: 2.4vw;
+    line-height: 110%;
+}
+
+.proximity .banner-title-3 {
+    font-size: 2.4vw;
+}
+
+.proximity .visual-play {
+    left: 47%;
+}
+
+.categorie {
+    position: absolute;
+    z-index: 2;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.darkText {
+    color: #08111b;
+}
+
+.categorie::before {
+    content: "";
+    display: inline-block;
+    width: 2.5vw;
+    height: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    border-radius: 50%;
+    background-color: $color_highlight;
+    margin-right: -19%;
+    margin-bottom: -8%;
+}
+
+.categorie-1 {
+    left: 15vw;
+    top: 2vw;
+}
+
+.categorie-2 {
+    left: 33vw;
+    top: 23vw;
+}
+
+.categorie-3 {
+    left: 42vw;
+    top: 37vw;
+}
+
+.visual-chat {
+    right: 10vw;
+    top: 33vw;
+}
+
+.proximity .visual-loupe {
+    left: 52vw;
+    top: 6vw;
+}
+
+.visual-globe {
+    left: 55vw;
+    top: 25vw;
+}
+
+.visual-panier {
+    right: 12vw;
+    top: 3vw;
+}
+
+.visual-location-1 {
+    right: 23vw;
+    top: 10vw;
+}
+
+.visual-location-2 {
+    right: 12vw;
+    top: 9vw;
+}
+
+.visual-location-3 {
+    right: 13%;
+    top: 14vw;
+}
+
+.categorie:hover {
+    transform: scale(1.2);
+}
+
+/* 1.3 Nos services */
+
+.proximity .imageService {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.proximity .services-wrapper {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    height: 900px;
+}
+
+a {
+    color: white;
+}
+
+.service-wrapper {
+    width: 33%;
+    overflow: hidden;
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.proximity .service-text-top {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.service-name {
+    opacity: 1;
+    position: absolute;
+    white-space: nowrap;
+    font-size: 56px;
+    font-family: "KSBD";
+    left: 40%;
+    margin-top: 50px;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    animation: service-name-out 1s ease-in-out;
+}
+
+.service-text {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    bottom: 6vw;
+    margin-left: 5%;
+    transition: all 0.5s ease-in-out;
+    color: white;
+}
+
+.service-name-open {
+    writing-mode: horizontal-tb;
+    font-size: 40px;
+    font-family: "KSBD";
+    text-transform: uppercase;
+}
+
+.service-description {
+    text-transform: none;
+    font-size: 2vw;
+    font-family: "KR";
+}
+
+.service-btn {
+    width: 6vw;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.service-number {
+    position: absolute;
+    font-family: "KSBD";
+    text-transform: uppercase;
+    z-index: 2;
+    line-height: 0.8;
+    color: rgba(0, 0, 0, 0);
+    padding: 0 auto;
+    bottom: 30px;
+    font-size: 12vw;
+    margin-left: 25%;
+    line-height: 1.2;
+    -webkit-text-stroke: 1px white;
+    transition: all 1s ease-in-out;
+}
+
+.service-wrapper:hover {
+    width: 50%;
+}
+
+.service-wrapper:hover .service-name {
+    opacity: 0;
+    left: -20vw;
+    margin-top: -50px;
+    animation: service-name-in 1s ease-in-out;
+}
+
+.service-wrapper:hover .service-text {
+    bottom: 6vw;
+    margin-left: 5%;
+    opacity: 1;
+}
+
+.service-wrapper:hover .service-number {
+    font-size: 8vw;
+    margin-left: 70%;
+    bottom: 5vw;
+}
+
+/* 1.4 À propos */
+
+.img-apropos {
+    aspect-ratio: 5 / 8;
+    -moz-border-radius: 45px;
+    -webkit-border-radius: 45px;
+    border-radius: 45px;
+    object-fit: cover;
+    object-position: 20%;
+    width: 100%;
+}
+
+.enSavoirPlus {
+    width: 12rem;
+    height: 12rem;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid $color_proximity;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.enSavoirPlus:hover {
+    background-color: $color_proximity;
+    color: white;
+    border: 1px solid white;
+}
+
+.elements {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 160vw;
+    z-index: -1;
+}
+
+.element {
+    content: "";
+    display: inline-block;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.element-1 {
+    height: 1px;
+    height: 30vw;
+    position: absolute;
+    margin-top: -300px;
+    left: 20vw;
+    border-left: 1px solid rgba(34, 41, 80, 0.16);
+    top: 0;
+}
+
+.element-2 {
+    height: 1px;
+    width: 15vw;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: 300px;
+    border-bottom: 1px solid rgba(34, 41, 80, 0.16);
+}
+
+.element-3 {
+    width: 30vw;
+    margin-left: 90vw;
+    margin-top: 80px;
+}
+
+/* 2. Site de Web & App */
+/* 2.1 Generic */
+
+.webapp p,
+.webapp li {
+    color: #333a3d;
+    font-family: "KL";
+}
+
+.webapp h2 {
+    font-size: 20.9px;
+    color: #1e3463;
+}
+
+.webapp h3 {
+    font-size: 1.5vw;
+    text-transform: none;
+    font-family: "KM";
+    color: #1e3463;
+    line-height: 120%;
+}
+
+.webapp h3::after {
+    height: 0px;
+    width: 0px;
+}
+
+.webapp h4 {
+    @extend %title;
+    color: #1e3463;
+}
+
+.section-title {
+    padding: 3rem 8vw 3rem 8vw;
+}
+
+.webapp .display-1 {
+    -webkit-text-stroke: 1px $color_webapp;
+}
+
+.webapp .display-2 {
+    font-family: "KM";
+    font-size: 3.5rem;
+    color: #1e3463;
+}
+
+/* 2.2 Navigation */
+
+.header-webapp {
+    font-size: 18px;
+}
+
+.header-webapp .header-logo::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 30px;
+    top: 1px;
+    right: 33%;
+    background-color: $color_proximity;
+}
+
+.site-name {
+    color: $color_highlight;
+    font-family: "KSBD";
+}
+
+.header-webapp .nav-item {
+    text-transform: uppercase;
+    font-family: "KSBD";
+    padding: 0;
+}
+
+.header-webapp .nav-link {
+    color: $color_proximity;
+}
+
+.header-webapp .nav-link:hover {
+    color: $color_webapp;
+}
+
+.fa-plus {
+    color: $color_webapp;
+}
+
+.btn-tarif {
+    padding: 0.5rem 3rem;
+    font-family: "KSBD";
+    color: #2e4586;
+    font-size: 26px;
+}
+
+.btn-tarif:hover {
+    color: white;
+}
+
+.nav-item:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 20px;
+    right: -20px;
+    top: 15px;
+    background-color: #d0d0d0;
+}
+
+/* 2.3 bannière héro */
+.webapp .banner {
+    overflow: visible;
+}
+
+.webapp .banner-content {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/png/banner-tarif.png");
+    background-size: cover;
+    background-color: #7bd8fb;
+    overflow: hidden;
+    -moz-border-radius: 50vw;
+    -webkit-border-radius: 50vw;
+    border-radius: 50vw;
+    position: relative;
+}
+
+.webapp .banner-text {
+    padding: 8.5vw 0vw 8.5vw 10vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+.webapp .banner .title {
+    font-family: "KSBD";
+    font-size: 4vw;
+    line-height: 100%;
+    display: block;
+}
+
+.webapp .banner .title-lg {
+    position: absolute;
+    font-family: "KSBD";
+    font-size: 9vw;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0);
+    text-align: end;
+    -webkit-text-stroke: 2px white;
+    top: 20%;
+    right: 54%;
+}
+
+.webapp .banner-title {
+    margin-right: 10vw;
+}
+
+.webapp .visual-play {
+    left: 16%;
+    top: 6%;
+}
+
+.webapp .banner-p {
+    padding-right: 4vw;
+}
+
+.progress {
+    color: $color_webapp;
+    position: relative;
+    height: auto;
+    font-family: "KL";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2vw;
+    border: 1px solid white;
+    background-color: white;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+.progress-bar {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    width: 43%;
+    height: 100%;
+    padding: 1rem;
+    transition: width 1s ease-in;
+    background-color: #55d0ff;
+    border-radius: 100px;
+    cursor: pointer;
+    color: white;
+    flex-direction: row;
+}
+
+.progress-bar .bold {
+    position: absolute;
+    left: 2rem;
+    font-family: "KSBD";
+}
+
+.progress-bar .regular {
+    position: absolute;
+    left: 9vw;
+}
+
+.btn-demander {
+    background-color: #1e3463;
+}
+
+.btn-demander:hover {
+    color: $color_webapp;
+}
+
+.visual-cible {
+    width: 5vw;
+    left: 2%;
+    bottom: 10vw;
+}
+
+.visual-rocket {
+    width: 3vw;
+    left: 60%;
+    top: 13%;
+}
+
+.webapp .visual-loupe {
+    width: 5vw;
+    right: 0%;
+    top: 33%;
+}
+
+.webapp .apropos {
+    color: #1e3463;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    padding: 5vw;
+    background-color: #f9f9fb;
+    border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+}
+
+.webapp.apropos>div:last-child {
+    border-radius: 20px;
+}
+
+.webapp .apropos .section-title {
+    padding: 1rem 0 1.5rem 0;
+}
+
+.webapp .apropos-left img {
+    height: 100%;
+    object-fit: cover;
+    padding: 0 0.5rem;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+}
+
+.webapp .apropos .list-group-item {
+    border: 0px;
+    padding: 0.6rem 0;
+}
+
+.webapp .apropos i {
+    color: $color_webapp;
+    margin-right: 0.5rem;
+}
+
+.ceo {
+    color: #333a3d;
+    font-size: 22px;
+    font-family: "KL";
+    border-top: 1px solid #333a3d;
+}
+
+.ceo-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+    overflow: hidden;
+}
+
+.ceo-image>img {
+    padding: 0;
+}
+
+.ceo-name {
+    font-family: "KM";
+}
+
+/* 2.4 Services */
+
+.webapp .service {
+    background-color: #fafafb;
+    position: relative;
+    flex: 1;
+}
+
+.webapp .service:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.webapp .service-number {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    background-color: $color_webapp;
+    color: white;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "KM";
+    font-size: 46px;
+    border-radius: 0 0 0 15px;
+}
+
+.btn-lire {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: "KM";
+    color: #1e3463;
+    transition: width 0.5s ease-in-out;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #61d2fe;
+}
+
+.btn-lire:hover {
+    width: 65%;
+    color: #1e3463;
+}
+
+.btn-lire>.fa-arrow-right {
+    color: #61d2fe;
+}
+
+/* 2.5 Chiffres clés */
+
+.chiffres {
+    background-color: #fafafb;
+    position: relative;
+    padding-bottom: 8vw;
+}
+
+.chiffres-banner {
+    width: 35%;
+}
+
+.chiffres-list {
+    position: absolute;
+    z-index: 2;
+    bottom: 10%;
+    width: 90%;
+}
+
+.chiffre {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 18vw;
+    width: 18vw;
+    transition: transform 0.5s ease-in-out;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.chiffre-number {
+    font-size: 5vw;
+    color: $color_webapp;
+    line-height: 90%;
+}
+
+.chiffre-description {
+    font-size: 1.7vw;
+    font-family: "KL";
+}
+
+.chiffre:hover {
+    transform: translateY(-50px);
+}
+
+.chiffre:nth-child(3) {
+    margin-top: 6rem;
+}
+
+.chiffre:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.chiffre:last-child {
+    margin-top: 3rem;
+}
+
+/* 2.6 Comment ça marche */
+
+.comment h4 {
+    font-size: 20px;
+    font-family: "KM";
+    text-transform: none;
+}
+
+.comment-intro {
+    text-align: center;
+}
+
+.comment p {
+    color: #a6a6a6;
+}
+
+.comment .section-title {
+    padding: 0 8vw 0 8vw;
+}
+
+.comment .fa-circle-check {
+    color: $color_webapp;
+    height: 20px;
+}
+
+.prestations-list {
+    background-color: #fafafb;
+    border-radius: 150px;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 4rem 2rem 6rem;
+}
+
+.prestation {
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px #ecedf2;
+    height: 100%;
+}
+
+.prestation:nth-child(2) {
+    margin-top: 5rem;
+}
+
+.prestation:nth-child(3) {
+    margin-top: 3rem;
+}
+
+/* 2.6 Regardez la vidéo démo */
+
+.demo {
+    background-color: #fafafb;
+}
+
+/* 2.7 Plan tarifaire */
+
+.tarifs {
+    background-image: url("../img/png/banner-tarif.png");
+    background-color: $color_webapp;
+    background-repeat: repeat;
+}
+
+.tarifs h2::after {
+    border-top: 1px solid white;
+}
+
+.tarifs .toggle {
+    font-size: 24px;
+    font-family: "KL";
+}
+
+.form-switch .form-check-input {
+    width: 3em;
+    height: 1.3em;
+    margin-left: -2em;
+    margin-right: 1rem;
+
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba%28255, 255, 255, 1%29'/></svg>");
+    background-color: #00b5fa;
+    border: 0px;
+    cursor: pointer;
+}
+
+.form-check {
+    margin-bottom: 0;
+    padding-left: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-check-label {
+    margin-top: 0.2rem;
+    height: 1.6em;
+    display: flex;
+    align-items: center;
+}
+
+.chip {
+    background-color: white;
+    color: $color_webapp;
+    padding: 0.1rem 0.5rem;
+    text-transform: uppercase;
+    font-family: "KL";
+    border-radius: 20px;
+    margin-left: 0.5rem;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarif {
+    background-color: white;
+    border-radius: 200px;
+    font-family: "KM";
+    flex: 1;
+}
+
+.tarif-name {
+    font-size: 1.5vw;
+    color: #1e3463;
+}
+
+.tarif-amount {
+    color: $color_webapp;
+    font-size: 4vw;
+}
+
+.tarif sup {
+    font-size: 1.5vw;
+    top: -0.8em;
+}
+
+.tarif-time {
+    font-size: 1.5vw;
+    color: #a6a6a6;
+    font-family: "KL";
+}
+
+.tarif-image {
+    width: 150px;
+    height: 150px;
+}
+
+.tarif-image>img {
+    width: auto;
+    height: 100%;
+}
+
+.tarif-items {
+    font-family: "KR";
+}
+
+.tarif-item {
+    color: #1e3463;
+    font-size: 1.2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarif-item-disabled {
+    color: #e6e6e7;
+}
+
+.tarif .icon-tick-disabled {
+    background-color: #e6e6e7;
+}
+
+/* 2.8 FAQ */
+
+.faq-banner {
+    border-radius: 500px;
+    overflow: hidden;
+    aspect-ratio: 2 / 3;
+}
+
+.faq-banner>img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+.faq-content {
+    margin: 0 10vw;
+}
+
+.accordion {
+    border: 1px solid #9d9d9d;
+    color: #070808;
+}
+
+.accordion-button {
+    font-size: 20px;
+    font-family: "KSBD";
+    padding: 1rem 1.5rem;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #070808;
+    background-color: white;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+    border: 0px;
+    line-height: 200%;
+    font-family: "KL";
+    text-align: justify;
+    padding-top: 0;
+    color: #333a3d;
+}
+
+@media screen and (max-width: 1025px) {
+
+    /* Generic */
+    p,
+    li {
+        font-size: 1.8vw;
+        line-height: 160%;
+    }
+
+    .nav-item:not(:last-child)::after {
+        right: 0px;
+        top: 10px;
+    }
+
+    .visual {
+        width: 4vw;
+    }
+
+    .visual-cible {
+        width: 6vw;
+    }
+
+    .visual-play {
+        width: 8vw;
+    }
+
+    .webapp .visual-loupe {
+        width: 6vw;
+    }
+
+    .footer-text {
+        font-size: 13px;
+        padding: 4rem 2rem 4rem 4rem;
+    }
+
+    .footer p,
+    .footer li {
+        font-size: 13px;
+    }
+
+    /* Proximity  */
+
+    .categorie {
+        font-size: 2vw;
+    }
+
+    .categorie::before {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    /* Web & App */
+
+    .webapp h3 {
+        font-size: 2.5vw;
+        line-height: 100%;
+    }
+
+    .header-webapp {
+        font-size: 15px;
+    }
+
+    .header-webapp .header-logo::after {
+        right: 30%;
+    }
+
+    .btn,
+    .progress {
+        padding: 0.5rem 1rem;
+    }
+
+    .webapp .banner-text {
+        padding-top: 11vw;
+        gap: 1vw;
+    }
+
+    .progress-bar .bold {
+        left: 1rem;
+    }
+
+    .btn-lire {
+        font-size: 1.5vw;
+        width: 80%;
+    }
+
+    .chiffres {
+        padding-bottom: 10vw;
+    }
+
+    .tarif-item {
+        font-size: 1.8vw;
+    }
+
+    .btn-tarif {
+        font-size: 20px;
+    }
+
+    .chiffres-list {
+        bottom: 4%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    /* Generic */
+
+    body {
+        overflow-x: hidden;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .display-1 {
+        font-size: 15vw;
+        line-height: 100%;
+    }
+
+    .display-2 {
+        font-size: 6vw;
+    }
+
+    .topbar {
+        font-size: 14px;
+    }
+
+    .marquee,
+    .marquee-track {
+        height: 18vw;
+    }
+
+    .footer h3 {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        overflow: visible;
+    }
+
+    .footer h3::after {
+        width: 0;
+    }
+
+    /* Proximity */
+
+    .visual-location-1 {
+        right: 23vw;
+        top: 7vw;
+    }
+
+    .visual-location-2 {
+        right: 12vw;
+        top: 7.5vw;
+    }
+
+    .visual-location-3 {
+        right: 13%;
+        top: 13vw;
+    }
+
+    .categorie {
+        font-size: 2.2vw;
+    }
+
+    .categorie::before {
+        width: 5vw;
+        height: 5vw;
+
+        margin-right: -19%;
+        margin-bottom: -6%;
+    }
+
+    .categorie-1 {
+        left: 12vw;
+        top: 1vw;
+    }
+
+    .categorie-2 {
+        left: 35vw;
+        top: 19vw;
+    }
+
+    .categorie-3 {
+        left: 42vw;
+        top: 33vw;
+    }
+
+    .proximity .banner-title {
+        transform: scale(1.1);
+        line-height: 120%;
+    }
+
+    .proximity .banner-title-1 {
+        line-height: 90%;
+    }
+
+    .visual-panier {
+        top: 0vw;
+        right: 15vw;
+    }
+
+    .proximity .banner-image {
+        width: 50%;
+    }
+
+    .proximity .services-wrapper {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 48%;
+    }
+
+    .service-wrapper {
+        width: 100%;
+        transition: none;
+    }
+
+    .service-text-top {
+        opacity: 0;
+    }
+
+    .service-name {
+        opacity: 0;
+    }
+
+    .service-text {
+        opacity: 1;
+        transition: none;
+        left: 5%;
+        bottom: 10%;
+    }
+
+    .service-name-open {
+        opacity: 1;
+        writing-mode: horizontal-tb;
+        font-size: 5vw;
+        font-family: "KSBD";
+        left: 0;
+        text-transform: uppercase;
+    }
+
+    .service-description {
+        opacity: 1;
+        text-transform: none;
+        font-size: 3vw;
+        font-family: "KR";
+    }
+
+    .service-btn {
+        opacity: 1;
+        width: 10vw;
+        margin-top: 1rem;
+    }
+
+    .service-number {
+        bottom: 7%;
+        margin-left: 75%;
+        transition: none;
+        font-size: 12vw;
+    }
+
+    .service-wrapper:hover {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .service-wrapper:hover .service-text {
+        opacity: 1;
+        transition: none;
+        left: 5%;
+        bottom: 10%;
+    }
+
+    .service-wrapper:hover .service-number {
+        opacity: 1;
+        bottom: 7%;
+        margin-left: 75%;
+        font-size: 12vw;
+    }
+
+    .certifications {
+        overflow-x: scoll;
+        width: 100%;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .img-apropos {
+        margin-bottom: 2rem;
+    }
+
+    .elements {
+        top: 300vw;
+    }
+
+    .element-1 {
+        left: 40vw;
+        top: 5vw;
+    }
+
+    .element-2 {
+        margin-left: 100px;
+        margin-top: 100px;
+    }
+
+    .element-3 {
+        margin-left: 90vw;
+        margin-top: 0px;
+    }
+
+    .footer {
+        height: 33rem;
+        position: relative;
+        overflow: clip;
+        -moz-border-radius: 45px;
+        -webkit-border-radius: 45px;
+        border-radius: 45px;
+    }
+
+    .element-4 {
+        mix-blend-mode: lighten;
+        position: absolute;
+        margin-top: -30vw;
+        scale: 1.2;
+        margin-left: 0vw;
+    }
+
+    .footer-company,
+    .footer-menu,
+    .actionEtLangues {
+        width: 100%;
+    }
+
+    .footer-text {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 1rem;
+        width: 100%;
+        margin: 0;
+        font-size: 13px;
+        padding: 2rem;
+    }
+
+    .footer-logo {
+        width: 50%;
+    }
+
+    .footer-action {
+        font-size: 9vw;
+    }
+
+    .col-3 {
+        padding: 0;
+    }
+
+    .row>* {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Web & App */
+
+    .webapp .banner p {
+        font-size: 1.5vw;
+    }
+
+    .webapp h2::after {
+        width: 80px;
+    }
+
+    .webapp .display-2 {
+        font-size: 5.5vw;
+    }
+
+    .webapp .banner .btn,
+    .webapp .banner .progress {
+        width: 70%;
+        justify-content: center;
+    }
+
+    .webapp .banner-text {
+        padding: 3vw 0vw 5vw 7vw;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .progress .regular {
+        font-family: "KSBD";
+    }
+
+    .apropos .list-group-item {
+        padding: 0.3rem 0;
+    }
+
+    .webapp .service-number {
+        width: 7vw;
+        height: 7vw;
+        font-size: 5vw;
+    }
+
+    .webapp .chiffres {
+        padding-bottom: 15vw;
+    }
+
+    .chiffre:hover {
+        transform: translateY(0px);
+    }
+
+    .btn-lire {
+        width: 100%;
+        font-size: 1.8vw;
+    }
+
+    .prestation:nth-child(2),
+    .prestation:nth-child(3) {
+        margin-top: 0;
+    }
+
+    .tarif-amount {
+        font-size: 6vw;
+    }
+
+    .tarif-name {
+        font-size: 2.5vw;
+    }
+
+    .tarif sup {
+        font-size: 2vw;
+    }
+
+    .tarif-time {
+        font-size: 2vw;
+    }
+
+    .accordion-button {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 651px) {
+    /* Generic */
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    p,
+    li {
+        font-size: 3.5vw;
+        line-height: 160%;
+    }
+
+    .footer {
+        height: 37rem;
+    }
+
+    .footer-text {
+        padding: 1rem;
+    }
+
+    .element-4 {
+        mix-blend-mode: lighten;
+        position: absolute;
+        margin-top: -10vw;
+        scale: 1.2;
+        margin-left: -20vw;
+        transform: scale(2);
+    }
+
+    /* Site de Proximity */
+    .display-1 {
+        font-size: 25vw;
+    }
+
+    .display-2 {
+        font-size: 8vw;
+    }
+
+    .marquee,
+    .marquee-track {
+        height: 27vw;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+
+    .header {
+        overflow: hidden;
+    }
+
+    .header-sticky {
+        height: 70px;
+    }
+
+    .header-logo {
+        width: 28vw;
+    }
+
+    .header-proximity .nav-item {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+    }
+
+    .header-proximity .nav-item:first-child {
+        padding-left: 0;
+    }
+
+    .header-proximity .nav-item:not(:last-child)::after {
+        top: 20%;
+        right: -10px;
+    }
+
+    .btn-container {
+        padding: 0;
+        height: 100%;
+    }
+
+    .btn-prj {
+        word-break: break-all;
+        font-size: 14px;
+    }
+
+    .btn-prj+span::before {
+        left: -9px;
+    }
+
+    .proximity .banner {
+        height: 100%;
+        -moz-border-radius: 50vw;
+        -webkit-border-radius: 50vw;
+        border-radius: 50vw;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+    }
+
+    .proximity .banner-close {
+        -moz-border-radius: 0vw;
+        -webkit-border-radius: 0vw;
+        border-radius: 0vw;
+        height: 56vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .proximity .banner-image {
+        width: 100%;
+    }
+
+    .proximity .banner-content {
+        position: absolute;
+        text-transform: uppercase;
+        z-index: 2;
+        width: calc(100% - 2rem);
+    }
+
+    .proximity .banner-titles {
+        margin-left: 34vw;
+        margin-top: 32vw;
+        transform: scale(2);
+    }
+
+    .title {
+        font-size: 6vw;
+    }
+
+    .title-1 {
+        font-size: 11vw;
+    }
+
+    .title-2 {
+        font-size: 4.5vw;
+    }
+
+    .title-3 {
+        font-size: 4.5vw;
+    }
+
+    .categorie {
+        font-size: 3.5vw;
+    }
+
+    .categorie::before {
+        width: 8vw;
+        height: 8vw;
+        margin-right: -19%;
+        margin-bottom: -8%;
+    }
+
+    .categorie-1 {
+        left: 20vw;
+        top: 9vw;
+    }
+
+    .categorie-2 {
+        left: 55vw;
+        top: 45vw;
+    }
+
+    .categorie-3 {
+        left: 45vw;
+        top: 70vw;
+    }
+
+    .proximity .banner .visual {
+        width: 8vw;
+    }
+
+    .proximity .banner .visual-play {
+        width: 15vw;
+        top: 2%;
+        left: 41%;
+    }
+
+    .visual-chat {
+        right: 16vw;
+        top: 160vw;
+    }
+
+    .proximity .visual-loupe {
+        left: 10vw;
+        top: 105vw;
+    }
+
+    .visual-globe {
+        left: 12vw;
+        top: 140vw;
+    }
+
+    .visual-panier {
+        right: 20vw;
+        top: 103vw;
+    }
+
+    .visual-location-1 {
+        right: 46vw;
+        top: 118vw;
+    }
+
+    .visual-location-2 {
+        right: 24vw;
+        top: 118vw;
+    }
+
+    .visual-location-3 {
+        right: 25vw;
+        top: 130vw;
+    }
+
+    .categorie:hover,
+    .icon:hover {
+        transform: scale(1.2);
+    }
+
+    .proximity .services-wrapper {
+        height: 150vw;
+    }
+
+    .service-description {
+        bottom: 29vw;
+        font-size: 4vw;
+    }
+
+    .service-btn {
+        left: 7%;
+        bottom: 10vw;
+        width: 13vw;
+    }
+
+    .logo {
+        width: 40vw;
+    }
+
+    .element-1,
+    .element-2,
+    .element-3 {
+        display: none;
+    }
+
+    /* Site de Web & App */
+
+    .webapp h3 {
+        font-size: 6vw;
+    }
+
+    .section-title,
+    .comment .section-title {
+        padding: 3rem 0.75rem 3rem 0.75rem;
+        font-size: 5vw;
+    }
+
+    .header-webapp .header-logo::after {
+        right: 40%;
+    }
+
+    .webapp .display-2 {
+        font-size: 8vw;
+    }
+
+    .btn,
+    .progress {
+        font-size: 3.5vw;
+    }
+
+    .webapp .banner {
+        height: 100%;
+        position: relative;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+    }
+
+    .webapp .banner .title {
+        font-size: 8vw;
+    }
+
+    .webapp .banner p {
+        font-size: 3vw;
+    }
+
+    .webapp .banner-close {
+        -moz-border-radius: 0vw;
+        -webkit-border-radius: 0vw;
+        border-radius: 0vw;
+        height: 56vw;
+        margin-left: 0;
+        margin-right: 0;
+        overflow: visible;
+    }
+
+    .webapp .banner-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .webapp .banner .title-lg {
+        font-size: 22vw;
+        top: 12%;
+        right: 10%;
+    }
+
+    .webapp .banner-text {
+        justify-content: space-between;
+        height: 90vw;
+        padding: 8.5vw 4vw 8.5vw 4vw;
+    }
+
+    .webapp .banner-title {
+        margin-right: 18vw;
+    }
+
+    .webapp .banner-p {
+        padding-left: 4vw;
+    }
+
+    .webapp .visual-play {
+        left: 42%;
+        width: 15vw;
+        top: 3%;
+    }
+
+    .visual-cible {
+        width: 12vw;
+        bottom: 160vw;
+        left: -3%;
+    }
+
+    .visual-rocket {
+        top: 50%;
+        width: 8vw;
+        left: 15%;
+    }
+
+    .webapp .visual-loupe {
+        width: 12vw;
+        top: 65%;
+        right: -2%;
+    }
+
+    .webapp .apropos {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+    }
+
+    .webapp .apropos-left img {
+        padding: 0 0.25rem 0 0;
+        border-radius: 20px;
+        -webkit-border-radisu: 20px;
+    }
+
+    .webapp .apropos-left .image-right {
+        padding: 0 0 0 0.25rem;
+    }
+
+    .ceo {
+        font-size: 18px;
+    }
+
+    .webapp .service {
+        flex: 100%;
+    }
+
+    .webapp .service:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .webapp .service-number {
+        width: 22vw;
+        height: 22vw;
+        font-size: 13vw;
+    }
+
+    .btn-lire {
+        font-size: 4vw;
+        width: 45%;
+    }
+
+    .webapp .chiffres {
+        padding-bottom: 86vw;
+        position: relative;
+    }
+
+    .chiffres-list {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        height: 112vw;
+        width: calc(100% - 0.5rem);
+    }
+
+    .chiffre {
+        width: calc(50vw - 1rem);
+        height: calc(50vw - 1rem);
+    }
+
+    .chiffres-banner {
+        width: 40%;
+    }
+
+    .chiffre:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .chiffre:nth-child(3) {
+        position: absolute;
+        margin-top: calc(50vw + 2.5rem);
+        left: 0.5rem;
+    }
+
+    .chiffre:last-child {
+        position: absolute;
+        margin-top: calc(50vw - 0.5rem);
+        right: 0.5rem;
+    }
+
+    .chiffre-number {
+        font-size: 10vw;
+    }
+
+    .chiffre-description {
+        font-size: 3vw;
+    }
+
+    .comment-intro {
+        text-align: left;
+    }
+
+    .prestations-list {
+        padding: 2rem;
+        flex-direction: column;
+        border-radius: 50px;
+    }
+
+    .form-check {
+        padding-left: 2.5rem;
+    }
+
+    .tarif-amount {
+        font-size: 15vw;
+    }
+
+    .tarif-name {
+        font-size: 6vw;
+    }
+
+    .tarif sup {
+        font-size: 5vw;
+        top: -1.5em;
+    }
+
+    .tarif-item,
+    .tarif-time {
+        font-size: 4vw;
+    }
+
+    .tarifs .toggle {
+        font-size: 4.5vw;
+    }
+
+    .btn-tarif {
+        padding: 0.5rem 1rem;
+        font-size: 3.5vw;
+    }
+
+    .faq-content {
+        margin: 0 0.75rem;
+    }
+}

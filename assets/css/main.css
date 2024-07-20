@@ -1,4 +1,4 @@
-/* 0.1 Settings */
+/* 0.1 Settings
 
 @font-face {
 	font-family: "KBK";
@@ -94,7 +94,7 @@
 	font-weight: 100;
 	font-style: normal;
 	font-display: swap;
-}
+} */
 
 :root {
 	--color_proximity: #2e4586;
